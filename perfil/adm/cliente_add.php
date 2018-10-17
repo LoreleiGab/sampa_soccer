@@ -2,107 +2,85 @@
 include "includes/menu.php";
 ?>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-      <section class="content-header">
-          <h1>
-              Blank page
-              <small>it all starts here</small>
-          </h1>
-          <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li><a href="#">Examples</a></li>
-              <li class="active">Blank page</li>
-          </ol>
-      </section>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <section class="content">
+        <h2 class="page-header">Cliente</h2>
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Cadastro</h3>
+                </div>
+                <form method="POST" action="?perfil=administrador&p=cliente_edit" role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>Classificação do cliente</label>
+                            <select class="form-control" name="classificacao_id">
+                                <option value="">Selecione...</option>
+                                <?php
+                                //geraOpcao("tipo_atracoes","")
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nome completo</label>
+                            <input type="text" name="nome" class="form-control" maxlength="180">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <labeL>Apelido</labeL>
+                                <input type="text" name="apelido" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <labeL>Posição</labeL>
+                                <input type="text" name="posicao" class="form-control">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <labeL>Pé dominante</labeL>
+                                <input type="text" name="pe_dominante" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <labeL>Clube</labeL>
+                                <input type="text" name="clube" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <labeL>Categoria</labeL>
+                                <input type="text" name="categoria" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <labeL>Data de Nascimento</labeL>
+                                <input type="date" name="data_nascimento" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <labeL>Telefone #1</labeL>
+                                <input type="text" name="telefone01" class="form-control">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <labeL>Telefone #2</labeL>
+                                <input type="text" name="telefone02" class="form-control">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <labeL>Email</labeL>
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                        </div>
 
-    <!-- Main content -->
-      <section class="content">
+                        <div class="form-group">
+                            <label>Diagnóstico</label>
+                            <textarea class="form-control" rows="5" name="diagnostico"></textarea>
+                        </div>
 
-          <!-- SELECT2 EXAMPLE -->
-          <div class="box box-default">
-              <div class="box-header with-border">
-                  <h3 class="box-title">Select2</h3>
-
-                  <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-                  </div>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body">
-                  <div class="row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Minimal</label>
-                              <select class="form-control select2" style="width: 100%;">
-                                  <option selected="selected">Alabama</option>
-                                  <option>Alaska</option>
-                                  <option>California</option>
-                                  <option>Delaware</option>
-                                  <option>Tennessee</option>
-                                  <option>Texas</option>
-                                  <option>Washington</option>
-                              </select>
-                          </div>
-                          <!-- /.form-group -->
-                          <div class="form-group">
-                              <label>Disabled</label>
-                              <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                                  <option selected="selected">Alabama</option>
-                                  <option>Alaska</option>
-                                  <option>California</option>
-                                  <option>Delaware</option>
-                                  <option>Tennessee</option>
-                                  <option>Texas</option>
-                                  <option>Washington</option>
-                              </select>
-                          </div>
-                          <!-- /.form-group -->
-                      </div>
-                      <!-- /.col -->
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label>Multiple</label>
-                              <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
-                                      style="width: 100%;">
-                                  <option>Alabama</option>
-                                  <option>Alaska</option>
-                                  <option>California</option>
-                                  <option>Delaware</option>
-                                  <option>Tennessee</option>
-                                  <option>Texas</option>
-                                  <option>Washington</option>
-                              </select>
-                          </div>
-                          <!-- /.form-group -->
-                          <div class="form-group">
-                              <label>Disabled Result</label>
-                              <select class="form-control select2" style="width: 100%;">
-                                  <option selected="selected">Alabama</option>
-                                  <option>Alaska</option>
-                                  <option disabled="disabled">California (disabled)</option>
-                                  <option>Delaware</option>
-                                  <option>Tennessee</option>
-                                  <option>Texas</option>
-                                  <option>Washington</option>
-                              </select>
-                          </div>
-                          <!-- /.form-group -->
-                      </div>
-                      <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
-              </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                  Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-                  the plugin.
-              </div>
-          </div>
-          <!-- /.box -->
-
-      </section>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-default">Cancela</button>
+                        <button type="submit" name="cadastra" class="btn btn-info pull-right">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+    </section>
     <!-- /.content -->
-  </div>
+</div>
