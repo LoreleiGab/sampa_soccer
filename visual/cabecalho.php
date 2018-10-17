@@ -1,3 +1,17 @@
+<?php
+ini_set('session.gc_maxlifetime', 60*60); // 60 minutos
+session_start();
+
+if(!isset ($_SESSION['login']) == true) //verifica se há uma sessão, se não, volta para área de login
+{
+    unset($_SESSION['login']);
+    header('location:../index.php');
+}
+else
+{
+    $logado = $_SESSION['login'];
+}
+?>
 <html>
   <head>
     <meta charset="utf-8">
