@@ -4,6 +4,32 @@
     </div>
     <strong>Copyright &copy; 2018 <a href="https://flinformatica.com.br">FL Informática</a>.</strong> All rights
     reserved.
+    <div class="box-body">
+        <div class="box-group" id="accordion">
+            <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+            <div class="panel box box-primary">
+                <div class="box-header with-border">
+                    <h4 class="box-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseRodape">
+                            Configurações
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseRodape" class="panel-collapse collapse">
+                    <div class="box-body">
+                        <?php
+                        echo "<strong>SESSION</strong><pre>", var_dump($_SESSION), "</pre>";
+                        echo "<strong>POST</strong><pre>", var_dump($_POST), "</pre>";
+                        echo "<strong>GET</strong><pre>", var_dump($_GET), "</pre>";
+                        echo "<strong>SERVER</strong><pre>", var_dump($_SERVER), "</pre>";
+                        echo "<strong>FILES</strong><pre>", var_dump($_FILES), "</pre>";
+                        echo ini_get('session.gc_maxlifetime')/60; // em minutos
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
