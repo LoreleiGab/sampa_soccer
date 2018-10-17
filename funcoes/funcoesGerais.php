@@ -4645,4 +4645,19 @@ function validaCNPJ($cnpj)
 	$resto = $soma % 11;
 	return $cnpj{13} == ($resto < 2 ? 0 : 11 - $resto);
 }
+
+function mensagem($tipo,$texto){
+    return "
+	    <div class=\"col-md-12\">
+                <div class=\"box box-".$tipo." box-solid\">
+                    <div class=\"box-header with-border\">
+                        <h3 class=\"box-title\">".$texto."</h3>
+                        <div class=\"box-tools pull-right\">
+                            <button type=\"button\" class=\"btn btn-box-tool\" data-widget=\"remove\"><i class=\"fa fa-times\"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    ";
+}
 ?>
