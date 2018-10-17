@@ -1,6 +1,55 @@
 <?php
 include "includes/menu.php";
+$con = bancoMysqli();
+
+if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
+    $classificacao_id = $_POST['classificacao_id'];
+    $nome = $_POST['nome'];
+    $apelido = $_POST['apelido'];
+}
+
+if(isset($_POST['cadastrar'])){
+    $sql_adiciona = "INSERT INTO clientes (nome, apelido, posicao, pe_dominante, data_nascimento, clube, categoria, telefone01, telefone02, emal, diagnostico, usuario_id) VALUES ('$nome', '$apelido', '$posicao', '$pe_dominante', '$data_nascimento', '$clube', '$categoria', '$telefone01', '$telefone02', '$email', '$diagnostico', '$usuario_id')";
+    if(mysqli_query($con,$sql_adiciona)){
+        $mensagem = "
+        <div class=\"col-md-6\">
+            <div class=\"box box-success\">
+                <div class=\"box-header with-border\">
+                    <h3 class=\"box-title\">Inserido com sucesso</h3>
+                    <div class=\"box-tools pull-right\">
+                        <button type=\"button\" class=\"btn btn-box-tool\" data-widget=\"remove\"><i class=\"fa fa-times\"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        ";
+        $idCliente = recuperaUltimo("cliente");
+    }
+    else{
+        $mensagem = "<span style=\"color: #FF0000; \"><strong>Erro ao inserir! Tente novamente.</strong></span>";
+    }
+}
+if(isset($_POST['editar'])){
+    $idCliente = $_POST['$idCliente'];
+    $sql_edita = "UPDATE clientes SET nome = '$nome', apelido = '$apelido' WHERE id = '$idCliente'";
+    if(mysqli_query($con,$sql_edita)){
+        $mensagem = "<span style=\"color: #01DF3A; \"><strong>Inserido com sucesso!</strong></span>";
+    }
+    else{
+        $mensagem = "<span style=\"color: #FF0000; \"><strong>Erro ao inserir! Tente novamente.</strong></span>";
+    }
+}
 ?>
+<div class="col-md-3">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">Inserido com sucesso</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -10,6 +59,7 @@ include "includes/menu.php";
             <div class="box box-info">
                 <div class="box-header with-border">
                     <h3 class="box-title">Cadastro</h3>
+                    <h5><?php if(isset($mensagem)){echo $mensagem;};?></h5>
                 </div>
                 <form method="POST" action="?perfil=administrador&p=cliente_edit" role="form">
                     <div class="box-body">
@@ -76,7 +126,8 @@ include "includes/menu.php";
                     <!-- /.box-body -->
                     <div class="box-footer">
                         <button type="submit" class="btn btn-default">Cancela</button>
-                        <button type="submit" name="cadastrar" class="btn btn-info pull-right">Cadastrar</button>
+                        <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                        <button type="submit" name="editar" class="btn btn-info pull-right">Editar</button>
                     </div>
                 </form>
             </div>
