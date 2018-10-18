@@ -15,7 +15,6 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-user"></i> <span>Cliente</span>
@@ -25,7 +24,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="?perfil=administrador&p=cliente_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Lista</a></li>
+                    <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Lista</a></li>
                 </ul>
             </li>
             <li class="treeview">

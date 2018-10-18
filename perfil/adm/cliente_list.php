@@ -1,79 +1,78 @@
 <?php
 include "includes/menu.php";
+
+$con = bancoMysqli();
+
+$idUser = $_SESSION['idUser'];
+$sql = "SELECT clientes.id AS idCliente, nome, telefone01, emal, nome_classificacao FROM clientes INNER JOIN classificacao c on clientes.classificacao_id = c.id";
+$query = mysqli_query($con,$sql);
 ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
+    <!-- Main content -->
     <section class="content">
+
+        <!-- START FORM-->
         <h2 class="page-header">Clientes</h2>
-        <div class="col-md-12">
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Lista</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Listagem</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Classificação</th>
+                                <th width="10%">Ação</th>
+                            </tr>
+                            </thead>
+
+                            <?php
+                            echo "<tbody>";
+                            while ($cliente = mysqli_fetch_array($query)){
+                                echo "<tr>";
+                                echo "<td>".$cliente['nome']."</td>";
+                                echo "<td>".$cliente['telefone01']."</td>";
+                                echo "<td>".$cliente['emal']."</td>";
+                                echo "<td>".$cliente['nome_classificacao']."</td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=cliente_edit\" role=\"form\">
+                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Carregar</button>
+                                    </form>
+                                </td>";
+                                echo "</tr>";
+                            }
+                            echo "</tbody>";
+                            ?>
+                            <tfoot>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Classificação</th>
+                                <th width="10%">Ação</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
                 </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th style="width: 10px">#</th>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>Email</th>
-                        </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>Update software</td>
-                            <td>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-red">55%</span></td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>Clean database</td>
-                            <td>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-yellow">70%</span></td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>Cron job running</td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-light-blue">30%</span></td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td>Fix and squish bugs</td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div>
+                <!-- /.box -->
             </div>
-            <!-- /.box -->
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <!-- END ACCORDION & CAROUSEL-->
+
     </section>
     <!-- /.content -->
 </div>
