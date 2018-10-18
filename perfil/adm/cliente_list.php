@@ -31,7 +31,7 @@ $query = mysqli_query($con,$sql);
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Classificação</th>
-                                <th width="10%">Ação</th>
+                                <th colspan="2" width="10%">Ação</th>
                             </tr>
                             </thead>
 
@@ -49,6 +49,12 @@ $query = mysqli_query($con,$sql);
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Carregar</button>
                                     </form>
                                 </td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_add\" role=\"form\">
+                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
+                                    <button type=\"submit\" name='avaliacao' class=\"btn btn-block btn-primary\">+ Avaliação</button>
+                                    </form>
+                                </td>";
                                 echo "</tr>";
                             }
                             echo "</tbody>";
@@ -59,7 +65,7 @@ $query = mysqli_query($con,$sql);
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Classificação</th>
-                                <th width="10%">Ação</th>
+                                <th colspan="2" width="10%">Ação</th>
                             </tr>
                             </tfoot>
                         </table>

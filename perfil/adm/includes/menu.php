@@ -21,7 +21,7 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                    <li><a href="?perfil=administrador&p=avaliacao_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>

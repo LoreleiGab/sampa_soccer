@@ -3,7 +3,6 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
-    $classificacao_id = $_POST['classificacao_id'];
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
     $posicao = $_POST['posicao'];
