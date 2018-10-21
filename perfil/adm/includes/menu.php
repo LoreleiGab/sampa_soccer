@@ -16,6 +16,8 @@
                     <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Lista</a></li>
                 </ul>
             </li>
+            <li><a href="../../../include/logoff.php"><i class="fa fa-sign-out"></i><span>Sair</span></a></li>
+            <!--
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-edit"></i>
@@ -62,6 +64,7 @@
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            -->
         </ul>
     </section>
     <!-- /.sidebar -->
