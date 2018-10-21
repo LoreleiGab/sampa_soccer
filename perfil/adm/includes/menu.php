@@ -10,7 +10,9 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="?perfil=administrador&p=cliente_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
+                    <li><a href="?perfil=administrador&p=atleta_add"><i class="fa fa-circle-o"></i> Atleta</a></li>
+                    <li><a href="?perfil=administrador&p=base_add"><i class="fa fa-circle-o"></i> Base</a></li>
+                    <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-circle-o"></i> Aluno</a></li>
                     <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Lista</a></li>
                 </ul>
             </li>
