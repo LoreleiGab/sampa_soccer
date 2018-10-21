@@ -6,10 +6,10 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $estatura_pai = $_POST['estatura_pai'];
     $estatura_mae = $_POST['estatura_mae'];
-    $estatura_prevista = 0;
-    $estimativa = 0;
-    $margem_erro01 = 0;
-    $margem_erro02 = 0;
+    $estatura_prevista = ($estatura_pai + $estatura_mae)/2;
+    $estimativa = ($estatura_pai + $estatura_mae)/2+6.5;
+    $margem_erro01 = ($estatura_pai + $estatura_mae)/2+12;
+    $margem_erro02 = ($estatura_pai + $estatura_mae)/2+6;
 }
 
 if(isset($_POST['cadastrar'])){

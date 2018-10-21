@@ -18,7 +18,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
 }
 
 if(isset($_POST['cadastrar'])){
-    $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, emal, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
+    $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
         $sql_base = "INSERT INTO base (apelido, posicao, pe_dominante, restricao, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$restricao', '$idCliente')";
@@ -35,7 +35,7 @@ if(isset($_POST['cadastrar'])){
 }
 if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
-    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', emal = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
+    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
         $sql_edita_base = "UPDATE base SET apelido = '$apelido', posicao = '$posicao', pe_dominante = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_base)) {
