@@ -11,7 +11,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $restricao = $_POST['restricao'];
     $atividade_interesse = $_POST['atividade_interesse'];
     $diagnostico = $_POST['diagnostico'];
-    $classificacao_id = 2;
+    $classificacao_id = 3;
     $usuario_id = $_SESSION['idUser'];
 }
 
