@@ -54,7 +54,7 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                                     <labeL>Telefone #2:</labeL> <?= $cliente['telefone02'] ?>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL>Email:</labeL> <?= $cliente['emal'] ?>
+                                    <labeL>Email:</labeL> <?= $cliente['email'] ?>
                                 </div>
                             </div>
                             <?php

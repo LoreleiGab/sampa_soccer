@@ -97,7 +97,7 @@ $aluno = recuperaDados("aluno","cliente_id",$idCliente);
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="email">Email</labeL>
-                                    <input type="email" id="email" name="email" class="form-control" value="<?= $cliente['emal'] ?>">
+                                    <input type="email" id="email" name="email" class="form-control" value="<?= $cliente['email'] ?>">
                                 </div>
                             </div>
                             <div class="row">
