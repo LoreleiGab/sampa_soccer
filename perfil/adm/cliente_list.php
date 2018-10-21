@@ -31,7 +31,7 @@ $query = mysqli_query($con,$sql);
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Classificação</th>
-                                <th colspan="2" width="10%">Ação</th>
+                                <th colspan="3" width="10%">Ação</th>
                             </tr>
                             </thead>
 
@@ -46,13 +46,19 @@ $query = mysqli_query($con,$sql);
                                 echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=cliente_edit\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
-                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Carregar</button>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>
                                 </td>";
                                 echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_add\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
                                     <button type=\"submit\" name='avaliacao' class=\"btn btn-block btn-primary\">+ Avaliação</button>
+                                    </form>
+                                </td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=cliente_resumo\" role=\"form\">
+                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
+                                    <button type=\"submit\" name='resumo' class=\"btn btn-block btn-primary\">Resumo</button>
                                     </form>
                                 </td>";
                                 echo "</tr>";
@@ -65,7 +71,7 @@ $query = mysqli_query($con,$sql);
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Classificação</th>
-                                <th colspan="2" width="10%">Ação</th>
+                                <th colspan="3" width="10%">Ação</th>
                             </tr>
                             </tfoot>
                         </table>
