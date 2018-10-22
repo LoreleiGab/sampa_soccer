@@ -133,18 +133,18 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     </form>
                 </div>
                 <!-- /.box -->
-                <?php
-                $sql_estatura = "SELECT * FROM estaturas WHERE cliente_id = '$idCliente'";
-                $query_estatura = mysqli_query($con,$sql_estatura);
-                $estatura = mysqli_fetch_array($query_estatura);
-                if($estatura != NULL) {
-                    ?>
-                    <!-- general form elements -->
-                    <div class="box box-info">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Estatura</h3>
-                        </div>
-                        <!-- /.box-header -->
+                <!-- ESTATURA general form elements -->
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Estatura</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <?php
+                    $sql_estatura = "SELECT * FROM estaturas WHERE cliente_id = '$idCliente'";
+                    $query_estatura = mysqli_query($con,$sql_estatura);
+                    $estatura = mysqli_fetch_array($query_estatura);
+                    if($estatura != NULL) {
+                        ?>
                         <!-- form start -->
                         <form method="POST" action="?perfil=administrador&p=estatura_edit" role="form">
                             <div class="box-body">
@@ -175,30 +175,95 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <button type="submit" name="carregar" class="btn btn-info pull-right">Editar</button>
                             </div>
                         </form>
-                    </div>
                     <!-- /.box -->
                     <?php
-                }
-                else{
-                    ?>
-                        <!-- general form elements -->
-                        <div class="box box-info">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Estatura</h3>
+                    }
+                    else{
+                        ?>
+                        <!-- form start -->
+                        <form method="POST" action="?perfil=administrador&p=estatura_add" role="form">
+                            <div class="box-body">
+                                <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                                <button type="submit" name="estatura" class="btn btn-info pull-left">Adicionar</button>
                             </div>
-                            <!-- /.box-header -->
-                            <!-- form start -->
-                            <form method="POST" action="?perfil=administrador&p=estatura_add" role="form">
-                                <div class="box-body">
-                                    <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
-                                    <button type="submit" name="estatura" class="btn btn-info pull-left">Adicionar</button>
-                                </div>
-                            </form>
-                        </div>
+                        </form>
                         <!-- /.box -->
-                <?php
-                }
-                ?>
+                    <?php
+                    }
+                    ?>
+                </div>
+                <!-- ESTATURA general form elements -->
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Avaliações</h3>
+                        <form method="POST" action="?perfil=administrador&p=avaliacao_add" role="form">
+                            <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                            <button type="submit" name="avaliacao" class="btn btn-info pull-right">Adicionar</button>
+                        </form>
+                    </div>
+                    <?php
+                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
+                    $query_avaliacao = mysqli_query($con,$sql_avaliacao);
+                    if($query_avaliacao != NULL) {
+                        ?>
+                        <div class="box-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Peso</th>
+                                    <th>Altura</th>
+                                    <th>IMC</th>
+                                    <th colspan="3" width="10%">Ação</th>
+                                </tr>
+                                </thead>
+                                <?php
+                                echo "<tbody>";
+                                while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
+                                    $imc = number_format($avaliacao['peso'] / (($avaliacao['altura']/100) * ($avaliacao['altura']/100)), 2);
+                                    echo "<tr>";
+                                    echo "<td>" . exibirDataBr($avaliacao['data']) . "</td>";
+                                    echo "<td>" . $avaliacao['peso'] . "</td>";
+                                    echo "<td>" . $avaliacao['altura'] . "</td>";
+                                    echo "<td>" . $imc . "</td>";
+                                    echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">
+                                    <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                    </form>
+                                    </td>";
+                                    echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
+                                    <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
+                                    </form>
+                                </td>";
+                                    echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=dobras_add\" role=\"form\">
+                                    <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Dobras</button>
+                                    </form>
+                                </td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";
+                                ?>
+                                <tfoot>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Peso</th>
+                                    <th>Altura</th>
+                                    <th>IMC</th>
+                                    <th colspan="3" width="10%">Ação</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                        <?php
+                    }
+                    ?>
+
             </div>
             <!-- /.col -->
         </div>

@@ -2,25 +2,9 @@
 include "includes/menu.php";
 $con = bancoMysqli();
 
-if(isset($_POST['cadastra'])){
-    $idCliente = $_POST['idCliente'];
-    $data = $_POST['data'];
-    $peso = $_POST['peso'];
-    $altura = $_POST['altura'];
-    $sql = "INSERT INTO avaliacoes (cliente_id,data,peso,altura) VALUES ('$idCliente','$data','$peso','$altura')";
-    if(mysqli_query($con,$sql)){
-        $mensagem = mensagem("success","Gravado com suscesso!");
-    }else{
-        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
-    }
-}
-
 if(isset($_POST['avaliacao'])){
     $idCliente = $_POST['idCliente'];
 }
-
-$sql_lista = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
-$query_lista = mysqli_query($con,$sql_lista);
 
 $cliente = recuperaDados("clientes","id",$idCliente);
 ?>
@@ -45,7 +29,7 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                     <div class="row" align="center">
                         <?php if(isset($mensagem)){echo $mensagem;};?>
                     </div>
-                    <form method="POST" action="?perfil=administrador&p=avaliacao_add" role="form">
+                    <form method="POST" action="?perfil=administrador&p=avaliacao_edit" role="form">
                         <div class="box-body">
                             <div class="form-group">
                                 <label>Nome:</label> <?= $cliente['nome'] ?>

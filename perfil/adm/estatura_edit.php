@@ -25,7 +25,7 @@ if(isset($_POST['cadastrar'])){
 if(isset($_POST['editar'])){
     $sql = "UPDATE estaturas SET cliente_id = '$idCliente', estatura_pai = '$estatura_pai', estatura_mae = '$estatura_mae', estatura_prevista = '$estatura_prevista', estimativa = '$estimativa', margem_erro01 = '$margem_erro01', margem_erro02 = '$margem_erro02' WHERE cliente_id = '$idCliente'";
     if(mysqli_query($con,$sql)){
-        $mensagem = mensagem("success", "Cadastrado com sucesso!");
+        $mensagem = mensagem("success", "Gravado com sucesso!");
     }
     else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
