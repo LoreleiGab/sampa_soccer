@@ -8,12 +8,12 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $estatura_mae = $_POST['estatura_mae'];
     $estatura_prevista = ($estatura_pai + $estatura_mae)/2;
     $estimativa = ($estatura_pai + $estatura_mae)/2+6.5;
-    $margem_erro01 = ($estatura_pai + $estatura_mae)/2+12;
-    $margem_erro02 = ($estatura_pai + $estatura_mae)/2+6;
+    $margem_erro01 = ($estatura_pai + $estatura_mae)/2+12.5;
+    $margem_erro02 = ($estatura_pai + $estatura_mae)/2+0.5;
 }
 
 if(isset($_POST['cadastrar'])){
-    $sql = "INSERT INTO estaturas (cliente_id, estatura_pai, estatura_mae, estatura_prevista, estimativa, margem_erro01, margem_erro02) VALUES ('$idCliente','$estatura_pai','$estatura_mae', '$$estatura_prevista', '$estimativa', '$margem_erro01', '$margem_erro02')";
+    $sql = "INSERT INTO estaturas (cliente_id, estatura_pai, estatura_mae, estatura_prevista, estimativa, margem_erro01, margem_erro02) VALUES ('$idCliente','$estatura_pai','$estatura_mae', '$estatura_prevista', '$estimativa', '$margem_erro01', '$margem_erro02')";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
     }
@@ -23,13 +23,17 @@ if(isset($_POST['cadastrar'])){
 }
 
 if(isset($_POST['editar'])){
-    $sql = "UPDATE estaturas SET cliente_id = '$idCliente', estatura_pai = '$estatura_pai', estatura_mae = '$estatura_mae', estimativa = '$estimativa', margem_erro01 = '$margem_erro01', margem_erro02 = '$margem_erro02' WHERE cliente_id = '$idCliente'";
+    $sql = "UPDATE estaturas SET cliente_id = '$idCliente', estatura_pai = '$estatura_pai', estatura_mae = '$estatura_mae', estatura_prevista = '$estatura_prevista', estimativa = '$estimativa', margem_erro01 = '$margem_erro01', margem_erro02 = '$margem_erro02' WHERE cliente_id = '$idCliente'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
     }
     else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
     }
+}
+
+if(isset($_POST['carregar'])){
+    $idCliente = $_POST['idCliente'];
 }
 
 $cliente = recuperaDados("clientes","id",$idCliente);
@@ -72,7 +76,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancela</button>
+                            <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
                             <button type="submit" name="editar" class="btn btn-info pull-right">Gravar</button>
                         </div>
                     </form>

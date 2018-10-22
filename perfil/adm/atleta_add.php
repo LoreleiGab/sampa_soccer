@@ -84,7 +84,6 @@ include "includes/menu.php";
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancela</button>
                             <button type="submit" name="cadastrar" class="btn btn-info pull-right">Cadastrar</button>
                         </div>
                     </form>

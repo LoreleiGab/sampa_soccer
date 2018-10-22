@@ -143,8 +143,8 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancela</button>
-                            <button type="submit" name="cadastrar" class="btn btn-info pull-right">Cadastrar</button>
+                            <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
+                            <button type="submit" name="editar" class="btn btn-info pull-right">Cadastrar</button>
                         </div>
                     </form>
                 </div>

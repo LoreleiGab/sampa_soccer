@@ -4,7 +4,7 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 $idUser = $_SESSION['idUser'];
-$sql = "SELECT clientes.id AS idCliente, nome, telefone01, emal, nome_classificacao FROM clientes INNER JOIN classificacao c on clientes.classificacao_id = c.id";
+$sql = "SELECT clientes.id AS idCliente, nome, telefone01, email, nome_classificacao, clientes.classificacao_id FROM clientes INNER JOIN classificacao c on clientes.classificacao_id = c.id";
 $query = mysqli_query($con,$sql);
 ?>
 
@@ -38,14 +38,23 @@ $query = mysqli_query($con,$sql);
                             <?php
                             echo "<tbody>";
                             while ($cliente = mysqli_fetch_array($query)){
+
+
                                 echo "<tr>";
                                 echo "<td>".$cliente['nome']."</td>";
                                 echo "<td>".$cliente['telefone01']."</td>";
-                                echo "<td>".$cliente['emal']."</td>";
+                                echo "<td>".$cliente['email']."</td>";
                                 echo "<td>".$cliente['nome_classificacao']."</td>";
-                                echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=cliente_edit\" role=\"form\">
-                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
+                                if($cliente['classificacao_id'] == 1){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 2){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=base_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 3){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=aluno_edit\" role=\"form\">";
+                                }
+                                echo "<input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>
                                 </td>";
