@@ -232,12 +232,24 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>
                                     </td>";
-                                    echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
-                                    <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
-                                    </form>
-                                </td>";
+                                    $perimetria = recuperaDados("perimetrias","avaliacao_id",$avaliacao['id']);
+                                    if($perimetria != NULL){
+                                        echo "<td>
+                                        <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_edit\" role=\"form\">
+                                        <input type='hidden' name='idPerimetria' value='" . $perimetria['id'] . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
+                                        </form>
+                                        </td>";
+                                    }
+                                    else{
+                                        echo "<td>
+                                        <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
+                                        <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
+                                        </form>
+                                        </td>";
+                                    }
+
                                     echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=dobras_add\" role=\"form\">
                                     <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>

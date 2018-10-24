@@ -4,18 +4,15 @@
     <section class="sidebar">
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">CADASTROS</li>
             <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-user"></i> <span>Cliente</span>
-                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="?perfil=administrador&p=atleta_add"><i class="fa fa-circle-o"></i> Atleta</a></li>
-                    <li><a href="?perfil=administrador&p=base_add"><i class="fa fa-circle-o"></i> Base</a></li>
-                    <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-circle-o"></i> Aluno</a></li>
-                    <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Lista</a></li>
-                </ul>
+                <li><a href="?perfil=administrador&p=atleta_add"><i class="fa fa-circle-o"></i> Atleta</a></li>
+                <li><a href="?perfil=administrador&p=base_add"><i class="fa fa-circle-o"></i> Base</a></li>
+                <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-circle-o"></i> Aluno</a></li>
             </li>
+            <li class="header">LISTA</li>
+            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Clientes</a></li>
+            <li class="header">OUTROS</li>
             <li><a href="../../../include/logoff.php"><i class="fa fa-sign-out"></i><span>Sair</span></a></li>
             <!--
             <li class="treeview">
