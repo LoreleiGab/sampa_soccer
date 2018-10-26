@@ -85,11 +85,11 @@ if(isset($_POST['login']))
 <div class="login-box">
     <div class="login-logo">
         <img src="visual/images/logo_sampa.png">
+        <h3><span style="color: #2f4195; " class="box-title">SACC - Sistema de Avaliação e Controle de Carga</span></h3>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg"><?php if(isset($mensagem)){ echo $mensagem; } ?></p>
-
         <form action="index.php" method="post">
             <div class="form-group has-feedback">
                 <label>Usuário</label>
