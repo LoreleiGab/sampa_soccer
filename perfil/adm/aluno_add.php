@@ -24,9 +24,18 @@ include "includes/menu.php";
                     </div>
                     <form method="POST" action="?perfil=administrador&p=aluno_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180">
+                            <div class="row">
+                                <div class="form-group col-md-10">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" maxlength="180">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="sexo_id">Sexo</label>
+                                    <select id="sexo_id" name="sexo_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("sexos","") ?>
+                                    </select>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-2">
@@ -64,7 +73,6 @@ include "includes/menu.php";
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancela</button>
                             <button type="submit" name="cadastrar" class="btn btn-info pull-right">Cadastrar</button>
                         </div>
                     </form>

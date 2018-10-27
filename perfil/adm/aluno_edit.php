@@ -4,6 +4,7 @@ $con = bancoMysqli();
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $nome = $_POST['nome'];
+    $sexo = $_POST['sexo_id'];
     $data_nascimento = $_POST['data_nascimento'];
     $telefone01 = $_POST['telefone01'];
     $telefone02 = $_POST['telefone02'];
@@ -19,7 +20,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_aluno = "INSERT INTO aluno (atividade_interesse, restricao, cliente_id) VALUES ('$atividade_interesse', '$restricao', '$idCliente')";
+        $sql_aluno = "INSERT INTO aluno (sexo_id, atividade_interesse, restricao, cliente_id) VALUES ('$sexo', '$atividade_interesse', '$restricao', '$idCliente')";
         if(mysqli_query($con,$sql_aluno)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -35,7 +36,7 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_aluno = "UPDATE aluno SET atividade_interesse = '$atividade_interesse', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
+        $sql_edita_aluno = "UPDATE aluno SET sexo_id = '$sexo', atividade_interesse = '$atividade_interesse', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_aluno)) {
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
@@ -78,9 +79,18 @@ $aluno = recuperaDados("aluno","cliente_id",$idCliente);
                     </div>
                     <form method="POST" action="?perfil=administrador&p=aluno_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                            <div class="row">
+                                <div class="form-group col-md-10">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="sexo_id">Sexo</label>
+                                    <select id="sexo_id" name="sexo_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("sexos",$aluno['sexo_id']) ?>
+                                    </select>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-2">
