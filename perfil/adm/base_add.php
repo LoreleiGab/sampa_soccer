@@ -57,7 +57,10 @@ include "includes/menu.php";
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL for="pe_dominante">Pé dominante</labeL>
-                                    <input type="text" id="pe_dominante" name="pe_dominante" class="form-control">
+                                    <select id="pe_dominante" name="pe_dominante" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("pe_dominantes", "") ?>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <labeL for="restricao">Alguma restrição</labeL>

@@ -24,7 +24,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_atleta = "INSERT INTO atleta (apelido, posicao, pe_dominante, clube, categoria, contatos, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$clube', '$categoria', '$contatos', '$ultimos_clubes', '$idCliente')";
+        $sql_atleta = "INSERT INTO atleta (apelido, posicao, pe_dominante_id, clube, categoria, contatos, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$clube', '$categoria', '$contatos', '$ultimos_clubes', '$idCliente')";
         if(mysqli_query($con,$sql_atleta)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -33,16 +33,16 @@ if(isset($_POST['cadastrar'])){
         }
     }
     else{
-        $mensagem = mensagem("danger","[COD2]Erro ao gravar! Tente novamente.").$sql_cliente;
+        $mensagem = mensagem("danger","[COD2]Erro ao gravar! Tente novamente.");
     }
 }
 if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao = '$posicao', pe_dominante = '$pe_dominante',clube = '$clube', categoria = '$categoria', contatos = '$contatos', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
+        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao = '$posicao', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria = '$categoria', contatos = '$contatos', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_atleta)) {
-            $mensagem = mensagem("success", "Gravado com sucesso!");
+            $mensagem = mensagem("success", "Gravado com sucesso!").$sql_edita_atleta;
         }
         else{
             $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
@@ -116,7 +116,10 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL for="pe_dominante">Pé dominante</labeL>
-                                    <input type="text" id="pe_dominante" name="pe_dominante" class="form-control" value="<?= $atleta['pe_dominante'] ?>">
+                                    <select id="pe_dominante" name="pe_dominante" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("pe_dominantes", $atleta['pe_dominante_id']) ?>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="clube">Clube</labeL>
