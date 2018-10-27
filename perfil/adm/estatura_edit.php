@@ -46,16 +46,20 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Cliente</h2>
+        <h2 class="page-header">Cliente
+        <small><?= $cliente['nome'] ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-info">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro de estatura</h3>
-                        <small><strong>Cliente:</strong> <?= $cliente['nome'] ?></small>
-                    </div>
+                    <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Cadastro de estatura</h3>
+                            <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
+                            <button type="submit" name="resumo" class="btn btn-info pull-right">Voltar Para o Resumo</button>
+                        </div>
+                    </form>
                     <!-- /.box-header -->
                     <!-- form start -->
                     <div class="row" align="center">
