@@ -237,7 +237,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         echo "<td>
                                         <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_edit\" role=\"form\">
                                         <input type='hidden' name='idPerimetria' value='" . $perimetria['id'] . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Perimetria</button>
                                         </form>
                                         </td>";
                                     }
@@ -245,17 +245,49 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         echo "<td>
                                         <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
                                         <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Perimetria</button>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Perimetria</button>
                                         </form>
                                         </td>";
                                     }
-
-                                    echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=dobras_add\" role=\"form\">
-                                    <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Dobras</button>
-                                    </form>
-                                </td>";
+                                    $dobras = recuperaDados("dobras","avaliacao_id",$avaliacao['id']);
+                                    if($dobras != NULL){
+                                        echo "<td>";
+                                        if($cliente['classificacao_id'] == 1) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 2) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
+                                        }
+                                        echo"<input type='hidden' name='idDobras' value='" . $dobras['id'] . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Dobras</button>
+                                        </form>
+                                        </td>";
+                                    }
+                                    else{
+                                        echo "<td>";
+                                        if($cliente['classificacao_id'] == 1) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 2) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
+                                        }
+                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
+                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
+                                        }
+                                        echo"<input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                            <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Dobras</button>
+                                            </form>
+                                        </td>";
+                                    }
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";
