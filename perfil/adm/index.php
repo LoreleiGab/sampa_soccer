@@ -1,48 +1,65 @@
 <?php
 include "includes/menu.php";
+$idUser = $_SESSION['idUser'];
+$user = recuperaDados("usuarios","id",$idUser);
 ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
       <section class="content-header">
-          <h1>
-              Blank page
-              <small>it all starts here</small>
-          </h1>
-          <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li><a href="#">Examples</a></li>
-              <li class="active">Blank page</li>
-          </ol>
+          <h1>SACC - Sistema de Avaliação e Controle de Carga</h1>
       </section>
 
     <!-- Main content -->
       <section class="content">
 
-          <!-- Default box -->
-          <div class="box">
-              <div class="box-header with-border">
-                  <h3 class="box-title">Title</h3>
-
-                  <div class="box-tools pull-right">
-                      <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                              title="Collapse">
-                          <i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                          <i class="fa fa-times"></i></button>
+          <div class="row">
+              <!-- /.col -->
+              <div class="col-md-12">
+                  <!-- Widget: user widget style 1 -->
+                  <div class="box box-widget widget-user">
+                      <!-- Add the bg color to the header using any of the bg-* classes -->
+                      <div class="widget-user-header bg-aqua-active">
+                          <h3 class="widget-user-username"><?= $user['nome'] ?></h3>
+                          <h5 class="widget-user-desc"><?= $user['empresa'] ?></h5>
+                      </div>
+                      <div class="box-footer">
+                          <div class="row">
+                              <div class="col-sm-4 border-right">
+                                  <div class="description-block">
+                                      <h5 class="description-header">Email</h5>
+                                      <span class="description-text"><?= $user['email'] ?></span>
+                                  </div>
+                                  <!-- /.description-block -->
+                              </div>
+                              <!-- /.col -->
+                              <div class="col-sm-4 border-right">
+                                  <div class="description-block">
+                                      <h5 class="description-header">Telefone</h5>
+                                      <span class="description-text"><?= $user['telefone'] ?></span>
+                                  </div>
+                                  <!-- /.description-block -->
+                              </div>
+                              <!-- /.col -->
+                              <div class="col-sm-4">
+                                  <div class="description-block">
+                                      <h5 class="description-header">Ativado até</h5>
+                                      <span class="description-text"><?= dataBR($user['data_ativacao'])?></span>
+                                  </div>
+                                  <!-- /.description-block -->
+                              </div>
+                              <!-- /.col -->
+                          </div>
+                          <!-- /.row -->
+                      </div>
                   </div>
+                  <!-- /.widget-user -->
               </div>
-              <div class="box-body">
-                  Start creating your amazing application!
-              </div>
-              <!-- /.box-body -->
-              <div class="box-footer">
-                  Footer
-              </div>
-              <!-- /.box-footer-->
+              <!-- /.col -->
+
           </div>
-          <!-- /.box -->
+          <!-- /.row -->
 
       </section>
     <!-- /.content -->

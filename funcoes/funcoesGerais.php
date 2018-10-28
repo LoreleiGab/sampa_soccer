@@ -149,11 +149,10 @@ date_default_timezone_set("Brazil/East");
 		return $newstring;
 	}
 	//retorna data d/m/y de mysql/date(a-m-d)
-	function exibirDataBr($data)
-	{
-		$timestamp = strtotime($data);
-		return date('d/m/Y', $timestamp);
-	}
+    function dataBR($data){
+        $data = explode('-',$data);
+        return $data[2].'/'.$data[1].'/'.$data['0'];
+    }
 	// retorna datatime sem hora
 	function retornaDataSemHora($data)
 	{
