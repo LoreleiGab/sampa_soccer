@@ -11,9 +11,10 @@
                 <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-male"></i> Aluno</a></li>
             </li>
             <li class="header">LISTA</li>
-            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o"></i> Clientes</a></li>
+            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-circle-o text-aqua"></i> Clientes</a></li>
             <li class="header">OUTROS</li>
-            <li><a href="../../../include/logoff.php"><i class="fa fa-sign-out"></i><span>Sair</span></a></li>
+            <li><a href="?perfil=administrador"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="../../../include/logoff.hp"><i class="fa fa-sign-out"></i><span>Sair</span></a></li>
             <!--
             <li class="treeview">
                 <a href="#">
