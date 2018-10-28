@@ -44,13 +44,12 @@ function mascara(o,f){
 function execmascara(){
     v_obj.value=v_fun(v_obj.value)
 }
-function mtel(v){
-    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
-    v=v.replace(/(\d{2})/g,"+$1 $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/^(\d{4})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d)(\d{7})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
-    return v;
-}
+  function mtel(v){
+      v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+      v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+      v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+      return v;
+  }
 
  function mask(t, mask){
  var i = t.value.length;
@@ -61,23 +60,6 @@ function mtel(v){
  }
  }
  </script>
-<script>
-    $(document).ready(function(){
-        $(".input-mask-phone").mask("55(99)9999-999?9");
-        $("#idTel").change(function(){
-            $('.input-mask-phone').unmask();
-
-            switch (parseInt($(this).val())) {
-                case 55:
-                    $(".input-mask-phone").mask("55(99)9999-999?9");
-                    break;
-                case 1:
-                    $(".input-mask-phone").mask("1(999)999-9999");
-                    break;
-            }
-        })
-    });
-</script>
 
 <script type="text/javascript">
 	$(document).ready(function(){	$("#cnpj").mask("99.999.999/9999-99");});

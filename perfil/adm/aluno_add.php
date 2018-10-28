@@ -44,11 +44,11 @@ include "includes/menu.php";
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="telefone01">Telefone #1</labeL>
-                                    <input type="text" id="telefone01" name="telefone01" class="form-control input-mask-phone" maxlength="15">
+                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control input-mask-phone" maxlength="15">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="telefone02">Telefone #2</labeL>
-                                    <input type="text" id="telefone02" name="telefone02" class="form-control" maxlength="19">
+                                    <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" maxlength="19">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="email">Email</labeL>
