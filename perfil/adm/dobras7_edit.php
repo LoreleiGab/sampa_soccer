@@ -45,6 +45,10 @@ if(isset($_POST['carregar'])){
     $idDobras = $_POST['idDobras'];
 }
 
+if(isset($_POST['idCliente'])){
+    $idCliente = $_POST['idCliente'];
+}
+
 $dobras = recuperaDados("dobras","id",$idDobras);
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -68,6 +72,9 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                     </form>
                     <!-- /.box-header -->
                     <!-- form start -->
+                    <div class="row" align="center">
+                        <?php if(isset($mensagem)){echo $mensagem;};?>
+                    </div>
                     <form method="POST" action="?perfil=administrador&p=dobras7_edit" role="form">
                         <div class="box-body">
 
@@ -81,7 +88,7 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                                     <input type="text" id="s_escapular" name="s_escapular" class="form-control" value="<?= $dobras['s_escapular'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="tricipital">Trcipital</labeL>
+                                    <labeL for="tricipital">Tricipital</labeL>
                                     <input type="text" id="tricipital" name="tricipital" class="form-control" value="<?= $dobras['tricipital'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">

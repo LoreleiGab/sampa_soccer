@@ -50,9 +50,13 @@ $cliente = recuperaDados("clientes","id",$avaliacao['cliente_id']);
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-info">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro</h3>
-                    </div>
+                    <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Cadastro</h3>
+                            <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
+                            <button type="submit" name="resumo" class="btn btn-info pull-right">Voltar Para o Resumo</button>
+                        </div>
+                    </form>
                     <!-- /.box-header -->
                     <!-- form start -->
                     <div class="row" align="center">
@@ -82,7 +86,6 @@ $cliente = recuperaDados("clientes","id",$avaliacao['cliente_id']);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-default">Cancelar</button>
                             <input type='hidden' name='idCliente' value='<?= $cliente['id'] ?>'>
                             <input type='hidden' name='idAvaliacao' value='<?= $avaliacao['id'] ?>'>
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>

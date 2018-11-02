@@ -8,7 +8,6 @@ if(isset($_POST['avaliacao'])){
 
 $cliente = recuperaDados("clientes","id",$idCliente);
 ?>
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Main content -->
@@ -21,9 +20,14 @@ $cliente = recuperaDados("clientes","id",$idCliente);
             <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-info">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro</h3>
-                    </div>
+
+                    <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Cadastro</h3>
+                            <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
+                            <button type="submit" name="resumo" class="btn btn-info pull-right">Voltar Para o Resumo</button>
+                        </div>
+                    </form>
                     <!-- /.box-header -->
                     <!-- form start -->
                     <div class="row" align="center">
@@ -42,7 +46,7 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="peso">Peso</labeL>
-                                    <input type="text" id="peso" name="peso" class="form-control">
+                                    <input type="text" id="peso" name="peso"  class="form-control">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="altura">Altura</labeL>

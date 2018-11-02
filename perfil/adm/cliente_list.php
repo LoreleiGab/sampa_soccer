@@ -59,12 +59,6 @@ $query = mysqli_query($con,$sql);
                                     </form>
                                 </td>";
                                 echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_add\" role=\"form\">
-                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
-                                    <button type=\"submit\" name='avaliacao' class=\"btn btn-block btn-primary\">+ Avaliação</button>
-                                    </form>
-                                </td>";
-                                echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=cliente_resumo\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
                                     <button type=\"submit\" name='resumo' class=\"btn btn-block btn-primary\">Resumo</button>
