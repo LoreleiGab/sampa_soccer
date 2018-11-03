@@ -132,7 +132,7 @@ date_default_timezone_set("Brazil/East");
         $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
         // cálculo
         $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
-        echo $idade;
+        return $idade;
     }
 
 	//soma(+) ou substrai(-) dias de um date(a-m-d)
