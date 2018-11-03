@@ -1081,7 +1081,6 @@
     <column id="280" parent="249" name="clube">
       <Position>5</Position>
       <DataType>varchar(60)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="281" parent="249" name="categoria_id">
@@ -1093,13 +1092,11 @@
     <column id="282" parent="249" name="restricao">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="283" parent="249" name="ultimos_clubes">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="284" parent="249" name="cliente_id">
@@ -1377,7 +1374,7 @@
     </column>
     <column id="333" parent="255" name="email">
       <Position>6</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1471,402 +1468,407 @@
       <DataType>decimal(3,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="351" parent="256" name="fk_dobras_avaliacoes1_idx">
+    <column id="351" parent="256" name="perna">
+      <Position>10</Position>
+      <DataType>decimal(3,1 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="352" parent="256" name="fk_dobras_avaliacoes1_idx">
       <ColNames>avaliacao_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="256" name="PRIMARY">
+    <key id="353" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="353" parent="256" name="fk_dobras_avaliacoes1">
+    <foreign-key id="354" parent="256" name="fk_dobras_avaliacoes1">
       <ColNames>avaliacao_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>avaliacoes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="354" parent="257" name="id">
+    <column id="355" parent="257" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="257" name="cliente_id">
+    <column id="356" parent="257" name="cliente_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="257" name="estatura_pai">
+    <column id="357" parent="257" name="estatura_pai">
       <Position>3</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="257" name="estatura_mae">
+    <column id="358" parent="257" name="estatura_mae">
       <Position>4</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="257" name="estatura_prevista">
+    <column id="359" parent="257" name="estatura_prevista">
       <Position>5</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="257" name="estimativa">
+    <column id="360" parent="257" name="estimativa">
       <Position>6</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="257" name="margem_erro01">
+    <column id="361" parent="257" name="margem_erro01">
       <Position>7</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="257" name="margem_erro02">
+    <column id="362" parent="257" name="margem_erro02">
       <Position>8</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="362" parent="257" name="fk_estaturas_clientes1_idx">
+    <index id="363" parent="257" name="fk_estaturas_clientes1_idx">
       <ColNames>cliente_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="363" parent="257" name="PRIMARY">
+    <key id="364" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="364" parent="257" name="fk_estaturas_clientes">
+    <foreign-key id="365" parent="257" name="fk_estaturas_clientes">
       <ColNames>cliente_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>clientes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="365" parent="258" name="id">
+    <column id="366" parent="258" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="258" name="avaliacao_id">
+    <column id="367" parent="258" name="avaliacao_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="258" name="altura_dobro">
+    <column id="368" parent="258" name="altura_dobro">
       <Position>3</Position>
       <DataType>decimal(3,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="258" name="resultado">
+    <column id="369" parent="258" name="resultado">
       <Position>4</Position>
       <DataType>decimal(2,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="369" parent="258" name="fk_imcs_avaliacoes_idx">
+    <index id="370" parent="258" name="fk_imcs_avaliacoes_idx">
       <ColNames>avaliacao_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="370" parent="258" name="PRIMARY">
+    <key id="371" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="371" parent="258" name="fk_imcs_avaliacoes1">
+    <foreign-key id="372" parent="258" name="fk_imcs_avaliacoes1">
       <ColNames>avaliacao_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>avaliacoes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="372" parent="259" name="id">
+    <column id="373" parent="259" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="259" name="cliente_id">
+    <column id="374" parent="259" name="cliente_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="259" name="data_inicio">
+    <column id="375" parent="259" name="data_inicio">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="259" name="data_vencimento">
+    <column id="376" parent="259" name="data_vencimento">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="376" parent="259" name="plano_id">
+    <column id="377" parent="259" name="plano_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="259" name="valor">
+    <column id="378" parent="259" name="valor">
       <Position>6</Position>
       <DataType>decimal(7,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="259" name="forma_pagamento">
+    <column id="379" parent="259" name="forma_pagamento">
       <Position>7</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="259" name="outros">
+    <column id="380" parent="259" name="outros">
       <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="380" parent="259" name="fk_matricula_clientes1_idx">
+    <index id="381" parent="259" name="fk_matricula_clientes1_idx">
       <ColNames>cliente_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="381" parent="259" name="PRIMARY">
+    <key id="382" parent="259" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="382" parent="259" name="fk_matricula_clientes1">
+    <foreign-key id="383" parent="259" name="fk_matricula_clientes1">
       <ColNames>cliente_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>clientes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="383" parent="260" name="id">
+    <column id="384" parent="260" name="id">
       <Position>1</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="260" name="pe_dominante">
+    <column id="385" parent="260" name="pe_dominante">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="385" parent="260" name="PRIMARY">
+    <key id="386" parent="260" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="386" parent="261" name="id">
+    <column id="387" parent="261" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="387" parent="261" name="avaliacao_id">
+    <column id="388" parent="261" name="avaliacao_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="388" parent="261" name="torax">
+    <column id="389" parent="261" name="torax">
       <Position>3</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="389" parent="261" name="cintura">
+    <column id="390" parent="261" name="cintura">
       <Position>4</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="261" name="abdome">
+    <column id="391" parent="261" name="abdome">
       <Position>5</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="261" name="quadril">
+    <column id="392" parent="261" name="quadril">
       <Position>6</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="392" parent="261" name="coxa_direita">
+    <column id="393" parent="261" name="coxa_direita">
       <Position>7</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="261" name="coxa_esquerda">
+    <column id="394" parent="261" name="coxa_esquerda">
       <Position>8</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="261" name="perna_direita">
+    <column id="395" parent="261" name="perna_direita">
       <Position>9</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="261" name="perna_esquerda">
+    <column id="396" parent="261" name="perna_esquerda">
       <Position>10</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="261" name="biceps_direito">
+    <column id="397" parent="261" name="biceps_direito">
       <Position>11</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="261" name="biceps_esquerdo">
+    <column id="398" parent="261" name="biceps_esquerdo">
       <Position>12</Position>
       <DataType>decimal(4,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="261" name="punho">
+    <column id="399" parent="261" name="punho">
       <Position>13</Position>
       <DataType>decimal(3,1 digit)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="399" parent="261" name="fk_perimetrias_avaliacoes_idx">
+    <index id="400" parent="261" name="fk_perimetrias_avaliacoes_idx">
       <ColNames>avaliacao_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="400" parent="261" name="PRIMARY">
+    <key id="401" parent="261" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="401" parent="261" name="fk_perimetrias_avaliacoes1">
+    <foreign-key id="402" parent="261" name="fk_perimetrias_avaliacoes1">
       <ColNames>avaliacao_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>avaliacoes</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="402" parent="262" name="id">
+    <column id="403" parent="262" name="id">
       <Position>1</Position>
       <DataType>tinyint(2)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="262" name="posicao">
+    <column id="404" parent="262" name="posicao">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="404" parent="262" name="PRIMARY">
+    <key id="405" parent="262" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="405" parent="263" name="id">
+    <column id="406" parent="263" name="id">
       <Position>1</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="263" name="sexo">
+    <column id="407" parent="263" name="sexo">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="407" parent="263" name="PRIMARY">
+    <key id="408" parent="263" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="408" parent="264" name="id">
+    <column id="409" parent="264" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="264" name="nome">
+    <column id="410" parent="264" name="nome">
       <Position>2</Position>
       <DataType>varchar(160)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="264" name="empresa">
+    <column id="411" parent="264" name="empresa">
       <Position>3</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="264" name="email">
+    <column id="412" parent="264" name="email">
       <Position>4</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="264" name="telefone">
+    <column id="413" parent="264" name="telefone">
       <Position>5</Position>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="413" parent="264" name="senha">
+    <column id="414" parent="264" name="senha">
       <Position>6</Position>
       <DataType>varchar(120)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="414" parent="264" name="data_ativacao">
+    <column id="415" parent="264" name="data_ativacao">
       <Position>7</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="415" parent="264" name="PRIMARY">
+    <key id="416" parent="264" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="416" parent="265" name="id">
+    <column id="417" parent="265" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="417" parent="265" name="avaliacao_id">
+    <column id="418" parent="265" name="avaliacao_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="418" parent="265" name="medida">
+    <column id="419" parent="265" name="medida">
       <Position>3</Position>
       <DataType>smallint(3)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="419" parent="265" name="fk_wells_avaliacoes1_idx">
+    <index id="420" parent="265" name="fk_wells_avaliacoes1_idx">
       <ColNames>avaliacao_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="420" parent="265" name="PRIMARY">
+    <key id="421" parent="265" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="421" parent="265" name="fk_wells_avaliacoes">
+    <foreign-key id="422" parent="265" name="fk_wells_avaliacoes">
       <ColNames>avaliacao_id</ColNames>
       <RefSchemaName>sampa</RefSchemaName>
       <RefTableName>avaliacoes</RefTableName>

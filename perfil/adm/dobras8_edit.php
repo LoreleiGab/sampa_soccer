@@ -10,11 +10,12 @@ if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $s_iliaca = $_POST['s_iliaca'] ?? NULL;
     $abdominal = $_POST['abdominal'] ?? NULL;
     $coxa = $_POST['coxa'] ?? NULL;
+    $perna = $_POST['perna'] ?? NULL;
 }
 
 if(isset($_POST['cadastra'])) {
     $idAvaliacao = $_POST['idAvaliacao'];
-    $sql = "INSERT INTO dobras (avaliacao_id, peitoral, s_escapular, tricipital, a_media, s_iliaca, abdominal, coxa) VALUES ('$idAvaliacao', '$peitoral', '$s_escapular', '$tricipital', '$a_media', '$s_iliaca', '$abdominal', '$coxa')";
+    $sql = "INSERT INTO dobras (avaliacao_id, peitoral, s_escapular, tricipital, a_media, s_iliaca, abdominal, coxa, perna) VALUES ('$idAvaliacao', '$peitoral', '$s_escapular', '$tricipital', '$a_media', '$s_iliaca', '$abdominal', '$coxa', '$perna')";
     if(mysqli_query($con,$sql)){
         $idDobras = recuperaUltimo("dobras");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -26,7 +27,7 @@ if(isset($_POST['cadastra'])) {
 
 if(isset($_POST['edita'])) {
     $idDobras = $_POST['idDobras'];
-    $sql = "UPDATE dobras SET peitoral = '$peitoral', s_escapular = '$s_escapular', tricipital = '$tricipital', a_media = '$a_media', s_iliaca = '$s_iliaca', abdominal = '$abdominal', coxa = '$coxa' WHERE id = '$idDobras'";
+    $sql = "UPDATE dobras SET peitoral = '$peitoral', s_escapular = '$s_escapular', tricipital = '$tricipital', a_media = '$a_media', s_iliaca = '$s_iliaca', abdominal = '$abdominal', coxa = '$coxa', perna = '$perna' WHERE id = '$idDobras'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
@@ -75,7 +76,7 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                     <div class="row" align="center">
                         <?php if(isset($mensagem)){echo $mensagem;};?>
                     </div>
-                    <form method="POST" action="?perfil=administrador&p=dobras7_edit" role="form">
+                    <form method="POST" action="?perfil=administrador&p=dobras8_edit" role="form">
                         <div class="box-body">
 
                             <div class="row">
@@ -106,6 +107,10 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                                 <div class="form-group col-md-1">
                                     <labeL for="coxa">Coxa</labeL>
                                     <input type="text" id="coxa" name="coxa" class="form-control" value="<?= $dobras['coxa'] ?>">
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <labeL for="perna">Perna</labeL>
+                                    <input type="text" id="perna" name="perna" class="form-control" value="<?= $dobras['perna'] ?>>
                                 </div>
                             </div>
 
