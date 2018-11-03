@@ -36,10 +36,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <label>Classificação do cliente:</label> <?= $classificacao['nome_classificacao'] ?>
                         </div>
                         <div class="row">
-                            <div class="form-group col-md-11">
+                            <div class="form-group col-md-9">
                                 <label>Nome completo:</label> <?= $cliente['nome'] ?>
                             </div>
-                            <div class="form-group col-md-1">
+                            <div class="form-group col-md-3">
                                 <label>Idade:</label> <?= idade($cliente['data_nascimento']) ?>
                             </div>
                         </div>
@@ -62,13 +62,15 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         if($cliente['classificacao_id'] == 1) {
                             $atleta = recuperaDados("atleta", "cliente_id", $idCliente);
                             $pe = recuperaDados("pe_dominantes","id",$atleta['pe_dominante_id']);
+                            $categoria = recuperaDados("categoria_atletas","id",$atleta['categoria_id']);
+                            $posicao = recuperaDados("posicoes","id", $atleta['posicao_id']);
                             ?>
                             <div class="row">
                                 <div class="form-group col-md-2">
                                     <labeL>Apelido:</labeL> <?= $atleta['apelido'] ?>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL>Posição:</labeL> <?= $atleta['posicao'] ?>
+                                    <labeL>Posição:</labeL> <?= $posicao['posicao'] ?>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL>Pé dominante:</labeL> <?= $pe['pe_dominante'] ?>
@@ -77,7 +79,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <labeL>Clube:</labeL> <?= $atleta['clube'] ?>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL>Categoria:</labeL> <?= $atleta['categoria'] ?>
+                                    <labeL>Categoria:</labeL> <?= $categoria['categoria'] ?>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -91,13 +93,14 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         if($cliente['classificacao_id'] == 2) {
                             $base = recuperaDados("base", "cliente_id", $idCliente);
                             $pe = recuperaDados("pe_dominantes","id",$base['pe_dominante_id']);
+                            $posicao = recuperaDados("posicoes","id", $base['posicao_id']);
                             ?>
                             <div class="row">
                                 <div class="form-group col-md-2">
                                     <labeL>Apelido:</labeL> <?= $base['apelido'] ?>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL>Posição:</labeL> <?= $base['posicao'] ?>
+                                    <labeL>Posição:</labeL> <?= $posicao['posicao'] ?>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL>Pé dominante:</labeL> <?= $pe['pe_dominante'] ?>
