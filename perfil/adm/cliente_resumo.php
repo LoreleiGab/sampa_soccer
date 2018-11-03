@@ -23,6 +23,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <div class="box box-info">
                     <div class="box-header with-border">
                         <h3 class="box-title">Cadastro</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
@@ -30,8 +35,13 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         <div class="form-group">
                             <label>Classificação do cliente:</label> <?= $classificacao['nome_classificacao'] ?>
                         </div>
-                        <div class="form-group">
-                            <label>Nome completo:</label> <?= $cliente['nome'] ?>
+                        <div class="row">
+                            <div class="form-group col-md-11">
+                                <label>Nome completo:</label> <?= $cliente['nome'] ?>
+                            </div>
+                            <div class="form-group col-md-1">
+                                <label>Idade:</label> <?= idade($cliente['data_nascimento']) ?>
+                            </div>
                         </div>
 
                         <div class="row">
@@ -71,7 +81,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 </div>
                             </div>
                             <div class="form-group">
-                                <labeL>Contatos:</labeL> <?= $atleta['contatos'] ?>
+                                <labeL>Restrição:</labeL> <?= $atleta['restricao'] ?>
                             </div>
                             <div class="form-group">
                                 <labeL>Últimos clubes:</labeL> <?= $atleta['ultimos_clubes'] ?>
@@ -139,6 +149,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Estatura</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
                     </div>
                     <!-- /.box-header -->
                     <?php
@@ -199,6 +214,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Avaliações</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
                         <form method="POST" action="?perfil=administrador&p=avaliacao_add" role="form">
                             <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
                             <button type="submit" name="avaliacao" class="btn btn-info pull-right">Adicionar</button>
@@ -329,6 +349,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             ?>
                                 <div class="box-header with-border">
                                     <h3 class="box-title">Perimetria</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="box-body">
                                     <table id="example1" class="table table-bordered table-striped">
@@ -407,7 +432,12 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             if($num_dobra > 0){
                                 ?>
                                 <div class="box-header with-border">
-                                    <h3 class="box-title">Perimetria</h3>
+                                    <h3 class="box-title">Dobras</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="box-body">
                                     <table id="example1" class="table table-bordered table-striped">

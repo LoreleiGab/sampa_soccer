@@ -123,6 +123,18 @@ date_default_timezone_set("Brazil/East");
 		return "$diasemana";
 	}
 
+	function idade($data_nascimento){
+        // separando yyyy, mm, ddd
+        list($ano, $mes, $dia) = explode('-', $data_nascimento);
+        // data atual
+        $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+        // Descobre a unix timestamp da data de nascimento do fulano
+        $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+        // cálculo
+        $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+        echo $idade;
+    }
+
 	//soma(+) ou substrai(-) dias de um date(a-m-d)
 	function somarDatas($data,$dias)
 	{
@@ -153,18 +165,6 @@ date_default_timezone_set("Brazil/East");
 		$data = date('Y-m-d H:i:s');
 		$sql = "INSERT INTO `log` (`id`, `idUsuario`, `enderecoIP`, `dataLog`, `descricao`)
 			VALUES (NULL, '$idUser', '$ip', '$data', '$logTratado')";
-		$mysqli = bancoMysqli();
-		$mysqli->query($sql);
-	}
-
-	function gravarLogSenha($log, $idUsuario)
-	{
-		//grava na tabela log as alterações de senha
-		$logTratado = addslashes($log);
-		$ip = $_SERVER["REMOTE_ADDR"];
-		$data = date('Y-m-d H:i:s');
-		$sql = "INSERT INTO `log` (`id`, `idUsuario`, `enderecoIP`, `dataLog`, `descricao`)
-			VALUES (NULL, '$idUsuario', '$ip', '$data', '$logTratado')";
 		$mysqli = bancoMysqli();
 		$mysqli->query($sql);
 	}
@@ -209,32 +209,6 @@ date_default_timezone_set("Brazil/East");
 		}
 	}
 
-
-	function geraOpcaoUsuario($tabela, $cargo,$select)
-	{
-		//gera os options de um select
-        if($cargo == 1){
-            $sql = "SELECT * FROM $tabela WHERE fiscal = 1 AND publicado = 1 ORDER BY 2";
-        }else{
-            $sql = "SELECT * FROM $tabela WHERE fiscal = 0 AND publicado = 1 ORDER BY 2";
-        }
-
-
-		$con = bancoMysqli();
-		$query = mysqli_query($con,$sql);
-		while($option = mysqli_fetch_row($query))
-		{
-			if($option[0] == $select)
-			{
-				echo "<option value='".$option[0]."' selected >".$option[1]."</option>";
-			}
-			else
-			{
-				echo "<option value='".$option[0]."'>".$option[1]."</option>";
-			}
-		}
-	}
-
 	function geraCombobox($tabela,$campo,$order,$select)
 	{
 		//gera os options de um select
@@ -255,16 +229,6 @@ date_default_timezone_set("Brazil/East");
 		}
 	}
 
-	function retornaTipo($id)
-	{
-		//retorna o tipo de evento
-		$con = bancoMysqli();
-		$sql = "SELECT * FROM tipo_evento WHERE id = '$id'";
-		$query = mysqli_query($con,$sql);
-		$x = mysqli_fetch_array($query);
-		return $x['tipoEvento'];
-	}
-
 	function recuperaModulo($pag)
 	{
 		$sql = "SELECT * FROM modulo WHERE pagina = '$pag'";
@@ -272,77 +236,6 @@ date_default_timezone_set("Brazil/East");
 		$query = mysqli_query($con,$sql);
 		$modulo = mysqli_fetch_array($query);
 		return $modulo;
-	}
-
-	function retornaModulos($perfil)
-	{
-		// recupera quais módulos o usuário tem acesso
-		$sql = "SELECT * FROM perfil WHERE id = $perfil";
-		$con = bancoMysqli();
-		$query = mysqli_query($con,$sql);
-		$campoFetch = mysqli_fetch_array($query);
-		$nome = "";
-		while($fieldinfo = mysqli_fetch_field($query))
-		{
-			if(($campoFetch[$fieldinfo->name] == 1) AND ($fieldinfo->name != 'id'))
-			{
-				$descricao = recuperaModulo($fieldinfo->name);
-				$nome = $nome.";\n + ".$descricao['nome'];
-			}
-		}
-		return substr($nome,1);
-	}
-
-	function listaModulos($perfil)
-	{
-		//gera as tds dos módulos a carregar
-		// recupera quais módulos o usuário tem acesso
-		$sql = "SELECT * FROM perfil WHERE id = $perfil";
-		$con = bancoMysqli();
-		$query = mysqli_query($con,$sql);
-		$campoFetch = mysqli_fetch_array($query);
-		while($fieldinfo = mysqli_fetch_field($query))
-		{
-			if(($campoFetch[$fieldinfo->name] == 1) AND ($fieldinfo->name != 'id'))
-			{
-				$descricao = recuperaModulo($fieldinfo->name);
-				echo "<tr>";
-				echo "<td class='list_description'><b>".$descricao['nome']."</b></td>";
-				echo "<td class='list_description'>".$descricao['descricao']."</td>";
-				echo "
-					<td class='list_description'>
-						<form method='POST' action='?perfil=$fieldinfo->name'>
-							<input type ='submit' class='btn btn-theme btn-lg btn-block' value='carregar'></td></form>"	;
-				echo "</tr>";
-			}
-		}
-	}
-
-	function listaModulosAlfa($perfil)
-	{
-		//gera as tds dos módulos a carregar
-		$con = bancoMysqli();
-		// recupera os módulos do sistema
-		$sql_modulos = "SELECT pagina FROM modulo ORDER BY nome";
-		$query_modulos = mysqli_query($con,$sql_modulos);
-		while($modulos = mysqli_fetch_array($query_modulos))
-		{
-			$sql = "SELECT * FROM perfil WHERE id = $perfil"; 
-			$query = mysqli_query($con,$sql);
-			$campoFetch = mysqli_fetch_array($query);
-			if(($campoFetch[$modulos['pagina']] == 1) AND ($campoFetch[$modulos['pagina']] != 'perfil.id'))
-			{
-				$descricao = recuperaModulo($modulos['pagina']);
-				echo "<tr>";
-				echo "<td class='list_description'><b>".$descricao['nome']."</b></td>";
-				echo "<td class='list_description'>".$descricao['descricao']."</td>";
-				echo "
-					<td class='list_description'>
-						<form method='POST' action='?perfil=".$modulos['pagina']."' >
-							<input type ='submit' class='btn btn-theme btn-lg btn-block' value='carregar'></td></form>"	;
-				echo "</tr>";
-			}
-		}
 	}
 
 	function recuperaUsuarioCompleto($id)
@@ -571,73 +464,29 @@ date_default_timezone_set("Brazil/East");
 
 	// Gera o endereço no PDF
 	function enderecoCEP($cep)
-	{
-		$con = bancoMysqliCEP();
-		$cep_index = substr($cep, 0, 5);
-		$dados['sucesso'] = 0;
-		$sql01 = "SELECT * FROM igsis_cep_cep_log_index WHERE cep5 = '$cep_index' LIMIT 0,1";
-		$query01 = mysqli_query($con,$sql01);
-		$campo01 = mysqli_fetch_array($query01);
-		$uf = "igsis_cep_".$campo01['uf'];
-		$sql02 = "SELECT * FROM $uf WHERE cep = '$cep'";
-		$query02 = mysqli_query($con,$sql02);
-		$campo02 = mysqli_fetch_array($query02);
-		$res = mysqli_num_rows($query02);
-		if($res > 0)
-		{
-			$dados['sucesso'] = 1;
-		}
-		else
-		{
-			$dados['sucesso'] = 0;
-		}
-		$dados['rua']     = $campo02['tp_logradouro']." ".$campo02['logradouro'];
-		$dados['bairro']  = $campo02['bairro'];
-		$dados['cidade']  = $campo02['cidade'];
-		$dados['estado']  = strtoupper($campo01['uf']);
-		return $dados;
-	}
-function verificaArquivosExistentesEvento($idEvento,$idDocumento)
-{
-	$con = bancoMysqli();
-	$verificacaoArquivo = "SELECT arquivo FROM upload_arquivo WHERE idPessoa = '$idEvento' AND idUploadListaDocumento = '$idDocumento' AND publicado = '1'";
-	$envio = mysqli_query($con, $verificacaoArquivo);
-
-	if (mysqli_num_rows($envio) > 0) {
-		return true;
-	}
-}
-
-function verificaArquivosExistentesComunicacao($idEvento)
-{
-	$con = bancoMysqli();
-	$verificacaoArquivo = "SELECT arquivo FROM upload_arquivo_com_prod WHERE idEvento = '$idEvento' AND publicado = '1'";
-	$envio = $con->query($verificacaoArquivo);
-	$qtd = mysqli_num_rows($envio);
-	if($qtd > 0){
-		return $qtd;
-	}
-}
-
-function verificaArquivosExistentesPF($idPessoa,$idDocumento)
-{
-	$con = bancoMysqli();
-	$verificacaoArquivo = "SELECT arquivo FROM upload_arquivo WHERE idTipoPessoa = '1' AND idPessoa = '$idPessoa' AND idUploadListaDocumento = '$idDocumento' AND publicado = '1'";
-	$envio = mysqli_query($con, $verificacaoArquivo);
-	if (mysqli_num_rows($envio) > 0) {
-		return true;
-	}
-}
-
-function verificaArquivosExistentesPJ($idPessoa,$idDocumento)
-{
-    $con = bancoMysqli();
-    $verificacaoArquivo = "SELECT arquivo FROM upload_arquivo WHERE idTipoPessoa = '2' AND idPessoa = '$idPessoa' AND idUploadListaDocumento = '$idDocumento' AND publicado = '1'";
-    $envio = mysqli_query($con, $verificacaoArquivo);
-    if (mysqli_num_rows($envio) > 0) {
-        return true;
+    {
+        $con = bancoMysqliCEP();
+        $cep_index = substr($cep, 0, 5);
+        $dados['sucesso'] = 0;
+        $sql01 = "SELECT * FROM igsis_cep_cep_log_index WHERE cep5 = '$cep_index' LIMIT 0,1";
+        $query01 = mysqli_query($con, $sql01);
+        $campo01 = mysqli_fetch_array($query01);
+        $uf = "igsis_cep_" . $campo01['uf'];
+        $sql02 = "SELECT * FROM $uf WHERE cep = '$cep'";
+        $query02 = mysqli_query($con, $sql02);
+        $campo02 = mysqli_fetch_array($query02);
+        $res = mysqli_num_rows($query02);
+        if ($res > 0) {
+            $dados['sucesso'] = 1;
+        } else {
+            $dados['sucesso'] = 0;
+        }
+        $dados['rua'] = $campo02['tp_logradouro'] . " " . $campo02['logradouro'];
+        $dados['bairro'] = $campo02['bairro'];
+        $dados['cidade'] = $campo02['cidade'];
+        $dados['estado'] = strtoupper($campo01['uf']);
+        return $dados;
     }
-}
 
 
 function listaArquivoCamposMultiplos($idPessoa,$tipoPessoa,$idCampo,$pagina,$pf)
