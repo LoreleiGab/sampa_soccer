@@ -14,7 +14,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $telefone02 = $_POST['telefone02'];
     $email = $_POST['email'];
     $diagnostico = $_POST['diagnostico'];
-    $contatos = $_POST['contatos'];
+    $restricao = $_POST['restricao'];
     $ultimos_clubes = $_POST['ultimos_clubes'];
     $classificacao_id = 1;
     $usuario_id = $_SESSION['idUser'];
@@ -24,7 +24,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_atleta = "INSERT INTO atleta (apelido, posicao, pe_dominante_id, clube, categoria, contatos, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$clube', '$categoria', '$contatos', '$ultimos_clubes', '$idCliente')";
+        $sql_atleta = "INSERT INTO atleta (apelido, posicao, pe_dominante_id, clube, categoria, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$clube', '$categoria', '$restricao', '$ultimos_clubes', '$idCliente')";
         if(mysqli_query($con,$sql_atleta)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -40,7 +40,7 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao = '$posicao', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria = '$categoria', contatos = '$contatos', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
+        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao = '$posicao', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria = '$categoria', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_atleta)) {
             $mensagem = mensagem("success", "Gravado com sucesso!").$sql_edita_atleta;
         }
@@ -131,8 +131,8 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                                 </div>
                             </div>
                             <div class="form-group">
-                                <labeL for="contatos">Contatos</labeL>
-                                <input id="contatos" type="text" name="contatos" class="form-control" maxlength="255" value="<?= $atleta['contatos'] ?>">
+                                <labeL for="restricao">Restrição</labeL>
+                                <input id="restricao" type="text" name="restricao" class="form-control" maxlength="255" value="<?= $atleta['restricao'] ?>">
                             </div>
                             <div class="form-group">
                                 <labeL for="ultimos_clubes">Últimos clubes</labeL>

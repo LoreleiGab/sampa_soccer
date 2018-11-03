@@ -72,8 +72,8 @@ include "includes/menu.php";
                                 </div>
                             </div>
                             <div class="form-group">
-                                <labeL for="contatos">Contatos</labeL>
-                                <input id="contatos" type="text" name="contatos" class="form-control" maxlength="255">
+                                <labeL for="restricao">Restrição</labeL>
+                                <input id="restricao" type="text" name="restricao" class="form-control" maxlength="255">
                             </div>
                             <div class="form-group">
                                 <labeL for="ultimos_clubes">Últimos clubes</labeL>
