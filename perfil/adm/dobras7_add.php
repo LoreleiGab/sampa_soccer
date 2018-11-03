@@ -30,7 +30,7 @@ if(isset($_POST['idAvaliacao'])){
                     </form>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form method="POST" action="?perfil=administrador&p=dobras8_edit" role="form">
+                    <form method="POST" action="?perfil=administrador&p=dobras7_edit" role="form">
                         <div class="box-body">
 
                             <div class="row">
@@ -61,10 +61,6 @@ if(isset($_POST['idAvaliacao'])){
                                 <div class="form-group col-md-1">
                                     <labeL for="coxa">Coxa</labeL>
                                     <input type="text" id="coxa" name="coxa" class="form-control">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="perna">Perna</labeL>
-                                    <input type="text" id="perna" name="perna" class="form-control">
                                 </div>
                             </div>
 

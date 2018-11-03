@@ -454,6 +454,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             <th>S Ilíaca</th>
                                             <th>Abdominal</th>
                                             <th>Coxa</th>
+                                            <th>Perna</th>
                                         </tr>
                                         </thead>
                                         <?php
@@ -468,6 +469,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "<td>".$dob['s_iliaca']."</td>";
                                             echo "<td>".$dob['abdominal']."</td>";
                                             echo "<td>".$dob['coxa']."</td>";
+                                            echo "<td>".$dob['perna']."</td>";
                                             echo "</tr>";
                                             echo "</tbody>";
                                         }
@@ -482,6 +484,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             <th>S Ilíaca</th>
                                             <th>Abdominal</th>
                                             <th>Coxa</th>
+                                            <th>Perna</th>
                                         </tr>
                                         </tfoot>
                                     </table>

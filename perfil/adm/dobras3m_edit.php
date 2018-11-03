@@ -76,41 +76,21 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                     <div class="row" align="center">
                         <?php if(isset($mensagem)){echo $mensagem;};?>
                     </div>
-                    <form method="POST" action="?perfil=administrador&p=dobras8_edit" role="form">
+                    <form method="POST" action="?perfil=administrador&p=dobras3m_edit" role="form">
                         <div class="box-body">
 
                             <div class="row">
-                                <div class="form-group col-md-1">
+                                <div class="form-group col-md-2">
                                     <labeL for="peitoral">Peitoral</labeL>
                                     <input type="text" id="peitoral" name="peitoral" class="form-control" value="<?= $dobras['peitoral'] ?>">
                                 </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="s_escapular">Escapular</labeL>
-                                    <input type="text" id="s_escapular" name="s_escapular" class="form-control" value="<?= $dobras['s_escapular'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="tricipital">Tricipital</labeL>
-                                    <input type="text" id="tricipital" name="tricipital" class="form-control" value="<?= $dobras['tricipital'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="a_media">A Media</labeL>
-                                    <input type="text" id="a_media" name="a_media" class="form-control" value="<?= $dobras['a_media'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="s_iliaca">S Ilíaca</labeL>
-                                    <input type="text" id="s_iliaca" name="s_iliaca" class="form-control" value="<?= $dobras['s_iliaca'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
+                                <div class="form-group col-md-2">
                                     <labeL for="abdominal">Abdominal</labeL>
                                     <input type="text" id="abdominal" name="abdominal" class="form-control" value="<?= $dobras['abdominal'] ?>">
                                 </div>
-                                <div class="form-group col-md-1">
+                                <div class="form-group col-md-2">
                                     <labeL for="coxa">Coxa</labeL>
                                     <input type="text" id="coxa" name="coxa" class="form-control" value="<?= $dobras['coxa'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="perna">Perna</labeL>
-                                    <input type="text" id="perna" name="perna" class="form-control" value="<?= $dobras['perna'] ?>">
                                 </div>
                             </div>
 
