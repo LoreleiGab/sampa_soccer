@@ -26,16 +26,16 @@ include "includes/menu.php";
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180">
+                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180" required>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-2">
                                     <labeL for="data_nascimento">Data de Nascimento</labeL>
-                                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-control">
+                                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" required>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="telefone01">Telefone #1</labeL>
-                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control">
+                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" required>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="telefone02">Telefone #2</labeL>
@@ -43,7 +43,7 @@ include "includes/menu.php";
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="email">Email</labeL>
-                                    <input type="email" id="email" name="email" class="form-control">
+                                    <input type="email" id="email" name="email" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -52,12 +52,15 @@ include "includes/menu.php";
                                     <input type="text" id="apelido" name="apelido" class="form-control">
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="posicao">Posição</labeL>
-                                    <input type="text" id="posicao" name="posicao" class="form-control">
+                                    <labeL for="posicao_id">Posição</labeL>
+                                    <select id="posicao_id" name="posicao_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("posicoes","") ?>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL for="pe_dominante">Pé dominante</labeL>
-                                    <select id="pe_dominante" name="pe_dominante" class="form-control">
+                                    <select id="pe_dominante" name="pe_dominante" class="form-control" required>
                                         <option value="">Selecione...</option>
                                         <?php geraOpcao("pe_dominantes","") ?>
                                     </select>
@@ -67,8 +70,11 @@ include "includes/menu.php";
                                     <input type="text" id="clube" name="clube" class="form-control">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL for="categoria">Categoria</labeL>
-                                    <input type="text" id="categoria" name="categoria" class="form-control">
+                                    <labeL for="categoria_id">Categoria</labeL>
+                                    <select id="categoria_id" name="categoria_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("categoria_atletas","") ?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">

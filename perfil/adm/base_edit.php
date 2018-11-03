@@ -5,7 +5,7 @@ $con = bancoMysqli();
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
-    $posicao = $_POST['posicao'];
+    $posicao_id = $_POST['posicao_id'];
     $pe_dominante = $_POST['pe_dominante'];
     $data_nascimento = $_POST['data_nascimento'];
     $telefone01 = $_POST['telefone01'];
@@ -21,7 +21,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_base = "INSERT INTO base (apelido, posicao, pe_dominante_id, restricao, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$restricao', '$idCliente')";
+        $sql_base = "INSERT INTO base (apelido, posicao_id, pe_dominante_id, restricao, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$restricao', '$idCliente')";
         if(mysqli_query($con,$sql_base)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -33,11 +33,12 @@ if(isset($_POST['cadastrar'])){
         $mensagem = mensagem("danger","[COD2]Erro ao gravar! Tente novamente.");
     }
 }
+
 if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_base = "UPDATE base SET apelido = '$apelido', posicao = '$posicao', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
+        $sql_edita_base = "UPDATE base SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_base)) {
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
@@ -80,9 +81,15 @@ $base = recuperaDados("base","cliente_id",$idCliente);
                     </div>
                     <form method="POST" action="?perfil=administrador&p=base_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                            <div class="row">
+                                <div class="form-group col-md-11">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                                </div>
+                                <div class="form-group col-md-1" align="center">
+                                    <label>Idade</label><br/>
+                                    <?= idade($cliente['data_nascimento']) ?>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-2">
@@ -108,8 +115,11 @@ $base = recuperaDados("base","cliente_id",$idCliente);
                                     <input type="text" id="apelido" name="apelido" class="form-control" value="<?= $base['apelido'] ?>">
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="posicao">Posição</labeL>
-                                    <input type="text" id="posicao" name="posicao" class="form-control" value="<?= $base['posicao'] ?>">
+                                    <labeL for="posicao_id">Posição</labeL>
+                                    <select id="posicao_id" name="posicao_id" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("posicoes",$base['posicao_id'] ) ?>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL for="pe_dominante">Pé dominante</labeL>

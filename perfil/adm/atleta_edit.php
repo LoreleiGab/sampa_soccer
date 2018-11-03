@@ -5,11 +5,11 @@ $con = bancoMysqli();
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
-    $posicao = $_POST['posicao'];
+    $posicao_id = $_POST['posicao_id'];
     $pe_dominante = $_POST['pe_dominante'];
     $data_nascimento = $_POST['data_nascimento'];
     $clube = $_POST['clube'];
-    $categoria = $_POST['categoria'];
+    $categoria_id = $_POST['categoria_id'];
     $telefone01 = $_POST['telefone01'];
     $telefone02 = $_POST['telefone02'];
     $email = $_POST['email'];
@@ -24,7 +24,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_atleta = "INSERT INTO atleta (apelido, posicao, pe_dominante_id, clube, categoria, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao', '$pe_dominante', '$clube', '$categoria', '$restricao', '$ultimos_clubes', '$idCliente')";
+        $sql_atleta = "INSERT INTO atleta (apelido, posicao_id, pe_dominante_id, clube, categoria_id, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$clube', '$categoria_id', '$restricao', '$ultimos_clubes', '$idCliente')";
         if(mysqli_query($con,$sql_atleta)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -40,9 +40,9 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao = '$posicao', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria = '$categoria', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
+        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria_id = '$categoria_id', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_atleta)) {
-            $mensagem = mensagem("success", "Gravado com sucesso!").$sql_edita_atleta;
+            $mensagem = mensagem("success", "Gravado com sucesso!");
         }
         else{
             $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
@@ -83,10 +83,17 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                     </div>
                     <form method="POST" action="?perfil=administrador&p=atleta_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label for="nome">Nome completo</label>
-                                <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                            <div class="row">
+                                <div class="form-group col-md-11">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" class="form-control" maxlength="180" value="<?= $cliente['nome'] ?>">
+                                </div>
+                                <div class="form-group col-md-1" align="center">
+                                    <label>Idade</label><br/>
+                                    <?= idade($cliente['data_nascimento']) ?>
+                                </div>
                             </div>
+
                             <div class="row">
                                 <div class="form-group col-md-2">
                                     <labeL for="data_nascimento">Data de Nascimento</labeL>
@@ -111,8 +118,11 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                                     <input type="text" id="apelido" name="apelido" class="form-control" value="<?= $atleta['apelido'] ?>">
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="posicao">Posição</labeL>
-                                    <input type="text" id="posicao" name="posicao" class="form-control" value="<?= $atleta['posicao'] ?>">
+                                    <labeL for="posicao_id">Posição</labeL>
+                                    <select id="posicao_id" name="posicao_id" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("posicoes",$atleta['posicao_id'] ) ?>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <labeL for="pe_dominante">Pé dominante</labeL>
@@ -126,8 +136,11 @@ $atleta = recuperaDados("atleta","cliente_id",$idCliente);
                                     <input type="text" id="clube" name="clube" class="form-control" value="<?= $atleta['clube'] ?>">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL for="categoria">Categoria</labeL>
-                                    <input type="text" id="categoria" name="categoria" class="form-control" value="<?= $atleta['categoria'] ?>">
+                                    <labeL for="categoria_id">Categoria</labeL>
+                                    <select id="categoria_id" name="categoria_id" class="form-control">
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcao("categoria_atletas",$atleta['categoria_id']) ?>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
