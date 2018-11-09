@@ -251,7 +251,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
                                     echo "<td>" . $avaliacao['peso'] . "</td>";
                                     echo "<td>" . $avaliacao['altura'] . "</td>";
-                                    echo "<td>" . $imc . "</td>";
+                                    echo "<td>" . imc($avaliacao['peso'],$avaliacao['altura']) ."</td>";
                                     echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">
                                     <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
