@@ -240,7 +240,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <th>Peso</th>
                                     <th>Altura</th>
                                     <th>IMC</th>
-                                    <th colspan="3" width="10%">Ação</th>
+                                    <th colspan="4" width="10%">Ação</th>
                                 </tr>
                                 </thead>
                                 <?php
@@ -316,6 +316,25 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             </form>
                                         </td>";
                                     }
+                                    $wells = recuperaDados("wells","avaliacao_id",$avaliacao['id']);
+                                    if($wells != NULL){
+                                        echo "<td>
+                                        <form method=\"POST\" action=\"?perfil=administrador&p=wells_edit\" role=\"form\">
+                                        <input type='hidden' name='idWells' value='" . $wells['id'] . "'>
+                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Wells</button>
+                                        </form>
+                                        </td>";
+                                    }
+                                    else{
+                                        echo "<td>
+                                        <form method=\"POST\" action=\"?perfil=administrador&p=wells_add\" role=\"form\">
+                                        <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Wells</button>
+                                        </form>
+                                        </td>";
+                                    }
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";
@@ -326,7 +345,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <th>Peso</th>
                                     <th>Altura</th>
                                     <th>IMC</th>
-                                    <th colspan="3" width="10%">Ação</th>
+                                    <th colspan="4" width="10%">Ação</th>
                                 </tr>
                                 </tfoot>
                             </table>
