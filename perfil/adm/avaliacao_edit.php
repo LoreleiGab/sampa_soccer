@@ -15,7 +15,7 @@ if(isset($_POST['cadastra'])){
         $idAvaliacao = recuperaUltimo("avaliacoes");
         $mensagem = mensagem("success","Gravado com suscesso!");
     }else{
-        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
+        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }
 }
 
@@ -26,7 +26,7 @@ if(isset($_POST['edita'])){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
     else{
-        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
+        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }
 }
 
