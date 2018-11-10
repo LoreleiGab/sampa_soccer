@@ -48,6 +48,9 @@ else
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
       <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+      <!-- JQUEY Mask -->
+      <script src="dist/js/jquery-1.12.4.min.js"></script>
+      <script src="dist/js/jquery.mask.js"></script>
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">

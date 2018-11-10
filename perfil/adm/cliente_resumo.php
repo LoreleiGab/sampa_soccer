@@ -148,6 +148,73 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     </form>
                 </div>
                 <!-- /.box -->
+                <!-- PLANO - Início -->
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Plano</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <?php
+                    $sql_matricula = "SELECT * FROM matricula WHERE cliente_id = '$idCliente'";
+                    $query_matricula = mysqli_query($con,$sql_matricula);
+                    $matricula = mysqli_fetch_array($query_matricula);
+                    if($matricula != NULL) {
+                        ?>
+                        <!-- form start -->
+                        <form method="POST" action="?perfil=administrador&p=matricula_edit" role="form">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="form-group col-md-2">
+                                        <labeL>Data início:</labeL> <?= $matricula['data_inicio'] ?>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <labeL>Data vecimento:</labeL> <?= $matricula['data_vencimento'] ?>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <labeL>Plano:</labeL> <?= $matricula['plano'] ?>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <labeL>Valor:</labeL> <?= $matricula['valor'] ?>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-8">
+                                        <labeL>Forma de pagamento:</labeL> <?= $matricula['forma_pagamento'] ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <labeL>Outros:</labeL> <?= $matricula['outros'] ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                                <button type="submit" name="carregar" class="btn btn-info pull-right">Editar</button>
+                            </div>
+                        </form>
+                        <!-- /.box -->
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <!-- form start -->
+                        <form method="POST" action="?perfil=administrador&p=plano_add" role="form">
+                            <div class="box-body">
+                                <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                                <button type="submit" name="matricula" class="btn btn-info pull-right">Adicionar</button>
+                            </div>
+                        </form>
+                        <!-- /.box -->
+                        <?php
+                    }
+                    ?>
+                </div>
+                <!-- PLANO - Fim -->
                 <!-- ESTATURA - Início -->
                 <div class="box box-default">
                     <div class="box-header with-border">
