@@ -85,8 +85,8 @@ date_default_timezone_set("Brazil/East");
     //retorna valor xxx,xx para xxx.xx
     function decimalMysql($valor)
     {
-        $valor = str_ireplace(",",".",$valor);
         $valor = str_ireplace(".","",$valor);
+        $valor = str_ireplace(",",".",$valor);
         return $valor;
     }
 

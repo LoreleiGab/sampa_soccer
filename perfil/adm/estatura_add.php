@@ -17,7 +17,7 @@ $idCliente = $_POST['idCliente'];
                 <div class="box box-info">
                     <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Cadastro de estatura</h3>
+                            <h3 class="box-title">Cadastro de estatura familiar</h3>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="resumo" class="btn btn-info pull-right">Voltar Para o Resumo</button>
                         </div>

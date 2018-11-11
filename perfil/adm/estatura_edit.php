@@ -4,8 +4,8 @@ $con = bancoMysqli();
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
-    $estatura_pai = dinheiroDeBr($_POST['estatura_pai']);
-    $estatura_mae = dinheiroDeBr($_POST['estatura_mae']);
+    $estatura_pai = decimalMysql($_POST['estatura_pai']);
+    $estatura_mae = decimalMysql($_POST['estatura_mae']);
     $estatura_prevista = ($estatura_pai + $estatura_mae)/2;
     $estimativa = ($estatura_pai + $estatura_mae)/2+6.5;
     $margem_erro01 = ($estatura_pai + $estatura_mae)/2+12.5;
@@ -55,7 +55,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
                 <div class="box box-info">
                     <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Cadastro de estatura</h3>
+                            <h3 class="box-title">Cadastro de estatura familiar</h3>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="resumo" class="btn btn-info pull-right">Voltar Para o Resumo</button>
                         </div>
@@ -104,7 +104,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
                                 <?= decimalBr($estatura['estimativa'],1) ?> cm.
                                 <br>
                                 <labeL>Margem de erro #1:</labeL>
-                                <?= decimalBr($estatura['margem_erro01'],1) ?>cm.
+                                <?= decimalBr($estatura['margem_erro01'],1) ?> cm.
                                 <br>
                                 <labeL>Margem de erro #2:</labeL>
                                 <?= decimalBr($estatura['margem_erro02'],1) ?> cm.
