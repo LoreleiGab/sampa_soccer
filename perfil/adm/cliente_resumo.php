@@ -170,16 +170,16 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <div class="box-body">
                                 <div class="row">
                                     <div class="form-group col-md-2">
-                                        <labeL>Data início:</labeL> <?= $matricula['data_inicio'] ?>
+                                        <labeL>Data início:</labeL> <?= dataBR($matricula['data_inicio']) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Data vecimento:</labeL> <?= $matricula['data_vencimento'] ?>
+                                        <labeL>Data vecimento:</labeL> <?= dataBr($matricula['data_vencimento']) ?>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <labeL>Plano:</labeL> <?= $matricula['plano'] ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Valor:</labeL> <?= $matricula['valor'] ?>
+                                        <labeL>Valor:</labeL> R$ <?= decimalBr($matricula['valor'],2) ?>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -218,7 +218,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <!-- ESTATURA - Início -->
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Estatura</h3>
+                        <h3 class="box-title">Estatura prevista</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
@@ -237,22 +237,22 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <div class="box-body">
                                 <div class="row">
                                     <div class="form-group col-md-2">
-                                        <labeL>Estatura Pai:</labeL> <?= $estatura['estatura_pai'] ?>
+                                        <labeL>Estatura Pai:</labeL> <?= decimalBr($estatura['estatura_pai'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Estatura Mãe:</labeL> <?= $estatura['estatura_mae'] ?>
+                                        <labeL>Estatura Mãe:</labeL> <?= decimalBr($estatura['estatura_mae'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Estatura Prevista:</labeL> <?= $estatura['estatura_prevista'] ?>
+                                        <labeL>Estatura Prevista:</labeL> <?= decimalBr($estatura['estatura_prevista'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Estimativa:</labeL> <?= $estatura['estimativa'] ?>
+                                        <labeL>Estimativa:</labeL> <?= decimalBr($estatura['estimativa'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Margem de erro #1:</labeL> <?= $estatura['margem_erro01'] ?>
+                                        <labeL>Margem de erro #1:</labeL> <?= decimalBr($estatura['margem_erro01'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Margem de erro #2:</labeL> <?= $estatura['margem_erro02'] ?>
+                                        <labeL>Margem de erro #2:</labeL> <?= decimalBr($estatura['margem_erro02'],1) ?>
                                     </div>
                                 </div>
                             </div>
@@ -313,11 +313,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <?php
                                 echo "<tbody>";
                                 while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
-                                    $imc = number_format($avaliacao['peso'] / (($avaliacao['altura']/100) * ($avaliacao['altura']/100)), 2);
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
-                                    echo "<td>" . $avaliacao['peso'] . "</td>";
-                                    echo "<td>" . $avaliacao['altura'] . "</td>";
+                                    echo "<td>" . decimalBr($avaliacao['peso'],2) . "</td>";
+                                    echo "<td>" . decimalBr($avaliacao['altura'],1) . "</td>";
                                     echo "<td>" . imc($avaliacao['peso'],$avaliacao['altura']) ."</td>";
                                     echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">
@@ -469,17 +468,17 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "<tbody>";
                                             echo "<tr>";
                                             echo "<td>".dataBR($avaliacao['data'])."</td>";
-                                            echo "<td>".$perim['torax']."</td>";
-                                            echo "<td>".$perim['cintura']."</td>";
-                                            echo "<td>".$perim['abdome']."</td>";
-                                            echo "<td>".$perim['quadril']."</td>";
-                                            echo "<td>".$perim['coxa_direita']."</td>";
-                                            echo "<td>".$perim['coxa_esquerda']."</td>";
-                                            echo "<td>".$perim['perna_direita']."</td>";
-                                            echo "<td>".$perim['perna_esquerda']."</td>";
-                                            echo "<td>".$perim['biceps_direito']."</td>";
-                                            echo "<td>".$perim['biceps_esquerdo']."</td>";
-                                            echo "<td>".$perim['punho']."</td>";
+                                            echo "<td>".decimalBr($perim['torax'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['cintura'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['abdome'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['quadril'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['coxa_direita'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['coxa_esquerda'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['perna_direita'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['perna_esquerda'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['biceps_direito'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['biceps_esquerdo'],1)."</td>";
+                                            echo "<td>".decimalBr($perim['punho'],1)."</td>";
                                             echo "</tr>";
                                             echo "</tbody>";
                                         }
@@ -550,14 +549,14 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "<tbody>";
                                             echo "<tr>";
                                             echo "<td>".dataBR($avaliacao['data'])."</td>";
-                                            echo "<td>".$dob['peitoral']."</td>";
-                                            echo "<td>".$dob['s_escapular']."</td>";
-                                            echo "<td>".$dob['tricipital']."</td>";
-                                            echo "<td>".$dob['a_media']."</td>";
-                                            echo "<td>".$dob['s_iliaca']."</td>";
-                                            echo "<td>".$dob['abdominal']."</td>";
-                                            echo "<td>".$dob['coxa']."</td>";
-                                            echo "<td>".$dob['perna']."</td>";
+                                            echo "<td>".decimalBr($dob['peitoral'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['s_escapular'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['tricipital'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['a_media'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['s_iliaca'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['abdominal'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['coxa'],1)."</td>";
+                                            echo "<td>".decimalBr($dob['perna'],1)."</td>";
                                             echo "</tr>";
                                             echo "</tbody>";
                                         }
@@ -584,6 +583,60 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     ?>
                 </div>
                 <!-- DOBRAS - Fim -->
+                <!-- WELLS - Início -->
+                <div class="box box-default">
+                    <?php
+                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
+                    $query_avaliacao = mysqli_query($con,$sql_avaliacao);
+                    if($query_avaliacao != NULL) {
+                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
+                            $idAvaliacao = $avaliacao['id'];
+                            $sql_wells = "SELECT * FROM wells WHERE avaliacao_id = '$idAvaliacao'";
+                            $query_wells = mysqli_query($con,$sql_wells);
+                            $num_wells = mysqli_num_rows($query_wells);
+                            if($num_wells > 0){
+                                ?>
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Wells</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Medida</th>
+                                        </tr>
+                                        </thead>
+                                        <?php
+                                        while($wel = mysqli_fetch_array($query_wells)){
+                                            echo "<tbody>";
+                                            echo "<tr>";
+                                            echo "<td>".dataBR($avaliacao['data'])."</td>";
+                                            echo "<td>".$wel['medida']."</td>";
+                                            echo "</tr>";
+                                            echo "</tbody>";
+                                        }
+                                        ?>
+                                        <tfoot>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Medida</th>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <?php
+                            }
+                        }
+                    }
+                    ?>
+                </div>
+                <!-- WELLS - Fim -->
             <!-- /.col -->
         </div>
         <!-- /.row -->
