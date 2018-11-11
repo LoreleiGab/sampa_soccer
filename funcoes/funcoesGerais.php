@@ -271,6 +271,15 @@ date_default_timezone_set("Brazil/East");
 		return $campo;
 	}
 
+	function recuperaNomeCliente($idCliente)
+    {
+        $con = bancoMysqli();
+        $sql = "SELECT nome FROM clientes WHERE id = '$idCliente'";
+        $query = mysqli_query($con,$sql);
+        $campo = mysqli_fetch_array($query);
+        return $campo['nome'];
+    }
+
 	function verificaExiste($idTabela,$idCampo,$idDado,$st)
 	{
 		//retorna uma array com indice 'numero' de registros e 'dados' da tabela

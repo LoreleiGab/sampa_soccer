@@ -47,7 +47,6 @@ if(isset($_POST['carregar'])){
 if(isset($_POST['idCliente'])){
     $idCliente = $_POST['idCliente'];
 }
-$cliente = recuperaDados("clientes","id",$idCliente);
 $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
 ?>
 
@@ -58,7 +57,7 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
 
         <!-- START FORM-->
         <h2 class="page-header">Perimetria
-        <small><?= $cliente['nome'] ?></small></h2>
+            <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
