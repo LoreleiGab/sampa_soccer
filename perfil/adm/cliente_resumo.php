@@ -339,6 +339,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         echo "<td>
                                         <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
                                         <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
                                         <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Perimetria</button>
                                         </form>
                                         </td>";

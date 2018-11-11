@@ -1,6 +1,8 @@
 <?php
 include "includes/menu.php";
 $idCliente = $_POST['idCliente'];
+
+$cliente = recuperaDados("clientes","id",$idCliente);
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -9,7 +11,8 @@ $idCliente = $_POST['idCliente'];
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Cliente</h2>
+        <h2 class="page-header">Cliente
+        <small><?= $cliente['nome'] ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">

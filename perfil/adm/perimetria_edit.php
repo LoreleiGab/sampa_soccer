@@ -3,17 +3,18 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
-    $torax = $_POST['torax'];
-    $cintura = $_POST['cintura'];
-    $abdome = $_POST['abdome'];
-    $quadril = $_POST['quadril'];
-    $coxa_direita = $_POST['coxa_direita'];
-    $coxa_esquerda = $_POST['coxa_esquerda'];
-    $perna_direita = $_POST['perna_direita'];
-    $perna_esquerda = $_POST['perna_esquerda'];
-    $biceps_direito = $_POST['biceps_direito'];
-    $biceps_esquerdo = $_POST['biceps_esquerdo'];
-    $punho = $_POST['punho'];
+    $idCliente = $_POST['idCliente'];
+    $torax = decimalMysql($_POST['torax']);
+    $cintura = decimalMysql($_POST['cintura']);
+    $abdome = decimalMysql($_POST['abdome']);
+    $quadril = decimalMysql($_POST['quadril']);
+    $coxa_direita = decimalMysql($_POST['coxa_direita']);
+    $coxa_esquerda = decimalMysql($_POST['coxa_esquerda']);
+    $perna_direita = decimalMysql($_POST['perna_direita']);
+    $perna_esquerda = decimalMysql($_POST['perna_esquerda']);
+    $biceps_direito = decimalMysql($_POST['biceps_direito']);
+    $biceps_esquerdo = decimalMysql($_POST['biceps_esquerdo']);
+    $punho = decimalMysql($_POST['punho']);
 }
 
 if(isset($_POST['cadastra'])){
@@ -46,7 +47,7 @@ if(isset($_POST['carregar'])){
 if(isset($_POST['idCliente'])){
     $idCliente = $_POST['idCliente'];
 }
-
+$cliente = recuperaDados("clientes","id",$idCliente);
 $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
 ?>
 
@@ -56,7 +57,8 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Perimetria</h2>
+        <h2 class="page-header">Perimetria
+        <small><?= $cliente['nome'] ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
@@ -128,6 +130,7 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
                         <!-- /.box-body -->
                         <div class="box-footer">
                             <input type='hidden' name='idPerimetria' value='<?= $perimetria['id'] ?>'>
+                            <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>
                         </div>
                     </form>
@@ -140,3 +143,17 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#torax').mask('000,0', {reverse: true});
+    $('#cintura').mask('000,0', {reverse: true});
+    $('#abdome').mask('000,0', {reverse: true});
+    $('#quadril').mask('000,0', {reverse: true});
+    $('#coxa_direita').mask('000,0', {reverse: true});
+    $('#coxa_esquerda').mask('000,0', {reverse: true});
+    $('#perna_direita').mask('000,0', {reverse: true});
+    $('#perna_esquerda').mask('000,0', {reverse: true});
+    $('#biceps_direito').mask('000,0', {reverse: true});
+    $('#biceps_esquerdo').mask('000,0', {reverse: true});
+    $('#punho').mask('000,0', {reverse: true});
+</script>

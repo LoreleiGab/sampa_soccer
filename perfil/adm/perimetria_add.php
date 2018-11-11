@@ -4,7 +4,9 @@ $con = bancoMysqli();
 
 if(isset($_POST['idAvaliacao'])){
     $idAvaliacao = $_POST['idAvaliacao'];
+    $idCliente = $_POST['idCliente'];
 }
+$cliente = recuperaDados("clientes","id",$idCliente);
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -13,8 +15,8 @@ if(isset($_POST['idAvaliacao'])){
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Perimetria</h2>
-
+        <h2 class="page-header">Perimetria
+        <small><?= $cliente['nome'] ?></small></h2>
         <div class="row">
             <div class="col-md-12">
                 <!-- general form elements -->
@@ -81,6 +83,7 @@ if(isset($_POST['idAvaliacao'])){
                         <!-- /.box-body -->
                         <div class="box-footer">
                             <input type='hidden' name='idAvaliacao' value='<?= $idAvaliacao ?>'>
+                            <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="cadastra" class="btn btn-info pull-right">Cadastrar</button>
                         </div>
                     </form>
@@ -93,3 +96,17 @@ if(isset($_POST['idAvaliacao'])){
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#torax').mask('000,0', {reverse: true});
+    $('#cintura').mask('000,0', {reverse: true});
+    $('#abdome').mask('000,0', {reverse: true});
+    $('#quadril').mask('000,0', {reverse: true});
+    $('#coxa_direita').mask('000,0', {reverse: true});
+    $('#coxa_esquerda').mask('000,0', {reverse: true});
+    $('#perna_direita').mask('000,0', {reverse: true});
+    $('#perna_esquerda').mask('000,0', {reverse: true});
+    $('#biceps_direito').mask('000,0', {reverse: true});
+    $('#biceps_esquerdo').mask('000,0', {reverse: true});
+    $('#punho').mask('000,0', {reverse: true});
+</script>
