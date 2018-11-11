@@ -5,8 +5,8 @@ $con = bancoMysqli();
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $idCliente = $_POST['idCliente'];
     $data = $_POST['data'];
-    $peso = $_POST['peso'];
-    $altura = $_POST['altura'];
+    $peso = decimalMysql($_POST['peso']);
+    $altura = decimalMysql($_POST['altura']);
 }
 
 if(isset($_POST['cadastra'])){
@@ -100,3 +100,8 @@ $cliente = recuperaDados("clientes","id",$avaliacao['cliente_id']);
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#peso').mask('000,00', {reverse: true});
+    $('#altura').mask('000,0', {reverse: true});
+</script>
