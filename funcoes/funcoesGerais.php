@@ -815,28 +815,28 @@ function mensagem($tipo,$texto){
 function imc($peso, $altura){
     $imc = number_format($peso / (($altura/100) * ($altura/100)), 2);
     if($imc < 17){
-        return $imc." (Desnutrido)";
+        return decimalBr($imc,2)." (Desnutrido)";
     }
     if($imc <= 18.49 && $imc >= 17){
-        return $imc." (Abaixo do peso)";
+         return decimalBr($imc,2)." (Abaixo do peso)";
     }
     if($imc <= 24.99 && $imc >= 18.5){
-        return $imc." (Normal)";
+         return decimalBr($imc,2)." (Normal)";
     }
     if($imc <= 29.99 && $imc >= 25){
-        return $imc." (Acima do peso)";
+         return decimalBr($imc,2)." (Acima do peso)";
     }
     if($imc <= 34.99 && $imc >= 30){
-        return $imc." (Obesidade I)";
+         return decimalBr($imc,2)." (Obesidade I)";
     }
     if($imc <= 39.99 && $imc >= 35){
-        return $imc." (Obesidade II)";
+         return decimalBr($imc,2)." (Obesidade II)";
     }
     if($imc >= 40){
-        return $imc." (Obesidade III)";
+         return decimalBr($imc,2)." (Obesidade III)";
     }
     else{
-        return $imc;
+         return decimalBr($imc,2);
     }
 }
 ?>
