@@ -15,7 +15,8 @@ if(isset($_POST['idAvaliacao'])){
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Dobras</h2>
+        <h2 class="page-header">Dobras
+        <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
@@ -85,3 +86,14 @@ if(isset($_POST['idAvaliacao'])){
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#peitoral').mask('000,0', {reverse: true});
+    $('#s_escapular').mask('000,0', {reverse: true});
+    $('#tricipital').mask('000,0', {reverse: true});
+    $('#a_media').mask('000,0', {reverse: true});
+    $('#s_iliaca').mask('000,0', {reverse: true});
+    $('#abdominal').mask('000,0', {reverse: true});
+    $('#coxa').mask('000,0', {reverse: true});
+    $('#perna').mask('000,0', {reverse: true});
+</script>

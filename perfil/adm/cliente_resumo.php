@@ -380,6 +380,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_add\" role=\"form\">";
                                         }
                                         echo"<input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
+                                            <input type='hidden' name='idCliente' value='" . $idCliente . "'>
                                             <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Dobras</button>
                                             </form>
                                         </td>";

@@ -3,14 +3,14 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
-    $peitoral = $_POST['peitoral'] ?? NULL;
-    $s_escapular = $_POST['s_escapular'] ?? NULL;
-    $tricipital = $_POST['tricipital'] ?? NULL;
-    $a_media = $_POST['a_media'] ?? NULL;
-    $s_iliaca = $_POST['s_iliaca'] ?? NULL;
-    $abdominal = $_POST['abdominal'] ?? NULL;
-    $coxa = $_POST['coxa'] ?? NULL;
-    $perna = $_POST['perna'] ?? NULL;
+    $peitoral = isset($_POST['peitoral']) ? decimalMysql($_POST['peitoral']) : NULL;
+    $s_escapular = isset($_POST['s_escapular']) ? decimalMysql($_POST['s_escapular']) : NULL;
+    $tricipital =  isset($_POST['tricipital']) ? decimalMysql($_POST['tricipital']) : NULL;
+    $a_media = isset($_POST['a_media']) ? decimalMysql($_POST['a_media']) : NULL;
+    $s_iliaca = isset($_POST['s_iliaca']) ? decimalMysql($_POST['s_iliaca']) : NULL;
+    $abdominal = isset($_POST['abdominal']) ? decimalMysql($_POST['abdominal']) : NULL;
+    $coxa =  isset($_POST['coxa']) ? decimalMysql($_POST['coxa']) : NULL;
+    $perna =  isset($_POST['perna']) ? decimalMysql($_POST['perna']) : NULL;
 }
 
 if(isset($_POST['cadastra'])) {
@@ -58,7 +58,8 @@ $dobras = recuperaDados("dobras","id",$idDobras);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Dobras</h2>
+        <h2 class="page-header">Dobras
+        <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
@@ -127,3 +128,13 @@ $dobras = recuperaDados("dobras","id",$idDobras);
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#peitoral').mask('000,0', {reverse: true});
+    $('#s_escapular').mask('000,0', {reverse: true});
+    $('#tricipital').mask('000,0', {reverse: true});
+    $('#a_media').mask('000,0', {reverse: true});
+    $('#s_iliaca').mask('000,0', {reverse: true});
+    $('#abdominal').mask('000,0', {reverse: true});
+    $('#coxa').mask('000,0', {reverse: true});
+</script>
