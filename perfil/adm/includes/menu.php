@@ -6,6 +6,17 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">CADASTROS</li>
             <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-plus"></i> <span>Novo</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="?perfil=administrador&p=atleta_add"><i class="fa fa-futbol-o"></i> Atleta</a></li>
+                    <li><a href="?perfil=administrador&p=base_add"><i class="fa fa-child"></i> Base</a></li>
+                    <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-male"></i> Aluno</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
                 <li><a href="?perfil=administrador&p=atleta_add"><i class="fa fa-futbol-o"></i> Atleta</a></li>
                 <li><a href="?perfil=administrador&p=base_add"><i class="fa fa-child"></i> Base</a></li>
                 <li><a href="?perfil=administrador&p=aluno_add"><i class="fa fa-male"></i> Aluno</a></li>
