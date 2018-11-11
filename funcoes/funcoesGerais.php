@@ -74,19 +74,22 @@ date_default_timezone_set("Brazil/East");
 		$url = "http://" . $dominio. $_SERVER['REQUEST_URI'];
 		return $url;
 	}
-	//retorna valor xxx,xx para xxx.xx
-	function dinheiroDeBr($valor)
-	{
-		$valor = str_ireplace(".","",$valor);
-		$valor = str_ireplace(",",".",$valor);
-		return $valor;
-	}
-	//retorna valor xxx.xx para xxx,xx
-	function dinheiroParaBr($valor)
-	{
-		$valor = number_format($valor, 2, ',', '.');
-		return $valor;
-	}
+
+    //retorna valor xxx,xx para xxx.xx
+    function decimalBr($valor,$decimal)
+    {
+        $valor = number_format($valor, $decimal, ',', '.');
+        return $valor;
+    }
+
+    //retorna valor xxx,xx para xxx.xx
+    function decimalMysql($valor)
+    {
+        $valor = str_ireplace(",",".",$valor);
+        $valor = str_ireplace(".","",$valor);
+        return $valor;
+    }
+
 	//use em problemas de codificacao utf-8
 	function _utf8_decode($string)
 	{

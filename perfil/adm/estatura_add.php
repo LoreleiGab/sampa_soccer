@@ -31,11 +31,11 @@ $idCliente = $_POST['idCliente'];
                         <div class="box-body">
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="estatura_pai">Estatura do pai</label>
+                                    <label for="estatura_pai">Estatura do pai</label> <i>(Em cm)</i>
                                     <input type="text" id="estatura_pai" name="estatura_pai" class="form-control">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="estatura_mae">Estatura da mãe</label>
+                                    <label for="estatura_mae">Estatura da mãe</label> <i>(Em cm)</i>
                                     <input type="text" id="estatura_mae" name="estatura_mae" class="form-control">
                                 </div>
                             </div>
@@ -55,3 +55,8 @@ $idCliente = $_POST['idCliente'];
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#estatura_pai').mask('000,0', {reverse: true});
+    $('#estatura_mae').mask('000,0', {reverse: true});
+</script>

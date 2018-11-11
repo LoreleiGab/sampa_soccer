@@ -4,8 +4,8 @@ $con = bancoMysqli();
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
-    $estatura_pai = $_POST['estatura_pai'];
-    $estatura_mae = $_POST['estatura_mae'];
+    $estatura_pai = dinheiroDeBr($_POST['estatura_pai']);
+    $estatura_mae = dinheiroDeBr($_POST['estatura_mae']);
     $estatura_prevista = ($estatura_pai + $estatura_mae)/2;
     $estimativa = ($estatura_pai + $estatura_mae)/2+6.5;
     $margem_erro01 = ($estatura_pai + $estatura_mae)/2+12.5;
@@ -50,7 +50,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
         <small><?= $cliente['nome'] ?></small></h2>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <!-- general form elements -->
                 <div class="box box-info">
                     <form method="POST" action="?perfil=administrador&p=cliente_resumo" role="form">
@@ -69,11 +69,11 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
                         <div class="box-body">
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="estatura_pai">Estatura do pai</label>
+                                    <label for="estatura_pai">Estatura do pai</label> <i>(Em cm)</i>
                                     <input type="text" id="estatura_pai" name="estatura_pai" class="form-control" value="<?= $estatura['estatura_pai'] ?>">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="estatura_mae">Estatura da mãe</label>
+                                    <label for="estatura_mae">Estatura da mãe</label> <i>(Em cm)</i>
                                     <input type="text" id="estatura_mae" name="estatura_mae" class="form-control" value="<?= $estatura['estatura_mae'] ?>">
                                 </div>
                             </div>
@@ -87,9 +87,41 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
                 </div>
                 <!-- /.box -->
             </div>
+            <div class="col-md-6">
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Estatura estimada</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <labeL>Estatura Prevista:</labeL>
+                                <?= decimalBr($estatura['estatura_prevista'],1) ?> cm.
+                                <br>
+                                <labeL>Estimativa:</labeL>
+                                <?= decimalBr($estatura['estimativa'],1) ?> cm.
+                                <br>
+                                <labeL>Margem de erro #1:</labeL>
+                                <?= decimalBr($estatura['margem_erro01'],1) ?>cm.
+                                <br>
+                                <labeL>Margem de erro #2:</labeL>
+                                <?= decimalBr($estatura['margem_erro02'],1) ?> cm.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box -->
+            </div>
             <!-- /.col -->
         </div>
         <!-- /.row -->
     </section>
     <!-- /.content -->
 </div>
+
+<script>
+    $('#estatura_pai').mask('000,0', {reverse: true});
+    $('#estatura_mae').mask('000,0', {reverse: true});
+</script>
