@@ -46,7 +46,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Cliente
+        <h2 class="page-header">Estatura
         <small><?= $cliente['nome'] ?></small></h2>
 
         <div class="row">
@@ -90,7 +90,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
             <div class="col-md-6">
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Estatura estimada</h3>
+                        <h3 class="box-title">Estatura prevista</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
