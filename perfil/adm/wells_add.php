@@ -15,7 +15,8 @@ $cliente = recuperaDados("clientes","id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Wells</h2>
+        <h2 class="page-header">Wells
+        <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
@@ -43,7 +44,7 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                             <div class="row">
                                 <div class="form-group col-md-offset-4 col-md-3">
                                     <labeL for="medida">Medida</labeL>
-                                    <input type="text" id="medida" name="medida" class="form-control">
+                                    <input type="number" id="medida" name="medida" class="form-control">
                                 </div>
                             </div>
 

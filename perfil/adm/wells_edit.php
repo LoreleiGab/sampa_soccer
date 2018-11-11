@@ -71,7 +71,7 @@ $wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
                             <div class="row">
                                 <div class="form-group col-md-offset-4 col-md-3">
                                     <labeL for="medida">Medida</labeL>
-                                    <input type="text" id="medida" name="medida" class="form-control" value="<?= $wells['medida'] ?>">
+                                    <input type="number" id="medida" name="medida" class="form-control" value="<?= $wells['medida'] ?>">
                                 </div>
                             </div>
 
