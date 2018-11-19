@@ -1,13 +1,13 @@
 <?php
-$con = bancoMysqli();
-
 if(isset($_SESSION['idCliente'])){
     unset($_SESSION['idCliente']);
 }
 include "includes/menu.php";
 
+$con = bancoMysqli();
+
 $idUser = $_SESSION['idUser'];
-$sql = "SELECT clientes.id AS idCliente, nome, telefone01, email, nome_classificacao, clientes.classificacao_id FROM clientes INNER JOIN classificacao c on clientes.classificacao_id = c.id";
+$sql = "SELECT clientes.id AS idCliente, nome, telefone01, email, nome_classificacao, clientes.classificacao_id FROM clientes INNER JOIN classificacao c on clientes.classificacao_id = c.id WHERE clientes.classificacao_id = '3'";
 $query = mysqli_query($con,$sql);
 ?>
 
@@ -20,7 +20,7 @@ $query = mysqli_query($con,$sql);
         <h2 class="page-header">Clientes</h2>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Listagem</h3>
@@ -33,7 +33,6 @@ $query = mysqli_query($con,$sql);
                                 <th>Nome</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
-                                <th>Classificação</th>
                                 <th width="10%">Ação</th>
                             </tr>
                             </thead>
@@ -41,13 +40,10 @@ $query = mysqli_query($con,$sql);
                             <?php
                             echo "<tbody>";
                             while ($cliente = mysqli_fetch_array($query)){
-
-
                                 echo "<tr>";
                                 echo "<td>".$cliente['nome']."</td>";
                                 echo "<td>".$cliente['telefone01']."</td>";
                                 echo "<td>".$cliente['email']."</td>";
-                                echo "<td>".$cliente['nome_classificacao']."</td>";
                                 echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=cliente_resumo\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
@@ -63,7 +59,6 @@ $query = mysqli_query($con,$sql);
                                 <th>Nome</th>
                                 <th>Telefone</th>
                                 <th>Email</th>
-                                <th>Classificação</th>
                                 <th width="10%">Ação</th>
                             </tr>
                             </tfoot>

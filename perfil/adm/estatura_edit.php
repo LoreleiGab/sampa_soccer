@@ -1,6 +1,12 @@
 <?php
-include "includes/menu.php";
 $con = bancoMysqli();
+
+if(isset($_SESSION['idCliente'])){
+    $idCliente = $_SESSION['idCliente'];
+}
+if(isset($_POST['idCliente'])) {
+    $idCliente = $_POST['idCliente'];
+}
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
@@ -36,7 +42,8 @@ if(isset($_POST['carregar'])){
     $idCliente = $_POST['idCliente'];
 }
 
-$cliente = recuperaDados("clientes","id",$idCliente);
+include "includes/menu.php";
+
 $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
 ?>
 
@@ -47,7 +54,7 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
 
         <!-- START FORM-->
         <h2 class="page-header">Estatura
-        <small><?= $cliente['nome'] ?></small></h2>
+            <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-6">

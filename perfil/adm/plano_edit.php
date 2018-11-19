@@ -1,14 +1,18 @@
 <?php
-include "includes/menu.php";
 $con = bancoMysqli();
 
-$idCliente = $_POST['idCliente'];
+if(isset($_SESSION['idCliente'])){
+    $idCliente = $_SESSION['idCliente'];
+}
+if(isset($_POST['idCliente'])) {
+    $idCliente = $_POST['idCliente'];
+}
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $data_inicio = $_POST['data_inicio'];
     $data_vencimento = $_POST['data_vencimento'];
     $plano = addslashes($_POST['plano']);
-    $valor = dinheiroDeBr($_POST['valor']);
+    $valor = decimalMysql($_POST['valor']);
     $forma_pagamento = addslashes($_POST['forma_pagamento']);
     $outros = addslashes($_POST['outros']);
 }
@@ -33,6 +37,8 @@ if(isset($_POST['edita'])){
     }
 }
 
+include "includes/menu.php";
+
 $plano = recuperaDados("matricula","cliente_id",$idCliente);
 ?>
 
@@ -42,7 +48,8 @@ $plano = recuperaDados("matricula","cliente_id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Cliente</h2>
+        <h2 class="page-header">Cliente
+            <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">

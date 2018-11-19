@@ -1,6 +1,11 @@
 <?php
+if(isset($_SESSION['idCliente'])){
+    $idCliente = $_SESSION['idCliente'];
+}
+if(isset($_POST['idCliente'])) {
+    $idCliente = $_POST['idCliente'];
+}
 include "includes/menu.php";
-$idCliente = $_POST['idCliente'];
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -9,7 +14,8 @@ $idCliente = $_POST['idCliente'];
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Cliente</h2>
+        <h2 class="page-header">Cliente
+            <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">

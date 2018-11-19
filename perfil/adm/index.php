@@ -1,5 +1,9 @@
 <?php
+if(isset($_SESSION['idCliente'])){
+    unset($_SESSION['idCliente']);
+}
 include "includes/menu.php";
+
 $idUser = $_SESSION['idUser'];
 $user = recuperaDados("usuarios","id",$idUser);
 ?>

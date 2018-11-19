@@ -1,6 +1,9 @@
 <?php
-include "includes/menu.php";
 $con = bancoMysqli();
+
+if(isset($_SESSION['idCliente'])){
+    $idCliente = $_SESSION['idCliente'];
+}
 
 if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $nome = $_POST['nome'];
@@ -52,6 +55,8 @@ if(isset($_POST['editar'])){
 if(isset($_POST['carregar'])){
     $idCliente = $_POST['idCliente'];
 }
+
+include "includes/menu.php";
 
 $cliente = recuperaDados("clientes","id",$idCliente);
 $aluno = recuperaDados("aluno","cliente_id",$idCliente);
