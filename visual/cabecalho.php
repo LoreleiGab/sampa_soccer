@@ -30,8 +30,6 @@ else
       <!-- AdminLTE Skins. Choose a skin from the css/skins
            folder instead of downloading all of them to reduce the load. -->
       <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-      <!-- Morris chart -->
-      <link rel="stylesheet" href="bower_components/morris.js/morris.css">
       <!-- jvectormap -->
       <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
       <!-- Date Picker -->
@@ -52,6 +50,7 @@ else
       <!-- JQUEY Mask -->
       <script src="dist/js/jquery-1.12.4.min.js"></script>
       <script src="dist/js/jquery.mask.js"></script>
+      <script src="dist/js/telefone.js"></script>
   </head>
 <body class="hold-transition skin-blue-light sidebar-mini">
 <div class="wrapper">
@@ -72,4 +71,4 @@ else
             </a>
         </nav>
     </header>
-<?php include "../include/script.php"; ?>
+<?php //include "../include/script.php"; ?>
