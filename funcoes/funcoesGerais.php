@@ -839,4 +839,9 @@ function imc($peso, $altura){
          return decimalBr($imc,2);
     }
 }
+
+function dc7(){
+	    //=1,112-0,00043449*(D52+E52+F52+G52+H52+I52+J52)+0,00000055*((D52+E52+F52+G52+H52+I52+J52)+(D52+E52+F52+G52+H52+I52+J52))-0,00028826*(L9)
+    
+}
 ?>
