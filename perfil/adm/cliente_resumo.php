@@ -318,8 +318,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
-                                    echo "<td>" . decimalBr($avaliacao['peso'],2) . "</td>";
-                                    echo "<td>" . decimalBr($avaliacao['altura'],1) . "</td>";
+                                    echo "<td>" . decimalBr($avaliacao['peso'],3) . "</td>";
+                                    echo "<td>" . decimalBr($avaliacao['altura'],2) . "</td>";
                                     echo "<td>" . imc($avaliacao['peso'],$avaliacao['altura']) ."</td>";
                                     echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">

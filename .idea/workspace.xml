@@ -144,28 +144,43 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="3" />
+          <entry key="php" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="99" />
+          <entry key="php" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="99" />
+          <entry key="PHP" value="122" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="587" column="22" selection-start-line="587" selection-start-column="22" selection-end-line="587" selection-end-column="22" />
+              <folding>
+                <element signature="n#div#5;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/visual/pages/charts/chartjs.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -209,7 +224,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_list.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="763">
@@ -218,20 +233,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/cabecalho.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/script.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="786">
+              <caret line="844" column="4" selection-start-line="844" selection-start-column="4" selection-end-line="844" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -332,7 +338,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_edit.php" />
-        <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
         <option value="$PROJECT_DIR$/visual/pages/tables/data.html" />
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/perfil/adm/includes/menu_cliente.php" />
@@ -354,7 +359,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/wells_list.php" />
         <option value="$PROJECT_DIR$/visual/bower_components/chart.js/docs/02-Bar-Chart.md" />
         <option value="$PROJECT_DIR$/visual/pages/charts/chartjs.html" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/visual/dist/js/cep_api.js" />
         <option value="$PROJECT_DIR$/visual/dist/js/telefone.js" />
         <option value="$PROJECT_DIR$/visual/cabecalho.php" />
@@ -362,6 +366,8 @@
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_list.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
       </list>
     </option>
   </component>
@@ -520,12 +526,12 @@
       <workItem from="1542369787094" duration="11478000" />
       <workItem from="1542381341330" duration="3510000" />
       <workItem from="1542393763443" duration="10406000" />
-      <workItem from="1542666841509" duration="3748000" />
+      <workItem from="1542666841509" duration="5927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198018000" />
+    <option name="totallyTimeSpent" value="200197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
@@ -674,19 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="820" column="33" selection-start-line="820" selection-start-column="33" selection-end-line="820" selection-end-column="33" />
-          <caret line="823" column="33" selection-start-line="823" selection-start-column="33" selection-end-line="823" selection-end-column="33" />
-          <caret line="826" column="33" selection-start-line="826" selection-start-column="33" selection-end-line="826" selection-end-column="33" />
-          <caret line="829" column="33" selection-start-line="829" selection-start-column="33" selection-end-line="829" selection-end-column="33" />
-          <caret line="832" column="33" selection-start-line="832" selection-start-column="33" selection-end-line="832" selection-end-column="33" />
-          <caret line="835" column="33" selection-start-line="835" selection-start-column="33" selection-end-line="835" selection-end-column="33" />
-          <caret line="838" column="33" selection-start-line="838" selection-start-column="33" selection-end-line="838" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -861,13 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4808">
-          <caret line="601" column="30" selection-start-line="601" selection-start-column="30" selection-end-line="601" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -945,6 +931,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="763">
           <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="587" column="22" selection-start-line="587" selection-start-column="22" selection-end-line="587" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#5;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="844" column="4" selection-start-line="844" selection-start-column="4" selection-end-line="844" selection-end-column="4" />
         </state>
       </provider>
     </entry>
