@@ -95,11 +95,14 @@ include "includes/menu.php";
                                         if($cliente['classificacao_id'] == 2) {
                                             echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_edit\" role=\"form\">";
                                         }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_edit\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_edit\" role=\"form\">";
+                                        if($cliente['classificacao_id'] == 3) {
+                                            $aluno = recuperaDados("aluno","cliente_id",$cliente['id']);
+                                            if($aluno['sexo_id'] == 1){
+                                                echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_edit\" role=\"form\">";
+                                            }
+                                            else{
+                                                echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_edit\" role=\"form\">";
+                                            }
                                         }
                                         echo"<input type='hidden' name='idDobras' value='" . $dobras['id'] . "'>
                                         <input type='hidden' name='idCliente' value='" . $idCliente . "'>
@@ -115,11 +118,14 @@ include "includes/menu.php";
                                         if($cliente['classificacao_id'] == 2) {
                                             echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_add\" role=\"form\">";
                                         }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_add\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_add\" role=\"form\">";
+                                        if($cliente['classificacao_id'] == 3) {
+                                            $aluno = recuperaDados("aluno","cliente_id",$cliente['id']);
+                                            if($aluno['sexo_id'] == 1) {
+                                                echo "<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_add\" role=\"form\">";
+                                            }
+                                            else{
+                                                echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_add\" role=\"form\">";
+                                            }
                                         }
                                         echo"<input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
                                             <input type='hidden' name='idCliente' value='" . $idCliente . "'>

@@ -102,6 +102,6 @@ $cliente = recuperaDados("clientes","id",$avaliacao['cliente_id']);
 </div>
 
 <script>
-    $('#peso').mask('000,00', {reverse: true});
-    $('#altura').mask('000,0', {reverse: true});
+    $('#peso').mask('000,000', {reverse: true});
+    $('#altura').mask('000,00', {reverse: true});
 </script>
