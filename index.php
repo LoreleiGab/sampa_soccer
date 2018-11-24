@@ -83,12 +83,14 @@ if(isset($_POST['login']))
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-    <div class="login-logo">
-        <img src="visual/images/logo_sampa.png">
-        <h3><span style="color: #2f4195; " class="box-title">Sistema de Avaliação e Controle de Carga</span></h3>
-    </div>
+    
     <!-- /.login-logo -->
     <div class="login-box-body">
+        <div class="login-logo">
+          <img src="visual/images/logo_sampa.png">
+          <h3><span style="color: #2f4195; " class="box-title">Sistema de Avaliação e<br/> Controle de Carga</span></h3>
+        </div>
+        <hr/>
         <p class="login-box-msg"><?php if(isset($mensagem)){ echo $mensagem; } ?></p>
         <form action="index.php" method="post">
             <div class="form-group has-feedback">

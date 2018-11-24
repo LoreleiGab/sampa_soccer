@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb261e0b-7692-4a9b-844a-71d369586629.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eb261e0b-7692-4a9b-844a-71d369586629.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/aluno_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/aluno_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/avaliacao_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/avaliacao_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/avaliacao_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/avaliacao_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/avaliacao_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/avaliacao_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/base_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/base_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/visual/cabecalho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/pages/charts/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/visual/pages/charts/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/rodape.php" beforeDir="false" afterPath="$PROJECT_DIR$/visual/rodape.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/perimetria_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/perimetria_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/wells_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual/images/academia_wallpaper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/visual/images/academia_wallpaper.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,20 +79,23 @@
     <session id="-487345705">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="30" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -87,7 +103,7 @@
           <entry key="html" value="86" />
           <entry key="js" value="131" />
           <entry key="md" value="5" />
-          <entry key="php" value="15745" />
+          <entry key="php" value="15747" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
@@ -96,7 +112,7 @@
           <entry key="HTML" value="90" />
           <entry key="JavaScript" value="131" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="15733" />
+          <entry key="PHP" value="15735" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="8" />
         </counts>
@@ -111,7 +127,7 @@
           <entry key="json" value="1" />
           <entry key="map" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="198" />
+          <entry key="php" value="201" />
           <entry key="sql" value="1" />
           <entry key="usuarios" value="1" />
         </counts>
@@ -124,7 +140,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="198" />
+          <entry key="PHP" value="201" />
           <entry key="Scratch" value="1" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -166,42 +182,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="587" column="22" selection-start-line="587" selection-start-column="22" selection-end-line="587" selection-end-column="22" />
-              <folding>
-                <element signature="n#div#5;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/pages/charts/chartjs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1633">
-              <caret line="421" column="20" selection-start-line="419" selection-start-column="14" selection-end-line="421" selection-end-column="20" />
-              <folding>
-                <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#aside#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/rodape.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="510">
+              <caret line="321" column="84" selection-start-line="321" selection-start-column="84" selection-end-line="325" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -209,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
+            <state relative-caret-position="1950">
+              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -218,8 +203,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+            <state relative-caret-position="2730">
+              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -227,40 +212,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="844" column="4" selection-start-line="844" selection-start-column="4" selection-end-line="844" selection-end-column="4" />
+            <state relative-caret-position="1560">
+              <caret line="60" column="80" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/dist/js/cep_api.js">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="58" selection-start-line="58" selection-end-line="58" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/dist/js/demo.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/dist/js/telefone.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="468">
+              <caret line="18" column="66" selection-start-line="17" selection-start-column="38" selection-end-line="18" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -276,7 +238,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>forms</find>
       <find>select</find>
       <find>blue</find>
       <find>body class=&quot;skin</find>
@@ -306,6 +267,7 @@
       <find>barChart</find>
       <find>areaChart</find>
       <find>morris</find>
+      <find>altu</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\sampa_soccer\visual\dist</dir>
@@ -363,11 +325,11 @@
         <option value="$PROJECT_DIR$/visual/dist/js/telefone.js" />
         <option value="$PROJECT_DIR$/visual/cabecalho.php" />
         <option value="$PROJECT_DIR$/visual/rodape.php" />
+        <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
-        <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
       </list>
     </option>
   </component>
@@ -395,10 +357,11 @@
       <path value="$PROJECT_DIR$/visual/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="971" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="5" />
+    <option name="y" value="-14" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -431,32 +394,6 @@
               <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="funcoes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="perfil" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="perfil" type="462c0819:PsiDirectoryNode" />
-              <item name="adm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="visual" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -475,7 +412,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -527,20 +464,27 @@
       <workItem from="1542381341330" duration="3510000" />
       <workItem from="1542393763443" duration="10406000" />
       <workItem from="1542666841509" duration="5927000" />
+      <workItem from="1542679469559" duration="337000" />
+      <workItem from="1542725043707" duration="2245000" />
+      <workItem from="1543098102819" duration="4000" />
+      <workItem from="1543098530079" duration="120000" />
+      <workItem from="1543099264997" duration="1000" />
+      <workItem from="1543099377325" duration="129000" />
+      <workItem from="1543099553030" duration="354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200197000" />
+    <option name="totallyTimeSpent" value="203451000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="971" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18070818" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20499243" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.34015927" />
+      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.33934426" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3295082" />
@@ -554,8 +498,8 @@
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
-      <window_info anchor="right" id="Remote Host" order="0" visible="true" weight="0.1923077" />
-      <window_info anchor="right" id="Database" order="1" weight="0.16605617" />
+      <window_info active="true" anchor="right" id="Remote Host" order="0" visible="true" weight="0.19288956" />
+      <window_info anchor="right" id="Database" order="1" weight="0.16565809" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
@@ -683,20 +627,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="18" column="66" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="18" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://eb261e0b-7692-4a9b-844a-71d369586629/schema/sampa/table/classificacao">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://eb261e0b-7692-4a9b-844a-71d369586629/schema/sampa/table/classificacao" />
     <entry file="file://$PROJECT_DIR$/visual/pages/tables/data.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -817,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1968">
           <caret line="199" column="37" selection-start-line="199" selection-start-column="37" selection-end-line="199" selection-end-column="37" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,13 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1633">
           <caret line="421" column="20" selection-start-line="419" selection-start-column="14" selection-end-line="421" selection-end-column="20" />
-          <folding>
-            <element signature="n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#aside#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,44 +834,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_add.php">
+    <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
+        <state relative-caret-position="786">
+          <caret line="844" column="4" selection-start-line="844" selection-start-column="4" selection-end-line="844" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="587" column="22" selection-start-line="587" selection-start-column="22" selection-end-line="587" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#5;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="321" column="84" selection-start-line="321" selection-start-column="84" selection-end-line="325" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="844" column="4" selection-start-line="844" selection-start-column="4" selection-end-line="844" selection-end-column="4" />
+        <state relative-caret-position="1950">
+          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2730">
+          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="60" column="80" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="66" selection-start-line="17" selection-start-column="38" selection-end-line="18" selection-end-column="66" />
         </state>
       </provider>
     </entry>

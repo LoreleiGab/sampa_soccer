@@ -84,15 +84,6 @@ include "includes/menu.php";
                                 }
                                 echo "</tbody>";
                                 ?>
-                                <tfoot>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Peso</th>
-                                    <th>Altura</th>
-                                    <th>IMC</th>
-                                    <th width="10%">Ação</th>
-                                </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -140,12 +131,6 @@ include "includes/menu.php";
                                             echo "</tbody>";
                                         }
                                         ?>
-                                        <tfoot>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Medida</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                                 <?php

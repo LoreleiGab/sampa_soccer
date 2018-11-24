@@ -106,15 +106,6 @@ include "includes/menu.php";
                                 }
                                 echo "</tbody>";
                                 ?>
-                                <tfoot>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Peso</th>
-                                    <th>Altura</th>
-                                    <th>IMC</th>
-                                    <th width="10%">Ação</th>
-                                </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -176,19 +167,6 @@ include "includes/menu.php";
                                             echo "</tbody>";
                                         }
                                         ?>
-                                        <tfoot>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Peitoral</th>
-                                            <th>S. Escapular</th>
-                                            <th>Tricipital</th>
-                                            <th>A Media</th>
-                                            <th>S Ilíaca</th>
-                                            <th>Abdominal</th>
-                                            <th>Coxa</th>
-                                            <th>Perna</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                                 <?php

@@ -319,7 +319,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
                                     echo "<td>" . decimalBr($avaliacao['peso'],3) . "</td>";
-                                    echo "<td>" . decimalBr($avaliacao['altura'],2) . "</td>";
+                                    echo "<td>" . decimalBr($avaliacao['altura'],1) . "</td>";
                                     echo "<td>" . imc($avaliacao['peso'],$avaliacao['altura']) ."</td>";
                                     echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">
@@ -410,15 +410,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 }
                                 echo "</tbody>";
                                 ?>
-                                <tfoot>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Peso</th>
-                                    <th>Altura</th>
-                                    <th>IMC</th>
-                                    <th colspan="4" width="10%">Ação</th>
-                                </tr>
-                                </tfoot>
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -486,22 +477,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "</tbody>";
                                         }
                                         ?>
-                                        <tfoot>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Torax</th>
-                                            <th>Cintura</th>
-                                            <th>Abdome</th>
-                                            <th>Quadril</th>
-                                            <th>Coxa D.</th>
-                                            <th>Coxa E.</th>
-                                            <th>Perna D.</th>
-                                            <th>Perna E.</th>
-                                            <th>Bíceps D.</th>
-                                            <th>Bíceps E.</th>
-                                            <th>Punho</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             <?php
@@ -564,19 +539,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "</tbody>";
                                         }
                                         ?>
-                                        <tfoot>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Peitoral</th>
-                                            <th>S. Escapular</th>
-                                            <th>Tricipital</th>
-                                            <th>A Media</th>
-                                            <th>S Ilíaca</th>
-                                            <th>Abdominal</th>
-                                            <th>Coxa</th>
-                                            <th>Perna</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                                 <?php
@@ -644,12 +606,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "</tbody>";
                                         }
                                         ?>
-                                        <tfoot>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Medida</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                                 <?php

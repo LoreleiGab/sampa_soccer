@@ -58,15 +58,6 @@ $query = mysqli_query($con,$sql);
                             }
                             echo "</tbody>";
                             ?>
-                            <tfoot>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Telefone</th>
-                                <th>Email</th>
-                                <th>Classificação</th>
-                                <th width="10%">Ação</th>
-                            </tr>
-                            </tfoot>
                         </table>
                     </div>
                     <!-- /.box-body -->
