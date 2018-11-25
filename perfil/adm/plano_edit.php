@@ -10,7 +10,7 @@ if(isset($_POST['idCliente'])) {
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $data_inicio = $_POST['data_inicio'];
-    $data_vencimento = $_POST['data_vencimento'];
+    $data_vencimento = addslashes($_POST['data_vencimento']);
     $plano = addslashes($_POST['plano']);
     $valor = decimalMysql($_POST['valor']);
     $forma_pagamento = addslashes($_POST['forma_pagamento']);
@@ -74,11 +74,11 @@ $plano = recuperaDados("matricula","cliente_id",$idCliente);
                                     <label for="data_inicio">Data início</label>
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control" value="<?= $plano['data_inicio'] ?>">
                                 </div>
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-3">
                                     <label for="data_vencimento">Data vencimento</label>
-                                    <input type="date" id="data_vencimento" name="data_vencimento" class="form-control" value="<?= $plano['data_vencimento'] ?>">
+                                    <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100" value="<?= $plano['data_vencimento'] ?>">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-5">
                                     <label for="plano">Plano</label>
                                     <input type="text" id="plano" name="plano" class="form-control" maxlength="120" value="<?= $plano['plano'] ?>">
                                 </div>

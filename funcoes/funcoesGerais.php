@@ -840,8 +840,41 @@ function imc($peso, $altura){
     }
 }
 
-function dc7(){
-	    //=1,112-0,00043449*(D52+E52+F52+G52+H52+I52+J52)+0,00000055*((D52+E52+F52+G52+H52+I52+J52)+(D52+E52+F52+G52+H52+I52+J52))-0,00028826*(L9)
-    
+function jackson($idAvaliacao){
+    $con = bancoMysqli();
+    $sql_avalicao = "SELECT * FROM avaliacoes WHERE id = '$idAvaliacao'";
+    $query_avaliacao = mysqli_query($con,$sql_avalicao);
+    $avaliacao = mysqli_fetch_array($query_avaliacao);
+    $idCliente = $avaliacao['cliente_id'];
+    $sql_cliente = "SELECT data_nascimento FROM clientes WHERE id = '$idCliente'";
+    $query_cliente = mysqli_query($con,$sql_cliente);
+    $cliente = mysqli_fetch_array($query_cliente);
+    $idade = idade($cliente['data_nascimento']);
+    $dobras = recuperaDados("dobras","avaliacao_id",$idAvaliacao);
+    $peitoral = $dobras['peitoral'];
+    $s_escapular = $dobras['s_escapular'];
+    $tricipital = $dobras['tricipital'];
+    $a_media = $dobras['a_media'];
+    $s_iliaca = $dobras['s_iliaca'];
+    $abdominal = $dobras['abdominal'];
+    $coxa = $dobras['coxa'];
+
+    $dc7 = number_format(1.112-0.00043449*($peitoral+$s_escapular+$tricipital+$a_media+$s_iliaca+$abdominal+$coxa)+0.00000055*(($peitoral+$s_escapular+$tricipital+$a_media+$s_iliaca+$abdominal+$coxa)+($peitoral+$s_escapular+$tricipital+$a_media+$s_iliaca+$abdominal+$coxa))-0.00028826*($idade),7);
+    $gordura7 = ((4.95/$dc7)-4.5)*100;
+    $mg7 = $avaliacao['peso']*$gordura7/100;
+    $mm7 = $avaliacao['peso'] - $mg7;
+    $jp['gordura7'] = number_format($gordura7,3,",",".");
+    $jp['mg7'] = number_format($mm7,3,",",".");
+    $jp['mm7'] =number_format($mg7,3,",",".");
+
+    $dc3 = number_format(1.10938-0.0008267*($peitoral+$abdominal+$coxa)+0.0000016*(($peitoral+$abdominal+$coxa)*($peitoral+$abdominal+$coxa))-0.0002574*($idade),7);
+    $gordura3 = ((4.95/$dc3)-4.5)*100;
+    $mg3 = $avaliacao['peso']*$gordura3/100;
+    $mm3 = $avaliacao['peso'] - $mg3;
+    $jp['gordura3'] = number_format($gordura3,3,",",".");
+    $jp['mg3'] = number_format($mm3,3,",",".");
+    $jp['mm3'] =number_format($mg3,3,",",".");
+
+    return $jp;
 }
 ?>

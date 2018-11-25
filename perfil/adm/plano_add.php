@@ -40,11 +40,11 @@ include "includes/menu.php";
                                     <label for="data_inicio">Data início</label>
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control">
                                 </div>
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-3">
                                     <label for="data_vencimento">Data vencimento</label>
-                                    <input type="date" id="data_vencimento" name="data_vencimento" class="form-control">
+                                    <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100">
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-5">
                                     <label for="plano">Plano</label>
                                     <input type="text" id="plano" name="plano" class="form-control" maxlength="120">
                                 </div>

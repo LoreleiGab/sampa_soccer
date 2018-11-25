@@ -46,7 +46,7 @@
 <!-- jvectormap -->
 <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
+<!-- jQuery Knob Chart-->
 <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="bower_components/moment/min/moment.min.js"></script>
@@ -68,6 +68,9 @@
 <!-- DataTables -->
 <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="bower_components/raphael/raphael.min.js"></script>
+<script src="bower_components/morris.js/morris.min.js"></script>
 <!-- API Consulta CEP -->
 <script src="./dist/js/cep_api.js"></script>
 
@@ -85,5 +88,7 @@
         })
     })
 </script>
+
+
 </body>
 </html>
