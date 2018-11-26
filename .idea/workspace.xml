@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funcoes/funcoesGerais.php" beforeDir="false" afterPath="$PROJECT_DIR$/funcoes/funcoesGerais.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/visual/cabecalho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/rodape.php" beforeDir="false" afterPath="$PROJECT_DIR$/visual/rodape.php" afterDir="false" />
-    </list>
+    <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +45,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sampa: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="avaliacoes: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sampa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sampa: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="usuarios: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -109,7 +108,7 @@
           <entry key="json" value="1" />
           <entry key="map" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="209" />
+          <entry key="php" value="210" />
           <entry key="sql" value="1" />
           <entry key="usuarios" value="1" />
         </counts>
@@ -122,7 +121,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="6" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="209" />
+          <entry key="PHP" value="210" />
           <entry key="Scratch" value="1" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -164,102 +163,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/script.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="608">
               <caret line="177" column="67" lean-forward="true" selection-start-line="177" selection-start-column="67" selection-end-line="177" selection-end-column="67" />
-              <folding>
-                <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#6;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#7;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
+        <entry file="file://$PROJECT_DIR$/perfil/administrador.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="44" column="134" selection-start-line="44" selection-start-column="134" selection-end-line="44" selection-end-column="134" />
+            <state relative-caret-position="198">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="78" column="134" selection-start-line="78" selection-start-column="134" selection-end-line="78" selection-end-column="134" />
+            <state relative-caret-position="242">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="867" column="36" selection-start-line="867" selection-start-column="36" selection-end-line="867" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2912">
-              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/cabecalho.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/rodape.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/pages/examples/blank.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="263" column="85" selection-start-line="263" selection-start-column="79" selection-end-line="263" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras7_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="109" column="124" selection-start-line="109" selection-start-column="109" selection-end-line="109" selection-end-column="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="66" selection-start-line="17" selection-start-column="38" selection-end-line="18" selection-end-column="66" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/include/logoff.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -392,11 +343,11 @@
       <path value="$PROJECT_DIR$/visual/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="y" value="-14" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="170" />
+    <option name="y" value="91" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -421,18 +372,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="funcoes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
@@ -449,6 +394,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,14 +472,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226321000" />
+    <option name="totallyTimeSpent" value="226489000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20499243" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17352185" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="0" weight="0.2885246" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -734,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="68" column="63" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+        <state relative-caret-position="110">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -779,15 +724,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="242">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/script.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="82">
+          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -852,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,9 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
           <caret line="1064" column="13" selection-start-line="1064" selection-start-column="13" selection-end-line="1064" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,10 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4795">
           <caret line="895" column="31" selection-start-line="889" selection-start-column="4" selection-end-line="906" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#aside#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,16 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="608">
           <caret line="177" column="67" lean-forward="true" selection-start-line="177" selection-start-column="67" selection-end-line="177" selection-end-column="67" />
-          <folding>
-            <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#7;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>

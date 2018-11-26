@@ -863,7 +863,7 @@ function jackson($idAvaliacao){
     $gordura7 = ((4.95/$dc7)-4.5)*100;
     $mg7 = $avaliacao['peso']*$gordura7/100;
     $mm7 = $avaliacao['peso'] - $mg7;
-    $jp['gordura7'] = number_format($gordura7,3,",",".");
+    $jp['gordura7'] = number_format($gordura7,2,",",".");
     $jp['mg7'] = number_format($mm7,3,",",".");
     $jp['mm7'] =number_format($mg7,3,",",".");
 
@@ -871,7 +871,7 @@ function jackson($idAvaliacao){
     $gordura3 = ((4.95/$dc3)-4.5)*100;
     $mg3 = $avaliacao['peso']*$gordura3/100;
     $mm3 = $avaliacao['peso'] - $mg3;
-    $jp['gordura3'] = number_format($gordura3,3,",",".");
+    $jp['gordura3'] = number_format($gordura3,2,",",".");
     $jp['mg3'] = number_format($mm3,3,",",".");
     $jp['mm3'] =number_format($mg3,3,",",".");
 

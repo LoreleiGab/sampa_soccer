@@ -573,8 +573,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <tr>
                                     <th>Data</th>
                                     <th>% Gordura</th>
-                                    <th>Massa Magra</th>
                                     <th>Massa Gorda</th>
+                                    <th>Massa Magra</th>
                                 </tr>
                                 </thead>
                                 <?php
