@@ -573,8 +573,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <tr>
                                     <th>Data</th>
                                     <th>% Gordura</th>
-                                    <th>Massa Gorda</th>
                                     <th>Massa Magra</th>
+                                    <th>Massa Gorda</th>
                                 </tr>
                                 </thead>
                                 <?php
@@ -584,9 +584,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
                                     echo "<td>" . $jp['gordura7'] . "</td>";
-                                    echo "<td>" . $jp['mm7'] . "</td>";
                                     echo "<td>" . $jp['mg7'] ."</td>";
-                                    echo "<td>";
+                                    echo "<td>" . $jp['mm7'] . "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";
@@ -633,9 +632,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
                                     echo "<td>" . $jp['gordura3'] . "</td>";
-                                    echo "<td>" . $jp['mm3'] . "</td>";
                                     echo "<td>" . $jp['mg3'] ."</td>";
-                                    echo "<td>";
+                                    echo "<td>" . $jp['mm3'] . "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";
