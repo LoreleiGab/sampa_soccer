@@ -309,6 +309,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <th>Data</th>
                                     <th>Peso</th>
                                     <th>Altura</th>
+                                    <th>IMC</th>
                                     <th></th>
                                     <th></th>
                                     <th></th>
@@ -317,6 +318,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 </thead>
                                 <?php
                                 echo "<tbody>";
+                                $avaliacao_charts = '';
                                 while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
                                     echo "<tr>";
                                     echo "<td>" . dataBR($avaliacao['data']) . "</td>";
@@ -409,7 +411,9 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         </td>";
                                     }
                                     echo "</tr>";
+                                    $avaliacao_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$avaliacao['peso']."}, ";
                                 }
+                                $avaliacao_charts = substr($avaliacao_charts,0,-2);
                                 echo "</tbody>";
                                 ?>
                             </table>
@@ -460,6 +464,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         </tr>
                                         </thead>
                                         <?php
+                                        $perimetria_charts = '';
                                         while($perim = mysqli_fetch_array($query_perimetria)){
                                             echo "<tbody>";
                                             echo "<tr>";
@@ -477,7 +482,12 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                             echo "<td>".decimalBr($perim['punho'],1)."</td>";
                                             echo "</tr>";
                                             echo "</tbody>";
+                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['torax']."}, ";
+                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['cintura']."}, ";
+                                            /*$perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['abdome']."}, ";
+                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['quadril']."}, ";*/
                                         }
+                                        $perimetria_charts = substr($perimetria_charts,0,-2);
                                         ?>
                                     </table>
                                 </div>
@@ -550,6 +560,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     }
                     ?>
                 </div>
+                <!-- DOBRAS - Fim -->
             </div>
             <!-- JACKSON POLLOCK 7 -->
             <div class="col-md-6">
@@ -647,26 +658,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 </div>
             </div>
             <!-- ./JACKSON POLLOCK 3 -->
-            <!-- BAR CHART -->
+            <!-- WELLS - Início -->
             <div class="col-md-12">
-                <div class="box box-success">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Bar Chart</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="box-body chart-responsive">
-                        <div class="chart" id="bar-chart" style="height: 300px;"></div>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-                <!-- DOBRAS - Fim -->
-                <!-- WELLS - Início -->
                 <div class="box box-default">
                     <?php
                     $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
@@ -713,90 +706,69 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     }
                     ?>
                 </div>
-                <!-- WELLS - Fim -->
-            <!-- /.col -->
-        </div>
+            </div>
+            <!-- WELLS - Fim -->
+            <!-- PESO CHART -->
+            <div class="col-md-6">
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Peso corporal total</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body chart-responsive">
+                        <div class="chart" id="peso-chart" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./PESO CHART -->
+            <!-- PERIMETRIA CHART -->
+            <div class="col-md-6">
+                <div class="box box-default">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Perimetria</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body chart-responsive">
+                        <div class="chart" id="perimetria-chart" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+            <?= $perimetria_charts ?>
+            <!-- ./PERIMETRIA CHART -->
         <!-- /.row -->
     </section>
     <!-- /.content -->
 </div>
 
-
 <script>
     $(function () {
         "use strict";
 
-        // AREA CHART
-        var area = new Morris.Area({
-            element: 'revenue-chart',
-            resize: true,
-            data: [
-                {y: '2011 Q1', item1: 2666, item2: 2666},
-                {y: '2011 Q2', item1: 2778, item2: 2294},
-                {y: '2011 Q3', item1: 4912, item2: 1969},
-                {y: '2011 Q4', item1: 3767, item2: 3597},
-                {y: '2012 Q1', item1: 6810, item2: 1914},
-                {y: '2012 Q2', item1: 5670, item2: 4293},
-                {y: '2012 Q3', item1: 4820, item2: 3795},
-                {y: '2012 Q4', item1: 15073, item2: 5967},
-                {y: '2013 Q1', item1: 10687, item2: 4460},
-                {y: '2013 Q2', item1: 8432, item2: 5713}
-            ],
-            xkey: 'y',
-            ykeys: ['item1', 'item2'],
-            labels: ['Item 1', 'Item 2'],
-            lineColors: ['#a0d0e0', '#3c8dbc'],
-            hideHover: 'auto'
-        });
-
-        // LINE CHART
-        var line = new Morris.Line({
-            element: 'line-chart',
-            resize: true,
-            data: [
-                {y: '2011 Q1', item1: 2666},
-                {y: '2011 Q2', item1: 2778},
-                {y: '2011 Q3', item1: 4912},
-                {y: '2011 Q4', item1: 3767},
-                {y: '2012 Q1', item1: 6810},
-                {y: '2012 Q2', item1: 5670},
-                {y: '2012 Q3', item1: 4820},
-                {y: '2012 Q4', item1: 15073},
-                {y: '2013 Q1', item1: 10687},
-                {y: '2013 Q2', item1: 8432}
-            ],
-            xkey: 'y',
-            ykeys: ['item1'],
-            labels: ['Item 1'],
-            lineColors: ['#3c8dbc'],
-            hideHover: 'auto'
-        });
-
-        //DONUT CHART
-        var donut = new Morris.Donut({
-            element: 'sales-chart',
-            resize: true,
-            colors: ["#3c8dbc", "#f56954", "#00a65a"],
-            data: [
-                {label: "Download Sales", value: 12},
-                {label: "In-Store Sales", value: 30},
-                {label: "Mail-Order Sales", value: 20}
-            ],
-            hideHover: 'auto'
-        });
-        //BAR CHART
+        //PESO CHART
         var bar = new Morris.Bar({
-            element: 'bar-chart',
+            element: 'peso-chart',
             resize: true,
-            data: [
-                {y: '2006', a: 100, b: 90},
-                {y: '2007', a: 75, b: 65},
-                {y: '2008', a: 50, b: 40},
-                {y: '2009', a: 75, b: 65},
-                {y: '2010', a: 50, b: 40},
-                {y: '2011', a: 75, b: 65},
-                {y: '2012', a: 100, b: 90}
-            ],
+            data: [<?= $avaliacao_charts ?>],
+            barColors: ['#3c8dbc'],
+            xkey: 'y',
+            ykeys: ['a'],
+            labels: ['Peso'],
+            hideHover: 'auto'
+        });
+
+        //PERIMETRIA CHART
+        var bar = new Morris.Bar({
+            element: 'perimetria-chart',
+            resize: true,
+            data: [<?= $perimetria_charts ?>],
             barColors: ['#00a65a', '#f56954'],
             xkey: 'y',
             ykeys: ['a', 'b'],
