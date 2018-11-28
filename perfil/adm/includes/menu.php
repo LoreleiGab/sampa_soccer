@@ -63,9 +63,17 @@
                     echo "<li><a href=\"?perfil=administrador&p=estatura_edit\"><i class=\"fa fa-circle-o text-aqua\"></i> Estatura</a></li>";
                 }
                 ?>
-                <li><a href="?perfil=administrador&p=avaliacao_list"><i class="fa fa-circle-o text-aqua"></i> Avaliação</a></li>
-                <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o text-aqua"></i> Perimetria</a></li>
-                <li><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o text-aqua"></i> Dobras</a></li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o text-aqua"></i> <span>Antropometria</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="?perfil=administrador&p=avaliacao_list"><i class="fa fa-circle-o"></i> Avaliação</a></li>
+                        <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
+                        <li><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
+                    </ul>
+                </li>
                 <li><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o text-aqua"></i> Wells</a></li>
             <?php
             }

@@ -741,7 +741,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     </div>
                 </div>
             </div>
-            <?= $perimetria_charts ?>
             <!-- ./PERIMETRIA CHART -->
         <!-- /.row -->
     </section>
@@ -765,7 +764,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
         });
 
         //PERIMETRIA CHART
-        var bar = new Morris.Bar({
+        /*var bar = new Morris.Bar({
             element: 'perimetria-chart',
             resize: true,
             data: [<?= $perimetria_charts ?>],
@@ -774,6 +773,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             ykeys: ['a', 'b'],
             labels: ['CPU', 'DISK'],
             hideHover: 'auto'
-        });
+        });*/
     });
 </script>
