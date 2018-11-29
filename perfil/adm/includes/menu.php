@@ -1,3 +1,9 @@
+<style>
+    .disabled {
+        pointer-events:none; //This makes it not clickable
+    opacity:0.6;         //This grays it out to look disabled
+    }
+</style>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -26,7 +32,7 @@
                     <li><a href="?perfil=administrador&p=aluno_list"><i class="fa fa-male"></i> Aluno</a></li>
                 </ul>
             </li>
-            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-list"></i> Listar todos</a></li>
+            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-list"></i> Listar todos</a>
             <?php
             /*
              * Se existir cliente
@@ -35,46 +41,106 @@
                 $cliente = recuperaDados("clientes","id",$_SESSION['idCliente']);
             ?>
                 <li class="header">CLIENTE</li>
-                <li><a href="?perfil=administrador&p=cliente_resumo"><i class="fa fa-circle-o text-aqua"></i> Resumo</a></li>
-                <?php
-                if($cliente['classificacao_id'] == 1) {
-                    echo "<li><a href=\"?perfil=administrador&p=atleta_edit\"><i class=\"fa fa-futbol-o\"></i> Cadastro</a></li>";
-                }
-                if($cliente['classificacao_id'] == 2) {
-                    echo "<li><a href=\"?perfil=administrador&p=base_edit\"><i class=\"fa fa-child\"></i> Cadastro</a></li>";
-                }
-                if($cliente['classificacao_id'] == 3) {
-                    echo "<li><a href=\"?perfil=administrador&p=aluno_edit\"><i class=\"fa fa-male\"></i> Cadastro</a></li>";
-                }
-                /* plano */
-                $matricula = recuperaDados("matricula","cliente_id",$_SESSION['idCliente']);
-                if($matricula == NULL){
-                    echo "<li><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o text-aqua\"></i> Plano</a></li>";
-                }
-                else{
-                    echo "<li><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o text-aqua\"></i> Plano</a></li>";
-                }
-                /* estatura */
-                $estatura = recuperaDados("estaturas","cliente_id",$_SESSION['idCliente']);
-                if($estatura == NULL){
-                    echo "<li><a href=\"?perfil=administrador&p=estatura_add\"><i class=\"fa fa-circle-o text-aqua\"></i> Estatura</a></li>";
-                }
-                else{
-                    echo "<li><a href=\"?perfil=administrador&p=estatura_edit\"><i class=\"fa fa-circle-o text-aqua\"></i> Estatura</a></li>";
-                }
-                ?>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-book"></i> <span>Cadastro</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <!--<li><a href="?perfil=administrador&p=cliente_resumo"><i class="fa fa-circle-o"></i> Resumo</a></li>-->
+                        <?php
+                        if($cliente['classificacao_id'] == 1) {
+                            echo "<li><a href=\"?perfil=administrador&p=atleta_edit\"><i class=\"fa fa-futbol-o\"></i> Dados pessoais</a></li>";
+                        }
+                        if($cliente['classificacao_id'] == 2) {
+                            echo "<li><a href=\"?perfil=administrador&p=base_edit\"><i class=\"fa fa-child\"></i> Dados pessoais</a></li>";
+                        }
+                        if($cliente['classificacao_id'] == 3) {
+                            echo "<li><a href=\"?perfil=administrador&p=aluno_edit\"><i class=\"fa fa-male\"></i> Dados pessoais</a></li>";
+                        }
+                        /* plano */
+                        $matricula = recuperaDados("matricula","cliente_id",$_SESSION['idCliente']);
+                        if($matricula == NULL){
+                            echo "<li><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                        }
+                        else{
+                            echo "<li><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                        }
+                        ?>
+                    </ul>
+                </li>
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-circle-o text-aqua"></i> <span>Antropometria</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="?perfil=administrador&p=avaliacao_list"><i class="fa fa-circle-o"></i> Avaliação</a></li>
                         <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
                         <li><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
                     </ul>
                 </li>
-                <li><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o text-aqua"></i> Wells</a></li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o text-aqua"></i> <span>Testes</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o"></i> Banco de Wells</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Salto horizontal</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Saltos 1 minuto</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Yoyo test</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Rast test</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Six mobility</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o text-aqua"></i> <span>Controle de carga</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Minutagem</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Tempo treinado</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Tempo jogado</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Distância</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> PSE</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Peso corporal</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Atividades</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o text-aqua"></i> <span>Resultados</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> IMC</a></li>
+                        <?php
+                        /* estatura */
+                        $estatura = recuperaDados("estaturas","cliente_id",$_SESSION['idCliente']);
+                        if($estatura == NULL){
+                            echo "<li><a href=\"?perfil=administrador&p=estatura_add\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
+                        }
+                        else{
+                            echo "<li><a href=\"?perfil=administrador&p=estatura_edit\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
+                        }
+                        ?>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Percentual de gordura</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Massa magra</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Massa gorda</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-circle-o text-aqua"></i> <span>Relatório</span>
+                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Cardápio</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Treino</a></li>
+                    </ul>
+                </li>
             <?php
             }
             /*
