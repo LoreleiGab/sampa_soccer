@@ -98,8 +98,8 @@ $base = recuperaDados("base","cliente_id",$idCliente);
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-2">
-                                    <labeL for="data_nascimento">Data de Nascimento</labeL>
-                                    <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" value="<?= $cliente['data_nascimento'] ?>">
+                                    <labeL for="datepicker01">Data de Nascimento</labeL>
+                                    <input type="date" id="datepicker01" name="data_nascimento" class="form-control" value="<?= $cliente['data_nascimento'] ?>">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <labeL for="telefone01">Telefone #1</labeL>

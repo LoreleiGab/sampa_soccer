@@ -89,6 +89,21 @@
     })
 </script>
 
+<script>
+    //funções para calendário
+    $(function() {
+        $( "#datepicker01" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    $(function() {
+        $( "#datepicker02" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+</script>
 
 </body>
 </html>
