@@ -53,6 +53,21 @@ else
       <script src="dist/js/jquery-1.12.4.min.js"></script>
       <script src="dist/js/jquery.mask.js"></script>
       <script src="dist/js/telefone.js"></script>
+      <style>
+          .example-modal .modal {
+              position: relative;
+              top: auto;
+              bottom: auto;
+              right: auto;
+              left: auto;
+              display: block;
+              z-index: 1;
+          }
+
+          .example-modal .modal {
+              background: transparent !important;
+          }
+      </style>
   </head>
 <body class="hold-transition skin-blue-light sidebar-mini">
 <div class="wrapper">

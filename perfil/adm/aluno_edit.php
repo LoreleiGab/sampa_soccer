@@ -61,7 +61,6 @@ include "includes/menu.php";
 $cliente = recuperaDados("clientes","id",$idCliente);
 $aluno = recuperaDados("aluno","cliente_id",$idCliente);
 ?>
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Main content -->
@@ -139,6 +138,7 @@ $aluno = recuperaDados("aluno","cliente_id",$idCliente);
                         <div class="box-footer">
                             <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
                             <button type="submit" name="editar" class="btn btn-info pull-right">Cadastrar</button>
+                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Remover</button>
                         </div>
                     </form>
                 </div>
@@ -147,6 +147,31 @@ $aluno = recuperaDados("aluno","cliente_id",$idCliente);
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        <!-- Confirmação de Exclusão -->
+        <div class="modal modal-danger fade" id="modal-danger">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Confirmação de exclusão</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente excluir?<br/> Todos os dados relacionados serão excluídos e essa ação não poderá ser desfeita.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="?perfil=administrador&p=aluno_list" role="form">
+                            <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
+                            <button type="submit" name="apagar" class="btn btn-outline">Sim</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- Fim Confirmação de Exclusão -->
     </section>
     <!-- /.content -->
 </div>

@@ -1,7 +1,7 @@
 <style>
     .disabled {
         pointer-events:none; //This makes it not clickable
-    opacity:0.6;         //This grays it out to look disabled
+        opacity:0.6;         //This grays it out to look disabled
     }
 </style>
 <!-- Left side column. contains the logo and sidebar -->
@@ -23,16 +23,16 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-book"></i> <span>Cadastros</span>
+                    <i class="fa fa-book"></i> <span>Clientes cadastrados</span>
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="?perfil=administrador&p=atleta_list"><i class="fa fa-futbol-o"></i> Atleta</a></li>
                     <li><a href="?perfil=administrador&p=base_list"><i class="fa fa-child"></i> Base</a></li>
                     <li><a href="?perfil=administrador&p=aluno_list"><i class="fa fa-male"></i> Aluno</a></li>
+                    <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-list"></i> Listar todos</a>
                 </ul>
             </li>
-            <li><a href="?perfil=administrador&p=cliente_list"><i class="fa fa-list"></i> Listar todos</a>
             <?php
             /*
              * Se existir cliente
@@ -61,10 +61,10 @@
                         /* plano */
                         $matricula = recuperaDados("matricula","cliente_id",$_SESSION['idCliente']);
                         if($matricula == NULL){
-                            echo "<li><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
                         }
                         else{
-                            echo "<li><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
                         }
                         ?>
                     </ul>
@@ -75,8 +75,8 @@
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
-                        <li><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
+                        <li class="disabled"><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
+                        <li class="disabled"><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
                     </ul>
                 </li>
@@ -86,7 +86,7 @@
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o"></i> Banco de Wells</a></li>
+                        <li class="disabled"><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o"></i> Banco de Wells</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Salto horizontal</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Saltos 1 minuto</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Yoyo test</a></li>
@@ -120,10 +120,10 @@
                         /* estatura */
                         $estatura = recuperaDados("estaturas","cliente_id",$_SESSION['idCliente']);
                         if($estatura == NULL){
-                            echo "<li><a href=\"?perfil=administrador&p=estatura_add\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
+                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=estatura_add\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
                         }
                         else{
-                            echo "<li><a href=\"?perfil=administrador&p=estatura_edit\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
+                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=estatura_edit\"><i class=\"fa fa-circle-o\"></i> Estatura</a></li>";
                         }
                         ?>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Percentual de gordura</a></li>
@@ -158,7 +158,7 @@
                     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="?perfil=administrador&p=avaliacao_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
+                    <li class="disabled"><a href="?perfil=administrador&p=avaliacao_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>

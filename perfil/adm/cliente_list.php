@@ -34,20 +34,33 @@ $query = mysqli_query($con,$sql);
                                 <th>Telefone</th>
                                 <th>Email</th>
                                 <th>Classificação</th>
-                                <th width="10%">Ação</th>
+                                <th width="10%"></th>
+                                <th width="10%"></th>
                             </tr>
                             </thead>
 
                             <?php
                             echo "<tbody>";
                             while ($cliente = mysqli_fetch_array($query)){
-
-
                                 echo "<tr>";
                                 echo "<td>".$cliente['nome']."</td>";
                                 echo "<td>".$cliente['telefone01']."</td>";
                                 echo "<td>".$cliente['email']."</td>";
                                 echo "<td>".$cliente['nome_classificacao']."</td>";
+                                if($cliente['classificacao_id'] == 1){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 2){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=base_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 3){
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=aluno_edit\" role=\"form\">";
+                                }
+                                echo "
+                                    <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                    </form>
+                                </td>";
                                 echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=cliente_resumo\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>

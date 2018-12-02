@@ -725,23 +725,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 </div>
             </div>
             <!-- ./PESO CHART -->
-            <!-- PERIMETRIA CHART -->
-            <div class="col-md-6">
-                <div class="box box-default">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Perimetria</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                        </div>
-                    </div>
-                    <div class="box-body chart-responsive">
-                        <div class="chart" id="perimetria-chart" style="height: 300px;"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./PERIMETRIA CHART -->
         <!-- /.row -->
     </section>
     <!-- /.content -->
@@ -763,16 +746,6 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             hideHover: 'auto'
         });
 
-        //PERIMETRIA CHART
-        /*var bar = new Morris.Bar({
-            element: 'perimetria-chart',
-            resize: true,
-            data: [<?= $perimetria_charts ?>],
-            barColors: ['#00a65a', '#f56954'],
-            xkey: 'y',
-            ykeys: ['a', 'b'],
-            labels: ['CPU', 'DISK'],
-            hideHover: 'auto'
-        });*/
+
     });
 </script>
