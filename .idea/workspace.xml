@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/perfil/adm/aluno_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/aluno_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/base_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/base_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/base_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/base_edit.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,7 +92,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="131" />
           <entry key="md" value="5" />
-          <entry key="php" value="17818" />
+          <entry key="php" value="17837" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
@@ -98,7 +101,7 @@
           <entry key="HTML" value="92" />
           <entry key="JavaScript" value="131" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="17806" />
+          <entry key="PHP" value="17825" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="8" />
         </counts>
@@ -189,17 +192,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-790">
-              <caret line="42" column="72" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="72" />
+            <state relative-caret-position="468">
+              <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1430">
-              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+            <state relative-caret-position="858">
+              <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -207,26 +210,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/base_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+            <state relative-caret-position="234">
+              <caret line="33" column="74" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visual/rodape.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="101" column="34" lean-forward="true" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+            <state relative-caret-position="1108">
+              <caret line="173" column="44" lean-forward="true" selection-start-line="149" selection-start-column="7" selection-end-line="173" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -234,8 +228,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="98" column="38" lean-forward="true" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+            <state relative-caret-position="250">
+              <caret line="191" column="82" selection-start-line="191" selection-start-column="82" selection-end-line="191" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -243,9 +237,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/base_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="100" column="63" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="63" />
-              <caret line="101" column="74" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="74" />
+            <state relative-caret-position="1966">
+              <caret line="173" column="80" selection-start-line="173" selection-start-column="80" selection-end-line="173" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -356,12 +349,12 @@
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/base_list.php" />
         <option value="$PROJECT_DIR$/visual/rodape.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/aluno_edit.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/base_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/base_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/aluno_edit.php" />
       </list>
     </option>
   </component>
@@ -523,12 +516,12 @@
       <workItem from="1543099377325" duration="129000" />
       <workItem from="1543099553030" duration="23224000" />
       <workItem from="1543310356818" duration="358000" />
-      <workItem from="1543706137093" duration="12170000" />
+      <workItem from="1543706137093" duration="14057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243259000" />
+    <option name="totallyTimeSpent" value="245146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -893,46 +886,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/base_add.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1430">
-          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="42" column="72" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/base_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="100" column="63" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="63" />
-          <caret line="101" column="74" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="74" />
+        <state relative-caret-position="1108">
+          <caret line="173" column="44" lean-forward="true" selection-start-line="149" selection-start-column="7" selection-end-line="173" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="98" column="38" lean-forward="true" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+        <state relative-caret-position="250">
+          <caret line="191" column="82" selection-start-line="191" selection-start-column="82" selection-end-line="191" selection-end-column="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_edit.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/base_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="101" column="34" lean-forward="true" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+        <state relative-caret-position="1966">
+          <caret line="173" column="80" selection-start-line="173" selection-start-column="80" selection-end-line="173" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/base_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="33" column="74" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
         </state>
       </provider>
     </entry>

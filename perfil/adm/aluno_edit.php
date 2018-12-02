@@ -138,7 +138,7 @@ $aluno = recuperaDados("aluno","cliente_id",$idCliente);
                         <div class="box-footer">
                             <input type='hidden' name='idCliente' value="<?= $cliente['id'] ?>">
                             <button type="submit" name="editar" class="btn btn-info pull-right">Cadastrar</button>
-                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Remover</button>
+                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Excluir</button>
                         </div>
                     </form>
                 </div>
