@@ -8,18 +8,12 @@ $con = bancoMysqli();
 
 if(isset($_POST['apagar'])){
     $idCliente = $_POST['idCliente'];
-    $sql_apaga_aluno = "DELETE FROM aluno WHERE cliente_id = '$idCliente'";
-    if(mysqli_query($con,$sql_apaga_aluno)){
-        $sql_apaga_cliente = "DELETE FROM clientes WHERE id = '$idCliente'";
-        if(mysqli_query($con,$sql_apaga_cliente)){
-            $mensagem = mensagem("success", "Excluído com sucesso!");
-        }
-        else{
-            $mensagem = mensagem("danger","Erro ao excluir! Tente novamente.");
-        }
+    $sql_apaga_cliente = "DELETE FROM clientes WHERE id = '$idCliente'";
+    if(mysqli_query($con,$sql_apaga_cliente)){
+        $mensagem = mensagem("success", "Excluído com sucesso!");
     }
     else{
-        $mensagem = mensagem("danger","Erro ao excluir! Tente novamente.[COD2]").$sql_apaga_aluno;
+        $mensagem = mensagem("danger","Erro ao excluir! Tente novamente.");
     }
 }
 
@@ -74,7 +68,7 @@ $query = mysqli_query($con,$sql);
                                 echo "<td>
                                     <form method=\"POST\" action=\"?perfil=administrador&p=cliente_resumo\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
-                                    <button type=\"submit\" name='resumo' class=\"btn btn-block btn-primary\">Abrir</button>
+                                    <button type=\"submit\" name='resumo' class=\"btn btn-block btn-primary\">Resumo</button>
                                     </form>
                                 </td>";
                                 echo "</tr>";
