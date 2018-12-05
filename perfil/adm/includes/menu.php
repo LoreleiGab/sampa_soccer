@@ -59,12 +59,12 @@
                             echo "<li><a href=\"?perfil=administrador&p=aluno_edit\"><i class=\"fa fa-male\"></i> Dados pessoais</a></li>";
                         }
                         /* plano */
-                        $matricula = recuperaDados("matricula","cliente_id",$_SESSION['idCliente']);
+                        $matricula = recuperaDados("planos","cliente_id",$_SESSION['idCliente']);
                         if($matricula == NULL){
-                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                            echo "<li><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
                         }
                         else{
-                            echo "<li class='disabled'><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
+                            echo "<li><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
                         }
                         ?>
                     </ul>
@@ -75,7 +75,7 @@
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="disabled"><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
+                        <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
                         <li class="disabled"><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
                     </ul>

@@ -163,7 +163,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     </div>
                     <!-- /.box-header -->
                     <?php
-                    $sql_matricula = "SELECT * FROM matricula WHERE cliente_id = '$idCliente'";
+                    $sql_matricula = "SELECT * FROM planos WHERE cliente_id = '$idCliente'";
                     $query_matricula = mysqli_query($con,$sql_matricula);
                     $matricula = mysqli_fetch_array($query_matricula);
                     if($matricula != NULL) {
