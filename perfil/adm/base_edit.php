@@ -43,6 +43,7 @@ if(isset($_POST['editar'])){
     if(mysqli_query($con,$sql_edita_cliente)){
         $sql_edita_base = "UPDATE bases SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_base)) {
+            $_SESSION['idCliente'] = $idCliente;
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
         else{

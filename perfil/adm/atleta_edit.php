@@ -45,6 +45,7 @@ if(isset($_POST['editar'])){
     if(mysqli_query($con,$sql_edita_cliente)){
         $sql_edita_atleta = "UPDATE atletas SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria_id = '$categoria_id', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_atleta)) {
+            $_SESSION['idCliente'] = $idCliente;
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
         else{
