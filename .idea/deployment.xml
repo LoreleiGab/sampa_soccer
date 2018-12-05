@@ -9,6 +9,27 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="CCSP (project level)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/sampa_soccer" local="$PROJECT_DIR$" web="/sampa_soccer" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="localhost">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="virtual">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
     <option name="myAutoUpload" value="ALWAYS" />
   </component>

@@ -23,7 +23,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_aluno = "INSERT INTO aluno (sexo_id, atividade_interesse, restricao, cliente_id) VALUES ('$sexo', '$atividade_interesse', '$restricao', '$idCliente')";
+        $sql_aluno = "INSERT INTO alunos (sexo_id, atividade_interesse, restricao, cliente_id) VALUES ('$sexo', '$atividade_interesse', '$restricao', '$idCliente')";
         if(mysqli_query($con,$sql_aluno)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -39,7 +39,7 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_aluno = "UPDATE aluno SET sexo_id = '$sexo', atividade_interesse = '$atividade_interesse', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
+        $sql_edita_aluno = "UPDATE alunos SET sexo_id = '$sexo', atividade_interesse = '$atividade_interesse', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_aluno)) {
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
@@ -59,7 +59,7 @@ if(isset($_POST['carregar'])){
 include "includes/menu.php";
 
 $cliente = recuperaDados("clientes","id",$idCliente);
-$aluno = recuperaDados("aluno","cliente_id",$idCliente);
+$aluno = recuperaDados("alunos","cliente_id",$idCliente);
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">

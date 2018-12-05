@@ -27,7 +27,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_atleta = "INSERT INTO atleta (apelido, posicao_id, pe_dominante_id, clube, categoria_id, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$clube', '$categoria_id', '$restricao', '$ultimos_clubes', '$idCliente')";
+        $sql_atleta = "INSERT INTO atletas (apelido, posicao_id, pe_dominante_id, clube, categoria_id, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$clube', '$categoria_id', '$restricao', '$ultimos_clubes', '$idCliente')";
         if(mysqli_query($con,$sql_atleta)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -43,7 +43,7 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_atleta = "UPDATE atleta SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria_id = '$categoria_id', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
+        $sql_edita_atleta = "UPDATE atletas SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante',clube = '$clube', categoria_id = '$categoria_id', restricao = '$restricao', ultimos_clubes = '$ultimos_clubes' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_atleta)) {
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
@@ -63,7 +63,7 @@ if(isset($_POST['carregar'])){
 include "includes/menu.php";
 
 $cliente = recuperaDados("clientes","id",$idCliente);
-$atleta = recuperaDados("atleta","cliente_id",$idCliente);
+$atleta = recuperaDados("atletas","cliente_id",$idCliente);
 ?>
 
 <!-- Content Wrapper. Contains page content -->

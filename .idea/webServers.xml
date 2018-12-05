@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="3898adc5-a0db-4c1b-81fa-f5df26def920" name="CCSP" url="http://200.237.5.33">
+      <webServer id="3898adc5-a0db-4c1b-81fa-f5df26def920" name="CCSP (project level)" url="http://200.237.5.33">
         <fileTransfer host="200.237.5.33" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

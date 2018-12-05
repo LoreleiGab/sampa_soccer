@@ -24,7 +24,7 @@ if(isset($_POST['cadastrar'])){
     $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
-        $sql_base = "INSERT INTO base (apelido, posicao_id, pe_dominante_id, restricao, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$restricao', '$idCliente')";
+        $sql_base = "INSERT INTO bases (apelido, posicao_id, pe_dominante_id, restricao, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$restricao', '$idCliente')";
         if(mysqli_query($con,$sql_base)) {
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
@@ -41,7 +41,7 @@ if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
     $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
-        $sql_edita_base = "UPDATE base SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
+        $sql_edita_base = "UPDATE bases SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_base)) {
             $mensagem = mensagem("success", "Gravado com sucesso!");
         }
@@ -61,7 +61,7 @@ if(isset($_POST['carregar'])){
 include "includes/menu.php";
 
 $cliente = recuperaDados("clientes","id",$idCliente);
-$base = recuperaDados("base","cliente_id",$idCliente);
+$base = recuperaDados("bases","cliente_id",$idCliente);
 ?>
 
 <!-- Content Wrapper. Contains page content -->

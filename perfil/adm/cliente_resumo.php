@@ -63,7 +63,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         </div>
                         <?php
                         if($cliente['classificacao_id'] == 1) {
-                            $atleta = recuperaDados("atleta", "cliente_id", $idCliente);
+                            $atleta = recuperaDados("atletas", "cliente_id", $idCliente);
                             $pe = recuperaDados("pe_dominantes","id",$atleta['pe_dominante_id']);
                             $categoria = recuperaDados("categoria_atletas","id",$atleta['categoria_id']);
                             $posicao = recuperaDados("posicoes","id", $atleta['posicao_id']);
@@ -94,7 +94,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <?php
                         }
                         if($cliente['classificacao_id'] == 2) {
-                            $base = recuperaDados("base", "cliente_id", $idCliente);
+                            $base = recuperaDados("bases", "cliente_id", $idCliente);
                             $pe = recuperaDados("pe_dominantes","id",$base['pe_dominante_id']);
                             $posicao = recuperaDados("posicoes","id", $base['posicao_id']);
                             ?>
@@ -115,7 +115,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <?php
                         }
                         if($cliente['classificacao_id'] == 3) {
-                            $aluno = recuperaDados("aluno", "cliente_id", $idCliente);
+                            $aluno = recuperaDados("alunos", "cliente_id", $idCliente);
                             ?>
                             <div class="form-group">
                                 <labeL>Atividades de interesse:</labeL> <?= $aluno['atividade_interesse'] ?>
