@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/base_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/base_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +75,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="131" />
           <entry key="md" value="5" />
-          <entry key="php" value="18511" />
+          <entry key="php" value="18556" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -90,7 +84,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="131" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="18497" />
+          <entry key="PHP" value="18542" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -171,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
+            <state relative-caret-position="298">
+              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -189,11 +183,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+            <state relative-caret-position="273">
+              <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -201,8 +195,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="284">
+              <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -210,8 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/base_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+            <state relative-caret-position="396">
+              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -219,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+            <state relative-caret-position="220">
+              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -250,8 +244,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>admin</find>
-      <find>select2</find>
       <find>fa fa-plu</find>
       <find>fa fa-ed</find>
       <find>nadia</find>
@@ -280,6 +272,8 @@
       <find>danger modal</find>
       <find>modal-danger</find>
       <find>datepicker</find>
+      <find>base</find>
+      <find>atleta</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\sampa_soccer\visual\dist</dir>
@@ -336,12 +330,12 @@
         <option value="$PROJECT_DIR$/perfil/adm/aluno_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_list.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
       </list>
     </option>
   </component>
@@ -423,6 +417,13 @@
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
               <item name="perfil" type="462c0819:PsiDirectoryNode" />
               <item name="adm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
+              <item name="perfil" type="462c0819:PsiDirectoryNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
@@ -512,12 +513,12 @@
       <workItem from="1543706137093" duration="17432000" />
       <workItem from="1543879944314" duration="5747000" />
       <workItem from="1543961797057" duration="2987000" />
-      <workItem from="1544048449797" duration="411000" />
+      <workItem from="1544048449797" duration="793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257666000" />
+    <option name="totallyTimeSpent" value="258048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -526,7 +527,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18123393" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="0" visible="true" weight="0.28436658" />
+      <window_info anchor="bottom" id="File Transfer" order="0" visible="true" weight="0.19137466" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3295082" />
@@ -864,41 +865,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="143" column="17" selection-start-line="143" selection-start-column="17" selection-end-line="143" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/15936419-6801-4dbd-98d4-24efe5676b14/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="70" column="45" lean-forward="true" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="284">
+          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/base_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+        <state relative-caret-position="396">
+          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="220">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+        <state relative-caret-position="298">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
         </state>
       </provider>
     </entry>
