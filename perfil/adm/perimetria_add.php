@@ -2,8 +2,7 @@
 include "includes/menu.php";
 $con = bancoMysqli();
 
-if(isset($_POST['idAvaliacao'])){
-    $idAvaliacao = $_POST['idAvaliacao'];
+if(isset($_POST['idCliente'])){
     $idCliente = $_POST['idCliente'];
 }
 $cliente = recuperaDados("clientes","id",$idCliente);
@@ -33,6 +32,13 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                         <div class="box-body">
 
                             <div class="row">
+                                <div class="form-group col-md-1">
+                                    <labeL for="imc_id">Data</labeL>
+                                    <select id="imc_id" name="imc_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcaoData("perimetrias",$idCliente,"") ?>
+                                    </select>
+                                </div>
                                 <div class="form-group col-md-1">
                                     <labeL for="torax">Torax</labeL>
                                     <input type="text" id="torax" name="torax" class="form-control">

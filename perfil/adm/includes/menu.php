@@ -71,19 +71,19 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-circle-o text-aqua"></i> <span>Antropometria</span>
+                        <i class="fa fa-circle-o text-green"></i> <span>Antropometria</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="?perfil=administrador&p=peso_altura_list"><i class="fa fa-circle-o"></i> Peso / Altura</a></li>
-                        <li class="disabled"><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
+                        <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
                         <li class="disabled"><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-circle-o text-aqua"></i> <span>Testes</span>
+                        <i class="fa fa-circle-o text-lime"></i> <span>Testes</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
@@ -112,7 +112,7 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-circle-o text-aqua"></i> <span>Resultados</span>
+                        <i class="fa fa-circle-o text-light-blue"></i> <span>Resultados</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
@@ -134,7 +134,7 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-circle-o text-aqua"></i> <span>Relatório</span>
+                        <i class="fa fa-circle-o text-purple"></i> <span>Relatório</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">

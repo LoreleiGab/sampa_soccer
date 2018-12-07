@@ -18,8 +18,8 @@ if(isset($_POST['cadastra']) || isset($_POST['edita'])){
 }
 
 if(isset($_POST['cadastra'])){
-    $idAvaliacao = $_POST['idAvaliacao'];
-    $sql = "INSERT INTO perimetrias (avaliacao_id, torax, cintura, abdome, quadril, coxa_direita, coxa_esquerda, perna_direita, perna_esquerda, biceps_direito, biceps_esquerdo, punho) VALUES ('$idAvaliacao', '$torax', '$cintura', '$abdome', '$quadril', '$coxa_direita', '$coxa_esquerda', '$perna_direita', '$perna_esquerda', '$biceps_direito', '$biceps_esquerdo', '$punho')";
+    $idImc = $_POST['imc_id'];
+    $sql = "INSERT INTO perimetrias (imc_id, torax, cintura, abdome, quadril, coxa_direita, coxa_esquerda, perna_direita, perna_esquerda, biceps_direito, biceps_esquerdo, punho) VALUES ('$idImc', '$torax', '$cintura', '$abdome', '$quadril', '$coxa_direita', '$coxa_esquerda', '$perna_direita', '$perna_esquerda', '$biceps_direito', '$biceps_esquerdo', '$punho')";
     if(mysqli_query($con,$sql)){
         $idPerimetria = recuperaUltimo("perimetrias");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -36,7 +36,7 @@ if(isset($_POST['edita'])){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
     else{
-        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
+        $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }
 }
 
@@ -79,6 +79,13 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
                         <div class="box-body">
 
                             <div class="row">
+                                <div class="form-group col-md-1">
+                                    <labeL for="imc_id">Data</labeL>
+                                    <?php
+                                    $imc = recuperaDados("imcs","id",$perimetria['imc_id']);
+                                    echo $data = dataBR($imc['data']);
+                                    ?>
+                                </div>
                                 <div class="form-group col-md-1">
                                     <labeL for="torax">Torax</labeL>
                                     <input type="text" id="torax" name="torax" class="form-control" value="<?= $perimetria['torax'] ?>">
@@ -131,6 +138,7 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
                             <input type='hidden' name='idPerimetria' value='<?= $perimetria['id'] ?>'>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>
+                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Excluir</button>
                         </div>
                     </form>
                 </div>
@@ -139,6 +147,31 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        <!-- Confirmação de Exclusão -->
+        <div class="modal modal-danger fade" id="modal-danger">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Confirmação de exclusão</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente excluir?<br/> Todos os dados relacionados serão excluídos e essa ação não poderá ser desfeita.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="?perfil=administrador&p=perimetria_list" role="form">
+                            <input type='hidden' name='idPerimetria' value='<?= $perimetria['id'] ?>'>
+                            <button type="submit" name="apagar" class="btn btn-outline">Sim</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- Fim Confirmação de Exclusão -->
     </section>
     <!-- /.content -->
 </div>

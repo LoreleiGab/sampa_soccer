@@ -192,6 +192,27 @@ date_default_timezone_set("Brazil/East");
 		}
 	}
 
+function geraOpcaoData($tabela,$idCliente,$select)
+{
+    //gera os options de um select
+    $sql = "SELECT im.id AS idImc , `data`, `peso`, `altura`, `resultado`, `cliente_id`, tbl2.id AS tblId FROM imcs AS im 
+            LEFT JOIN $tabela AS tbl2 ON tbl2.imc_id = im.id
+            WHERE tbl2.id IS NULL AND cliente_id = '$idCliente' ORDER BY im.data";
+    $con = bancoMysqli();
+    $query = mysqli_query($con,$sql);
+    while($option = mysqli_fetch_row($query))
+    {
+        if($option[0] == $select)
+        {
+            echo "<option value='".$option[0]."' selected >".dataBR($option[1])."</option>";
+        }
+        else
+        {
+            echo "<option value='".$option[0]."'>".dataBR($option[1])."</option>";
+        }
+    }
+}
+
 	function geraOpcaoPublicado($tabela,$select)
 	{
 		//gera os options de um select
