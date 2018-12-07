@@ -286,19 +286,19 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <!-- AVALIAÇÕES general form elements -->
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Avaliações</h3>
+                        <h3 class="box-title">Peso / Altura</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
                         </div>
-                        <form method="POST" action="?perfil=administrador&p=avaliacao_add" role="form">
+                        <form method="POST" action="?perfil=administrador&p=peso_altura_add" role="form">
                             <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
                             <button type="submit" name="avaliacao" class="btn btn-info pull-right">Adicionar</button>
                         </form>
                     </div>
                     <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
+                    $sql_avaliacao = "SELECT * FROM imcs WHERE cliente_id = '$idCliente'";
                     $query_avaliacao = mysqli_query($con,$sql_avaliacao);
                     if($query_avaliacao != NULL) {
                         ?>
@@ -310,10 +310,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <th>Peso</th>
                                     <th>Altura</th>
                                     <th>IMC</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th width="10%">Ação</th>
                                 </tr>
                                 </thead>
                                 <?php
@@ -326,90 +323,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     echo "<td>" . decimalBr($avaliacao['altura'],1) . "</td>";
                                     echo "<td>" . imc($avaliacao['peso'],$avaliacao['altura']) ."</td>";
                                     echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=avaliacao_edit\" role=\"form\">
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=peso_altura_edit\" role=\"form\">
                                     <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>
                                     </td>";
-                                    $perimetria = recuperaDados("perimetrias","avaliacao_id",$avaliacao['id']);
-                                    if($perimetria != NULL){
-                                        echo "<td>
-                                        <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_edit\" role=\"form\">
-                                        <input type='hidden' name='idPerimetria' value='" . $perimetria['id'] . "'>
-                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Perimetria</button>
-                                        </form>
-                                        </td>";
-                                    }
-                                    else{
-                                        echo "<td>
-                                        <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_add\" role=\"form\">
-                                        <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Perimetria</button>
-                                        </form>
-                                        </td>";
-                                    }
-                                    $dobras = recuperaDados("dobras","avaliacao_id",$avaliacao['id']);
-                                    if($dobras != NULL){
-                                        echo "<td>";
-                                        if($cliente['classificacao_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_edit\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_edit\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_edit\" role=\"form\">";
-                                        }
-                                        echo"<input type='hidden' name='idDobras' value='" . $dobras['id'] . "'>
-                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Dobras</button>
-                                        </form>
-                                        </td>";
-                                    }
-                                    else{
-                                        echo "<td>";
-                                        if($cliente['classificacao_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_add\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_add\" role=\"form\">";
-                                        }
-                                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
-                                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_add\" role=\"form\">";
-                                        }
-                                        echo"<input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                            <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                            <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Dobras</button>
-                                            </form>
-                                        </td>";
-                                    }
-                                    $wells = recuperaDados("wells","avaliacao_id",$avaliacao['id']);
-                                    if($wells != NULL){
-                                        echo "<td>
-                                        <form method=\"POST\" action=\"?perfil=administrador&p=wells_edit\" role=\"form\">
-                                        <input type='hidden' name='idWells' value='" . $wells['id'] . "'>
-                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-edit\"></i> Wells</button>
-                                        </form>
-                                        </td>";
-                                    }
-                                    else{
-                                        echo "<td>
-                                        <form method=\"POST\" action=\"?perfil=administrador&p=wells_add\" role=\"form\">
-                                        <input type='hidden' name='idAvaliacao' value='" . $avaliacao['id'] . "'>
-                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
-                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\"><i class=\"fa fa-plus\"></i> Wells</button>
-                                        </form>
-                                        </td>";
-                                    }
                                     echo "</tr>";
                                     $avaliacao_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$avaliacao['peso']."}, ";
                                 }
