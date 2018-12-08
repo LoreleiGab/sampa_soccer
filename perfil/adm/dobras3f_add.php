@@ -2,10 +2,8 @@
 include "includes/menu.php";
 $con = bancoMysqli();
 
-if(isset($_POST['idAvaliacao'])){
-    $idAvaliacao = $_POST['idAvaliacao'];
-    $avaliacao = recuperaDados("avaliacoes","id",$idAvaliacao);
-    $idCliente = $avaliacao['cliente_id'];
+if(isset($_POST['idCliente'])){
+    $idCliente = $_POST['idCliente'];
 }
 ?>
 
@@ -36,6 +34,13 @@ if(isset($_POST['idAvaliacao'])){
 
                             <div class="row">
                                 <div class="form-group col-md-2">
+                                    <labeL for="imc_id">Data</labeL>
+                                    <select id="imc_id" name="imc_id" class="form-control" required>
+                                        <option value="">Selecione...</option>
+                                        <?php geraOpcaoData("dobras",$idCliente,"") ?>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
                                     <labeL for="tricipital">Tricipital</labeL>
                                     <input type="text" id="tricipital" name="tricipital" class="form-control">
                                 </div>
@@ -52,7 +57,6 @@ if(isset($_POST['idAvaliacao'])){
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <input type='hidden' name='idAvaliacao' value='<?= $idAvaliacao ?>'>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="cadastra" class="btn btn-info pull-right">Cadastrar</button>
                         </div>
