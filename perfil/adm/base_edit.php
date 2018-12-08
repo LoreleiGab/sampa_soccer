@@ -57,6 +57,7 @@ if(isset($_POST['editar'])){
 
 if(isset($_POST['carregar'])){
     $idCliente = $_POST['idCliente'];
+    $_SESSION['idCliente'] = $idCliente;
 }
 
 include "includes/menu.php";
