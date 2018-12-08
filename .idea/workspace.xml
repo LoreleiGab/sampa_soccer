@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras3f_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras3f_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras3f_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras3f_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras3m_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras3m_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="19525" />
+          <entry key="php" value="19532" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -92,7 +92,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="19511" />
+          <entry key="PHP" value="19518" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -109,7 +109,7 @@
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="271" />
+          <entry key="php" value="273" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
         </counts>
@@ -122,7 +122,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="271" />
+          <entry key="PHP" value="273" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -195,37 +195,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras7_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" selection-start-line="4" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="-338">
+              <caret line="41" column="38" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="41" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras7_edit.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3m_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="153" selection-end-column="44" />
+            <state relative-caret-position="390">
+              <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="137" column="44" selection-start-line="113" selection-start-column="8" selection-end-line="137" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_edit.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3m_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="123" column="76" lean-forward="true" selection-start-line="123" selection-start-column="76" selection-end-line="123" selection-end-column="76" />
+            <state relative-caret-position="172">
+              <caret line="137" column="44" selection-start-line="137" selection-start-column="44" selection-end-line="137" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -284,8 +284,6 @@
       <list>
         <option value="$PROJECT_DIR$/perfil/adm/dobras8_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras8_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/dobras3m_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_edit.php" />
         <option value="$PROJECT_DIR$/visual/pages/tables/data.html" />
@@ -333,6 +331,8 @@
         <option value="$PROJECT_DIR$/perfil/adm/dobras7_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3f_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3f_edit.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/dobras3m_add.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
       </list>
     </option>
   </component>
@@ -363,7 +363,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="5" />
     <option name="y" value="-14" />
     <option name="width" value="1386" />
@@ -499,12 +499,12 @@
       <workItem from="1543879944314" duration="5747000" />
       <workItem from="1543961797057" duration="2987000" />
       <workItem from="1544048449797" duration="793000" />
-      <workItem from="1544186885529" duration="28036000" />
+      <workItem from="1544186885529" duration="28509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286084000" />
+    <option name="totallyTimeSpent" value="286557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -565,20 +565,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visual/pages/charts/flot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="1064" column="13" selection-start-line="1064" selection-start-column="13" selection-end-line="1064" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visual/pages/charts/chartjs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10946">
-          <caret line="421" column="20" selection-start-line="419" selection-start-column="14" selection-end-line="421" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/avaliacao_edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2730">
@@ -872,13 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/dobras7_edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -886,10 +865,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-338">
+          <caret line="41" column="38" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="41" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3m_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="123" column="76" lean-forward="true" selection-start-line="123" selection-start-column="76" selection-end-line="123" selection-end-column="76" />
+        <state relative-caret-position="510">
+          <caret line="137" column="44" selection-start-line="113" selection-start-column="8" selection-end-line="137" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3m_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="137" column="44" selection-start-line="137" selection-start-column="44" selection-end-line="137" selection-end-column="44" />
         </state>
       </provider>
     </entry>

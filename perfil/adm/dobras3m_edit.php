@@ -14,8 +14,8 @@ if(isset($_POST['cadastra']) || isset($_POST['edita'])){
 }
 
 if(isset($_POST['cadastra'])) {
-    $idAvaliacao = $_POST['idAvaliacao'];
-    $sql = "INSERT INTO dobras (avaliacao_id, peitoral, s_escapular, tricipital, a_media, s_iliaca, abdominal, coxa, perna) VALUES ('$idAvaliacao', '$peitoral', '$s_escapular', '$tricipital', '$a_media', '$s_iliaca', '$abdominal', '$coxa', '$perna')";
+    $idImc = $_POST['imc_id'];
+    $sql = "INSERT INTO dobras (imc_id, peitoral, s_escapular, tricipital, a_media, s_iliaca, abdominal, coxa, perna) VALUES ('$idImc', '$peitoral', '$s_escapular', '$tricipital', '$a_media', '$s_iliaca', '$abdominal', '$coxa', '$perna')";
     if(mysqli_query($con,$sql)){
         $idDobras = recuperaUltimo("dobras");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -34,12 +34,6 @@ if(isset($_POST['edita'])) {
     else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
     }
-}
-
-if(isset($_POST['idAvaliacao'])){
-    $idAvaliacao = $_POST['idAvaliacao'];
-    $avaliacao = recuperaDados("avaliacoes","id",$idAvaliacao);
-    $idCliente = $avaliacao['cliente_id'];
 }
 
 if(isset($_POST['carregar'])){
@@ -82,6 +76,13 @@ $dobras = recuperaDados("dobras","id",$idDobras);
 
                             <div class="row">
                                 <div class="form-group col-md-2">
+                                    <labeL for="imc_id">Data</labeL><br/>
+                                    <?php
+                                    $imc = recuperaDados("imcs","id",$dobras['imc_id']);
+                                    echo $data = dataBR($imc['data']);
+                                    ?>
+                                </div>
+                                <div class="form-group col-md-2">
                                     <labeL for="peitoral">Peitoral</labeL>
                                     <input type="text" id="peitoral" name="peitoral" class="form-control" value="<?= $dobras['peitoral'] ?>">
                                 </div>
@@ -101,6 +102,7 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                             <input type='hidden' name='idDobras' value="<?= $dobras['id'] ?>">
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>
+                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Excluir</button>
                         </div>
                     </form>
                 </div>
@@ -109,6 +111,31 @@ $dobras = recuperaDados("dobras","id",$idDobras);
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        <!-- Confirmação de Exclusão -->
+        <div class="modal modal-danger fade" id="modal-danger">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Confirmação de exclusão</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente excluir?<br/> Todos os dados relacionados serão excluídos e essa ação não poderá ser desfeita.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="?perfil=administrador&p=dobras_list" role="form">
+                            <input type='hidden' name='idDobras' value='<?= $dobras['id'] ?>'>
+                            <button type="submit" name="apagar" class="btn btn-outline">Sim</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- Fim Confirmação de Exclusão -->
     </section>
     <!-- /.content -->
 </div>
