@@ -14,7 +14,7 @@ $cliente = recuperaDados("clientes","id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Wells
+        <h2 class="page-header">banco de Wells
         <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">

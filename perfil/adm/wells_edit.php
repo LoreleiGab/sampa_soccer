@@ -43,7 +43,7 @@ $wells = recuperaDados("wells","cliente_id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Wells</h2>
+        <h2 class="page-header">Banco de Wells</h2>
         <small><?= recuperaNomeCliente($idCliente) ?></small>
 
         <div class="row">

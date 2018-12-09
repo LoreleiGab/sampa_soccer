@@ -38,7 +38,7 @@ include "includes/menu.php";
                     $query_wells = mysqli_query($con,$sql_wells);
                     ?>
                     <div class="box-header with-border">
-                        <h3 class="box-title">Wells</h3>
+                        <h3 class="box-title">Banco de Wells</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
