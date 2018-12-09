@@ -4,11 +4,12 @@ $con = bancoMysqli();
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $idCliente = $_POST['idCliente'];
+    $data = $_POST['data'];
     $medida = $_POST['medida'];
 }
 
 if(isset($_POST['cadastra'])){
-    $sql = "INSERT INTO wells (cliente_id, medida) VALUES ('$idCliente','$medida')";
+    $sql = "INSERT INTO wells (cliente_id, data, medida) VALUES ('$idCliente', '$data', '$medida')";
     if(mysqli_query($con,$sql)){
         $idWells = recuperaUltimo("wells");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -20,7 +21,7 @@ if(isset($_POST['cadastra'])){
 
 if(isset($_POST['edita'])){
     $idWells = $_POST['idWells'];
-    $sql = "UPDATE wells SET medida = '$medida' WHERE id = '$idWells'";
+    $sql = "UPDATE wells SET medida = '$medida', data = '$data' WHERE id = '$idWells'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
@@ -65,7 +66,11 @@ $wells = recuperaDados("wells","cliente_id",$idCliente);
                     <form method="POST" action="?perfil=administrador&p=wells_edit" role="form">
                         <div class="box-body">
                             <div class="row">
-                                <div class="form-group col-md-offset-4 col-md-3">
+                                <div class="col-md-2">
+                                    <labeL for="data">Data</labeL>
+                                    <input type="date" id="data" name="data" class="form-control" value="<?= $wells['data'] ?>">
+                                </div>
+                                <div class="col-md-2">
                                     <labeL for="medida">Medida</labeL>
                                     <input type="number" id="medida" name="medida" class="form-control" value="<?= $wells['medida'] ?>">
                                 </div>
@@ -74,7 +79,7 @@ $wells = recuperaDados("wells","cliente_id",$idCliente);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <input type='hidden' name='idWells' value='<?= $idWells ?>'>
+                            <input type='hidden' name='idWells' value='<?= $wells['id'] ?>'>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>
                             <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Excluir</button>
@@ -100,7 +105,7 @@ $wells = recuperaDados("wells","cliente_id",$idCliente);
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
-                        <form method="POST" action="?perfil=administrador&p=dobras_list" role="form">
+                        <form method="POST" action="?perfil=administrador&p=wells_list" role="form">
                             <input type='hidden' name='idWells' value='<?= $wells['id'] ?>'>
                             <button type="submit" name="apagar" class="btn btn-outline">Sim</button>
                         </form>

@@ -37,7 +37,11 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                     <form method="POST" action="?perfil=administrador&p=wells_edit" role="form">
                         <div class="box-body">
                             <div class="row">
-                                <div class="form-group col-md-offset-4 col-md-3">
+                                <div class="col-md-2">
+                                    <labeL for="data">Data</labeL>
+                                    <input type="date" id="data" name="data" class="form-control">
+                                </div>
+                                <div class="col-md-2">
                                     <labeL for="medida">Medida</labeL>
                                     <input type="number" id="medida" name="medida" class="form-control">
                                 </div>

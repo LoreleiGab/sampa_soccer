@@ -55,17 +55,26 @@ include "includes/menu.php";
                             <tr>
                                 <th>Data</th>
                                 <th>Medida</th>
+                                <th width="20%">Ação</th>
                             </tr>
                             </thead>
                             <?php
+                            echo "<tbody>";
                             while($wel = mysqli_fetch_array($query_wells)){
-                                echo "<tbody>";
                                 echo "<tr>";
-                                echo "<td>".dataBR($avaliacao['data'])."</td>";
+                                echo "<td>".dataBR($wel['data'])."</td>";
                                 echo "<td>".$wel['medida']."</td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=wells_edit\" role=\"form\">
+                                    <input type='hidden' name='idWells' value='" . $wel['id'] . "'>
+                                    <input type='hidden' name='idCliente' value='" . $idCliente. "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                    </form>
+                                    </td>";
                                 echo "</tr>";
-                                echo "</tbody>";
                             }
+
+                            echo "</tbody>";
                             ?>
                         </table>
                     </div>
