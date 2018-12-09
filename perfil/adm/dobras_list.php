@@ -76,7 +76,7 @@ include "includes/menu.php";
                             <tr>
                                 <th>Data</th>
                                 <th>Peitoral</th>
-                                <th>S. Escapular</th>
+                                <th>Sub Escapular</th>
                                 <th>Tricipital</th>
                                 <th>A Media</th>
                                 <th>S Ilíaca</th>
