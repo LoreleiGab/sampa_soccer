@@ -98,7 +98,7 @@ $plano = recuperaDados("planos","cliente_id",$idCliente);
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control" value="<?= $plano['data_inicio'] ?>">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label for="data_vencimento">Data vencimento</label>
+                                    <label for="data_vencimento">Vencimento</label>
                                     <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100" value="<?= $plano['data_vencimento'] ?>">
                                 </div>
                                 <div class="form-group col-md-5">

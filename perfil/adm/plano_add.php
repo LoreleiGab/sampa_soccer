@@ -41,7 +41,7 @@ include "includes/menu.php";
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <label for="data_vencimento">Data vencimento</label>
+                                    <label for="data_vencimento">Vencimento</label>
                                     <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100">
                                 </div>
                                 <div class="form-group col-md-5">
