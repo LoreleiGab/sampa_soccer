@@ -4,7 +4,6 @@ $con = bancoMysqli();
 
 if(isset($_POST['carregar'])){
     $idCliente = $_POST['idCliente'];
-    $idAvaliacao = $_POST['idAvaliacao'];
 }
 
 $cliente = recuperaDados("clientes","id",$idCliente);
@@ -37,10 +36,6 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                     </div>
                     <form method="POST" action="?perfil=administrador&p=wells_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label>Nome:</label> <?= $cliente['nome'] ?>
-                            </div>
-
                             <div class="row">
                                 <div class="form-group col-md-offset-4 col-md-3">
                                     <labeL for="medida">Medida</labeL>
@@ -51,7 +46,6 @@ $cliente = recuperaDados("clientes","id",$idCliente);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <input type='hidden' name='idAvaliacao' value='<?= $idAvaliacao ?>'>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="cadastra" class="btn btn-info pull-right">Cadastrar</button>
                         </div>

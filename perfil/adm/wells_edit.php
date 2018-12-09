@@ -3,13 +3,12 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
-    $idAvaliacao = $_POST['idAvaliacao'];
     $idCliente = $_POST['idCliente'];
     $medida = $_POST['medida'];
 }
 
 if(isset($_POST['cadastra'])){
-    $sql = "INSERT INTO wells (avaliacao_id, medida) VALUES ('$idAvaliacao','$medida')";
+    $sql = "INSERT INTO wells (cliente_id, medida) VALUES ('$idCliente','$medida')";
     if(mysqli_query($con,$sql)){
         $idWells = recuperaUltimo("wells");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -20,7 +19,8 @@ if(isset($_POST['cadastra'])){
 }
 
 if(isset($_POST['edita'])){
-    $sql = "UPDATE wells SET medida = '$medida' WHERE avaliacao_id = '$idAvaliacao'";
+    $idWells = $_POST['idWells'];
+    $sql = "UPDATE wells SET medida = '$medida' WHERE id = '$idWells'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
@@ -31,11 +31,10 @@ if(isset($_POST['edita'])){
 
 if(isset($_POST['carregar'])){
     $idCliente = $_POST['idCliente'];
-    $idAvaliacao = $_POST['idAvaliacao'];
 }
 
 $cliente = recuperaDados("clientes","id",$idCliente);
-$wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
+$wells = recuperaDados("wells","cliente_id",$idCliente);
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -44,6 +43,7 @@ $wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
 
         <!-- START FORM-->
         <h2 class="page-header">Wells</h2>
+        <small><?= recuperaNomeCliente($idCliente) ?></small>
 
         <div class="row">
             <div class="col-md-12">
@@ -64,10 +64,6 @@ $wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
                     </div>
                     <form method="POST" action="?perfil=administrador&p=wells_edit" role="form">
                         <div class="box-body">
-                            <div class="form-group">
-                                <label>Nome:</label> <?= $cliente['nome'] ?>
-                            </div>
-
                             <div class="row">
                                 <div class="form-group col-md-offset-4 col-md-3">
                                     <labeL for="medida">Medida</labeL>
@@ -78,9 +74,10 @@ $wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer">
-                            <input type='hidden' name='idAvaliacao' value='<?= $idAvaliacao ?>'>
+                            <input type='hidden' name='idWells' value='<?= $idWells ?>'>
                             <input type='hidden' name='idCliente' value="<?= $idCliente ?>">
                             <button type="submit" name="edita" class="btn btn-info pull-right">Gravar</button>
+                            <button type="button" class="btn btn-danger pull-left" data-toggle="modal" data-target="#modal-danger">Excluir</button>
                         </div>
                     </form>
                 </div>
@@ -89,6 +86,31 @@ $wells = recuperaDados("wells","avaliacao_id",$idAvaliacao);
             <!-- /.col -->
         </div>
         <!-- /.row -->
+        <!-- Confirmação de Exclusão -->
+        <div class="modal modal-danger fade" id="modal-danger">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Confirmação de exclusão</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deseja realmente excluir?<br/> Todos os dados relacionados serão excluídos e essa ação não poderá ser desfeita.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cancelar</button>
+                        <form method="POST" action="?perfil=administrador&p=dobras_list" role="form">
+                            <input type='hidden' name='idWells' value='<?= $wells['id'] ?>'>
+                            <button type="submit" name="apagar" class="btn btn-outline">Sim</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- Fim Confirmação de Exclusão -->
     </section>
     <!-- /.content -->
 </div>
