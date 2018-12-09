@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="" />
+    <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +83,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="19719" />
+          <entry key="php" value="19721" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -89,7 +92,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="19705" />
+          <entry key="PHP" value="19707" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -191,8 +194,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4290">
-              <caret line="151" column="65" lean-forward="true" selection-start-line="151" selection-start-column="65" selection-end-line="151" selection-end-column="65" />
+            <state relative-caret-position="234">
+              <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -200,8 +203,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1222">
-              <caret line="44" column="134" selection-start-line="44" selection-start-column="134" selection-end-line="44" selection-end-column="134" />
+            <state relative-caret-position="234">
+              <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -288,7 +291,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/avaliacao_list.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo_bkp.php" />
         <option value="$PROJECT_DIR$/visual/pages/charts/morris.html" />
         <option value="$PROJECT_DIR$/visual/rodape.php" />
@@ -299,7 +301,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/cliente_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" />
@@ -327,6 +328,8 @@
         <option value="$PROJECT_DIR$/perfil/adm/dobras8_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras8_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras_list.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
       </list>
     </option>
   </component>
@@ -494,19 +497,19 @@
       <workItem from="1543961797057" duration="2987000" />
       <workItem from="1544048449797" duration="793000" />
       <workItem from="1544186885529" duration="33028000" />
-      <workItem from="1544356692962" duration="2134000" />
+      <workItem from="1544356692962" duration="3856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293210000" />
+    <option name="totallyTimeSpent" value="294932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18683812" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="0" visible="true" weight="0.19016394" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -522,8 +525,8 @@
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
-      <window_info anchor="right" id="Remote Host" order="0" visible="true" weight="0.19288956" />
-      <window_info anchor="right" id="Database" order="1" weight="0.1633888" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.19288956" />
+      <window_info active="true" anchor="right" id="Database" order="1" visible="true" weight="0.1633888" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
@@ -867,15 +870,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="44" column="134" selection-start-line="44" selection-start-column="134" selection-end-line="44" selection-end-column="134" />
+        <state relative-caret-position="234">
+          <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4290">
-          <caret line="151" column="65" lean-forward="true" selection-start-line="151" selection-start-column="65" selection-end-line="151" selection-end-column="65" />
+        <state relative-caret-position="234">
+          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
         </state>
       </provider>
     </entry>
