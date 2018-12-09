@@ -107,11 +107,11 @@ $atleta = recuperaDados("atletas","cliente_id",$idCliente);
                                     <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" value="<?= $cliente['data_nascimento'] ?>">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL for="telefone01">Telefone #1</labeL>
+                                    <labeL for="telefone01">Telefone 01</labeL>
                                     <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone01'] ?>">
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <labeL for="telefone02">Telefone #2</labeL>
+                                    <labeL for="telefone02">Telefone 02</labeL>
                                     <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone02'] ?>">
                                 </div>
                                 <div class="form-group col-md-4">
