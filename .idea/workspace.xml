@@ -4,7 +4,6 @@
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/perfil/adm/wells_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/wells_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/wells_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/wells_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/wells_list.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="19892" />
+          <entry key="php" value="19902" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -93,7 +92,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="19878" />
+          <entry key="PHP" value="19888" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -168,7 +167,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="-520">
               <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
             </state>
           </provider>
@@ -177,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="328">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -186,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/wells_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="130">
+              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -480,12 +479,12 @@
       <workItem from="1543961797057" duration="2987000" />
       <workItem from="1544048449797" duration="793000" />
       <workItem from="1544186885529" duration="33028000" />
-      <workItem from="1544356692962" duration="5578000" />
+      <workItem from="1544356692962" duration="6299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296654000" />
+    <option name="totallyTimeSpent" value="297375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -844,24 +843,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+        <state relative-caret-position="328">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="-520">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/wells_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="130">
+          <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
         </state>
       </provider>
     </entry>

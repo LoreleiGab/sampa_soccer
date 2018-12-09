@@ -31,11 +31,12 @@ if(isset($_POST['edita'])){
 }
 
 if(isset($_POST['carregar'])){
+    $idWells = $_POST['idWells'];
     $idCliente = $_POST['idCliente'];
 }
 
 $cliente = recuperaDados("clientes","id",$idCliente);
-$wells = recuperaDados("wells","cliente_id",$idCliente);
+$wells = recuperaDados("wells","id",$idWells);
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -43,8 +44,8 @@ $wells = recuperaDados("wells","cliente_id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Banco de Wells</h2>
-        <small><?= recuperaNomeCliente($idCliente) ?></small>
+        <h2 class="page-header">Banco de Wells
+        <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
 
         <div class="row">
             <div class="col-md-12">
