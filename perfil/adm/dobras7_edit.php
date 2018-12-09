@@ -86,8 +86,8 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                                     <labeL for="peitoral">Peitoral</labeL>
                                     <input type="text" id="peitoral" name="peitoral" class="form-control" value="<?= $dobras['peitoral'] ?>">
                                 </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="s_escapular">Escapular</labeL>
+                                <div class="form-group col-md-2">
+                                    <labeL for="s_escapular">Sub Escapular</labeL>
                                     <input type="text" id="s_escapular" name="s_escapular" class="form-control" value="<?= $dobras['s_escapular'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
