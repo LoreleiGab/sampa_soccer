@@ -861,9 +861,9 @@ function imc($peso, $altura){
     }
 }
 
-function jackson($idAvaliacao){
+function jackson($idImc){
     $con = bancoMysqli();
-    $sql_avalicao = "SELECT * FROM avaliacoes WHERE id = '$idAvaliacao'";
+    $sql_avalicao = "SELECT * FROM imcs WHERE id = '$idImc'";
     $query_avaliacao = mysqli_query($con,$sql_avalicao);
     $avaliacao = mysqli_fetch_array($query_avaliacao);
     $idCliente = $avaliacao['cliente_id'];
@@ -871,7 +871,7 @@ function jackson($idAvaliacao){
     $query_cliente = mysqli_query($con,$sql_cliente);
     $cliente = mysqli_fetch_array($query_cliente);
     $idade = idade($cliente['data_nascimento']);
-    $dobras = recuperaDados("dobras","avaliacao_id",$idAvaliacao);
+    $dobras = recuperaDados("dobras","imc_id",$idImc);
     $peitoral = $dobras['peitoral'];
     $s_escapular = $dobras['s_escapular'];
     $tricipital = $dobras['tricipital'];
@@ -895,6 +895,14 @@ function jackson($idAvaliacao){
     $jp['gordura3'] = number_format($gordura3,2,",",".");
     $jp['mg3'] = number_format($mm3,3,",",".");
     $jp['mm3'] =number_format($mg3,3,",",".");
+
+    $dc3m = number_format(1.0994921-0.0009929*($tricipital+$s_iliaca+$coxa)+0.0000023*(($tricipital+$s_iliaca+$coxa)*($tricipital+$s_iliaca+$coxa))-0.0001392*($idade));
+    $gordura3m = ((4.95/$dc3m)-4.5)*100;
+    $mg3m = $avaliacao['peso']*$gordura3m/100;
+    $mm3m = $avaliacao['peso'] - $mg3m;
+    $jp['gordura3m'] = number_format($gordura3m,2,",",".");
+    $jp['mg3m'] = number_format($mm3m,3,",",".");
+    $jp['mm3m'] =number_format($mg3,3,",",".");
 
     return $jp;
 }

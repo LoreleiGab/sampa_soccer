@@ -28,7 +28,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 <!-- general form elements -->
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro</h3>
+                        <h3 class="box-title">Dados pessoais</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
@@ -150,8 +150,12 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         </div>
                     </form>
                 </div>
-                <!-- /.box -->
-                <!-- PLANO - Início -->
+            </div>
+        </div>
+        <!-- /.box -->
+        <!-- PLANO - Início -->
+        <div class="row">
+            <div class="col-md-12">
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Plano</h3>
@@ -159,6 +163,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -217,8 +222,12 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     }
                     ?>
                 </div>
-                <!-- PLANO - Fim -->
-                <!-- ESTATURA - Início -->
+            </div>
+        </div>
+        <!-- PLANO - Fim -->
+        <!-- ESTATURA - Início -->
+        <div class="row">
+            <div class="col-md-12">
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Estatura prevista</h3>
@@ -226,6 +235,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <!-- /.box-header -->
@@ -282,8 +292,12 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     }
                     ?>
                 </div>
-                <!-- ESTATURA - Fim -->
-                <!-- AVALIAÇÕES general form elements -->
+            </div>
+        </div>
+        <!-- ESTATURA - Fim -->
+        <!-- AVALIAÇÕES general form elements -->
+        <div class="row">
+            <div class="col-md-6">
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Peso / Altura</h3>
@@ -291,6 +305,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                         <form method="POST" action="?perfil=administrador&p=peso_altura_add" role="form">
                             <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
@@ -298,7 +313,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         </form>
                     </div>
                     <?php
-                    $sql_avaliacao = "SELECT * FROM imcs WHERE cliente_id = '$idCliente'";
+                    $sql_avaliacao = "SELECT * FROM imcs WHERE cliente_id = '$idCliente' ORDER BY data";
                     $query_avaliacao = mysqli_query($con,$sql_avaliacao);
                     if($query_avaliacao != NULL) {
                         ?>
@@ -341,146 +356,192 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     }
                     ?>
                 </div>
-                <!-- AVALIAÇÕES - Fim -->
-                <!-- PERIMETRIA - Início -->
+            </div>
+            <!-- PESO CHART -->
+            <div class="col-md-6">
                 <div class="box box-default">
-                <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
-                    $query_avaliacao = mysqli_query($con,$sql_avaliacao);
-                    if($query_avaliacao != NULL) {
-                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
-                            $idAvaliacao = $avaliacao['id'];
-                            $sql_perimetria = "SELECT * FROM perimetrias WHERE avaliacao_id = '$idAvaliacao'";
-                            $query_perimetria = mysqli_query($con,$sql_perimetria);
-                            $num_perimetria = mysqli_num_rows($query_perimetria);
-                            if($num_perimetria > 0){
-                            ?>
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Perimetria</h3>
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="box-body">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Torax</th>
-                                            <th>Cintura</th>
-                                            <th>Abdome</th>
-                                            <th>Quadril</th>
-                                            <th>Coxa D.</th>
-                                            <th>Coxa E.</th>
-                                            <th>Perna D.</th>
-                                            <th>Perna E.</th>
-                                            <th>Bíceps D.</th>
-                                            <th>Bíceps E.</th>
-                                            <th>Punho</th>
-                                        </tr>
-                                        </thead>
-                                        <?php
-                                        $perimetria_charts = '';
-                                        while($perim = mysqli_fetch_array($query_perimetria)){
-                                            echo "<tbody>";
-                                            echo "<tr>";
-                                            echo "<td>".dataBR($avaliacao['data'])."</td>";
-                                            echo "<td>".decimalBr($perim['torax'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['cintura'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['abdome'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['quadril'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['coxa_direita'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['coxa_esquerda'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['perna_direita'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['perna_esquerda'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['biceps_direito'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['biceps_esquerdo'],1)."</td>";
-                                            echo "<td>".decimalBr($perim['punho'],1)."</td>";
-                                            echo "</tr>";
-                                            echo "</tbody>";
-                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['torax']."}, ";
-                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['cintura']."}, ";
-                                            /*$perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['abdome']."}, ";
-                                            $perimetria_charts .= "{y: '".dataBR($avaliacao['data'])."', a: ".$perim['quadril']."}, ";*/
-                                        }
-                                        $perimetria_charts = substr($perimetria_charts,0,-2);
-                                        ?>
-                                    </table>
-                                </div>
-                            <?php
-                            }
-                        }
-                    }
-                ?>
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Peso corporal total</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body chart-responsive">
+                        <div class="chart" id="peso-chart" style="height: 300px;"></div>
+                    </div>
                 </div>
-                <!-- PERIMETRIA - Fim -->
-                <!-- DOBRAS - Início -->
+            </div>
+            <!-- ./PESO CHART -->
+        </div>
+        <!-- AVALIAÇÕES - Fim -->
+        <!-- PERIMETRIA - Início -->
+        <div class="row">
+            <div class="col-md-12">
                 <div class="box box-default">
                     <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
-                    $query_avaliacao = mysqli_query($con,$sql_avaliacao);
-                    if($query_avaliacao != NULL) {
-                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
-                            $idAvaliacao = $avaliacao['id'];
-                            $sql_dobra = "SELECT * FROM dobras WHERE avaliacao_id = '$idAvaliacao'";
-                            $query_dobra = mysqli_query($con,$sql_dobra);
-                            $num_dobra = mysqli_num_rows($query_dobra);
-                            if($num_dobra > 0){
-                                ?>
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Dobras</h3>
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="box-body">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Peitoral</th>
-                                            <th>S. Escapular</th>
-                                            <th>Tricipital</th>
-                                            <th>A Media</th>
-                                            <th>S Ilíaca</th>
-                                            <th>Abdominal</th>
-                                            <th>Coxa</th>
-                                            <th>Perna</th>
-                                        </tr>
-                                        </thead>
-                                        <?php
-
-                                        while($dob = mysqli_fetch_array($query_dobra)){
-                                            echo "<tbody>";
-                                            echo "<tr>";
-                                            echo "<td>".dataBR($avaliacao['data'])."</td>";
-                                            echo "<td>".decimalBr($dob['peitoral'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['s_escapular'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['tricipital'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['a_media'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['s_iliaca'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['abdominal'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['coxa'],1)."</td>";
-                                            echo "<td>".decimalBr($dob['perna'],1)."</td>";
-                                            echo "</tr>";
-                                            echo "</tbody>";
-                                        }
-                                        ?>
-                                    </table>
-                                </div>
-                                <?php
-                            }
-                        }
-                    }
+                    $sql_perimetria = "SELECT per.id AS idPerimetria, `imc_id`, `torax`, `cintura`, `abdome`, `quadril`, `coxa_direita`, `coxa_esquerda`, `perna_direita`, `perna_esquerda`, `biceps_direito`, `biceps_esquerdo`, `punho`, i.id, `data`, `peso`, `altura`, `resultado`, `cliente_id` FROM perimetrias AS per INNER JOIN imcs i on per.imc_id = i.id WHERE i.cliente_id = '$idCliente' ORDER BY i.data";
+                    $query_perimetria = mysqli_query($con,$sql_perimetria);
                     ?>
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Perimetria</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                        <form method="POST" action="?perfil=administrador&p=perimetria_add" role="form">
+                            <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                            <button type="submit" name="perimetria" class="btn btn-info pull-right">Adicionar</button>
+                        </form>
+                    </div>
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Torax</th>
+                                <th>Cintura</th>
+                                <th>Abdome</th>
+                                <th>Quadril</th>
+                                <th>Coxa D.</th>
+                                <th>Coxa E.</th>
+                                <th>Perna D.</th>
+                                <th>Perna E.</th>
+                                <th>Bíceps D.</th>
+                                <th>Bíceps E.</th>
+                                <th>Punho</th>
+                                <th>Ação</th>
+                            </tr>
+                            </thead>
+                            <?php
+                            while($perim = mysqli_fetch_array($query_perimetria)){
+                                echo "<tbody>";
+                                echo "<tr>";
+                                echo "<td>".dataBR($perim['data'])."</td>";
+                                echo "<td>".decimalBr($perim['torax'],1)."</td>";
+                                echo "<td>".decimalBr($perim['cintura'],1)."</td>";
+                                echo "<td>".decimalBr($perim['abdome'],1)."</td>";
+                                echo "<td>".decimalBr($perim['quadril'],1)."</td>";
+                                echo "<td>".decimalBr($perim['coxa_direita'],1)."</td>";
+                                echo "<td>".decimalBr($perim['coxa_esquerda'],1)."</td>";
+                                echo "<td>".decimalBr($perim['perna_direita'],1)."</td>";
+                                echo "<td>".decimalBr($perim['perna_esquerda'],1)."</td>";
+                                echo "<td>".decimalBr($perim['biceps_direito'],1)."</td>";
+                                echo "<td>".decimalBr($perim['biceps_esquerdo'],1)."</td>";
+                                echo "<td>".decimalBr($perim['punho'],1)."</td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=perimetria_edit\" role=\"form\">
+                                    <input type='hidden' name='idPerimetria' value='" . $perim['idPerimetria'] . "'>
+                                    <input type='hidden' name='idCliente' value='" . $idCliente. "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                    </form>
+                                    </td>";
+                                echo "</tr>";
+                                echo "</tbody>";
+                            }
+                            ?>
+                        </table>
+                    </div>
                 </div>
-                <!-- DOBRAS - Fim -->
             </div>
-            <!-- JACKSON POLLOCK 7 -->
+        </div>
+        <!-- PERIMETRIA - Fim -->
+        <!-- DOBRAS - Início -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-default">
+                    <?php
+                    $sql_dobra = "SELECT do.id AS idDobra, `imc_id`, `peitoral`, `s_escapular`, `tricipital`, `a_media`, `s_iliaca`, `abdominal`, `coxa`, `perna`, i.id, `data`, `peso`, `altura`, `resultado`, `cliente_id` FROM dobras AS do INNER JOIN imcs i on do.imc_id = i.id WHERE i.cliente_id = '$idCliente' ORDER BY i.data";
+                    $query_dobra = mysqli_query($con,$sql_dobra);
+                    ?>
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Dobras</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                        <?php
+                        if($cliente['classificacao_id'] == 1) {
+                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_add\" role=\"form\">";
+                        }
+                        if($cliente['classificacao_id'] == 2) {
+                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_add\" role=\"form\">";
+                        }
+                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
+                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_add\" role=\"form\">";
+                        }
+                        if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
+                            echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_add\" role=\"form\">";
+                        }
+                        ?>
+                        <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                        <button type="submit" name="perimetria" class="btn btn-info pull-right">Adicionar</button>
+                        </form>
+                    </div>
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Peitoral</th>
+                                <th>Sub Escapular</th>
+                                <th>Tricipital</th>
+                                <th>A Media</th>
+                                <th>S Ilíaca</th>
+                                <th>Abdominal</th>
+                                <th>Coxa</th>
+                                <th>Perna</th>
+                                <th>Ação</th>
+                            </tr>
+                            </thead>
+                            <?php
+                            while($dob = mysqli_fetch_array($query_dobra)){
+                                echo "<tbody>";
+                                echo "<tr>";
+                                echo "<td>".dataBR($dob['data'])."</td>";
+                                echo "<td>".decimalBr($dob['peitoral'],1)."</td>";
+                                echo "<td>".decimalBr($dob['s_escapular'],1)."</td>";
+                                echo "<td>".decimalBr($dob['tricipital'],1)."</td>";
+                                echo "<td>".decimalBr($dob['a_media'],1)."</td>";
+                                echo "<td>".decimalBr($dob['s_iliaca'],1)."</td>";
+                                echo "<td>".decimalBr($dob['abdominal'],1)."</td>";
+                                echo "<td>".decimalBr($dob['coxa'],1)."</td>";
+                                echo "<td>".decimalBr($dob['perna'],1)."</td>";
+                                echo "<td>";
+                                if($cliente['classificacao_id'] == 1) {
+                                    echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras7_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 2) {
+                                    echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras8_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 1) {
+                                    echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3m_edit\" role=\"form\">";
+                                }
+                                if($cliente['classificacao_id'] == 3 && $aluno['sexo_id'] == 2) {
+                                    echo"<form method=\"POST\" action=\"?perfil=administrador&p=dobras3f_edit\" role=\"form\">";
+                                }
+                                echo"<input type='hidden' name='idDobras' value='" . $dob['idDobra'] . "'>
+                                        <input type='hidden' name='idCliente' value='" . $idCliente . "'>
+                                        <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                        </form>
+                                        </td>";
+                                echo "</tr>";
+                                echo "</tbody>";
+                            }
+                            ?>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DOBRAS - Fim -->
+        <div class="row">
+        <!-- JACKSON POLLOCK 7 -->
             <div class="col-md-6">
                 <div class="box box-default">
                     <div class="box-header with-border">
@@ -489,10 +550,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
+                    $sql_avaliacao = "SELECT * FROM imcs WHERE cliente_id = '$idCliente' ORDER BY data";
                     $query_avaliacao = mysqli_query($con,$sql_avaliacao);
                     if($query_avaliacao != NULL) {
                         ?>
@@ -537,10 +599,11 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
+                    $sql_avaliacao = "SELECT * FROM imcs WHERE cliente_id = '$idCliente' ORDER BY data";
                     $query_avaliacao = mysqli_query($con,$sql_avaliacao);
                     if($query_avaliacao != NULL) {
                         ?>
@@ -556,14 +619,41 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 </thead>
                                 <?php
                                 echo "<tbody>";
-                                while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
-                                    $jp = jackson($avaliacao['id']);
-                                    echo "<tr>";
-                                    echo "<td>" . dataBR($avaliacao['data']) . "</td>";
-                                    echo "<td>" . $jp['gordura3'] . "</td>";
-                                    echo "<td>" . $jp['mg3'] ."</td>";
-                                    echo "<td>" . $jp['mm3'] . "</td>";
-                                    echo "</tr>";
+                                if($cliente['classificacao_id'] == 3) {
+                                    $aluno = recuperaDados("alunos", "cliente_id", $idCliente);
+                                    if($aluno['sexo_id'] == 2){
+                                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
+                                            $jp = jackson($avaliacao['id']);
+                                            echo "<tr>";
+                                            echo "<td>" . dataBR($avaliacao['data']) . "</td>";
+                                            echo "<td>" . $jp['gordura3'] . "</td>";
+                                            echo "<td>" . $jp['mg3'] . "</td>";
+                                            echo "<td>" . $jp['mm3'] . "</td>";
+                                            echo "</tr>";
+                                        }
+                                    }
+                                    else{
+                                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
+                                            $jp = jackson($avaliacao['id']);
+                                            echo "<tr>";
+                                            echo "<td>" . dataBR($avaliacao['data']) . "</td>";
+                                            echo "<td>" . $jp['gordura3'] . "</td>";
+                                            echo "<td>" . $jp['mg3'] . "</td>";
+                                            echo "<td>" . $jp['mm3'] . "</td>";
+                                            echo "</tr>";
+                                        }
+                                    }
+                                }
+                                else{
+                                    while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
+                                        $jp = jackson($avaliacao['id']);
+                                        echo "<tr>";
+                                        echo "<td>" . dataBR($avaliacao['data']) . "</td>";
+                                        echo "<td>" . $jp['gordura3'] . "</td>";
+                                        echo "<td>" . $jp['mg3'] . "</td>";
+                                        echo "<td>" . $jp['mm3'] . "</td>";
+                                        echo "</tr>";
+                                    }
                                 }
                                 echo "</tbody>";
                                 ?>
@@ -576,61 +666,66 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                 </div>
             </div>
             <!-- ./JACKSON POLLOCK 3 -->
+        </div>
+        <div class="row">
             <!-- WELLS - Início -->
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="box box-default">
                     <?php
-                    $sql_avaliacao = "SELECT * FROM avaliacoes WHERE cliente_id = '$idCliente'";
-                    $query_avaliacao = mysqli_query($con,$sql_avaliacao);
-                    if($query_avaliacao != NULL) {
-                        while ($avaliacao = mysqli_fetch_array($query_avaliacao)) {
-                            $idAvaliacao = $avaliacao['id'];
-                            $sql_wells = "SELECT * FROM wells WHERE avaliacao_id = '$idAvaliacao'";
-                            $query_wells = mysqli_query($con,$sql_wells);
-                            $num_wells = mysqli_num_rows($query_wells);
-                            if($num_wells > 0){
-                                ?>
-                                <div class="box-header with-border">
-                                    <h3 class="box-title">Wells</h3>
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="box-body">
-                                    <table id="example1" class="table table-bordered table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>Data</th>
-                                            <th>Medida</th>
-                                        </tr>
-                                        </thead>
-                                        <?php
-                                        while($wel = mysqli_fetch_array($query_wells)){
-                                            echo "<tbody>";
-                                            echo "<tr>";
-                                            echo "<td>".dataBR($avaliacao['data'])."</td>";
-                                            echo "<td>".$wel['medida']."</td>";
-                                            echo "</tr>";
-                                            echo "</tbody>";
-                                        }
-                                        ?>
-                                    </table>
-                                </div>
-                                <?php
-                            }
-                        }
-                    }
+                    $sql_wells = "SELECT * FROM wells WHERE cliente_id = '$idCliente' ORDER BY data";
+                    $query_wells = mysqli_query($con,$sql_wells);
                     ?>
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Banco de Wells</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                        <form method="POST" action="?perfil=administrador&p=wells_add" role="form">
+                            <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
+                            <button type="submit" name="carregar" class="btn btn-info pull-right">Adicionar</button>
+                        </form>
+                    </div>
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Medida</th>
+                                <th width="20%">Ação</th>
+                            </tr>
+                            </thead>
+                            <?php
+                            echo "<tbody>";
+                            $wells_charts = '';
+                            while($wel = mysqli_fetch_array($query_wells)){
+                                echo "<tr>";
+                                echo "<td>".dataBR($wel['data'])."</td>";
+                                echo "<td>".$wel['medida']."</td>";
+                                echo "<td>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=wells_edit\" role=\"form\">
+                                    <input type='hidden' name='idWells' value='" . $wel['id'] . "'>
+                                    <input type='hidden' name='idCliente' value='" . $idCliente. "'>
+                                    <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
+                                    </form>
+                                    </td>";
+                                echo "</tr>";
+                                $wells_charts .= "{y: '".dataBR($wel['data'])."', a: ".$wel['medida']."}, ";
+                            }
+                            $wells_charts = substr($wells_charts,0,-2);
+                            echo "</tbody>";
+                            ?>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <!-- WELLS - Fim -->
             <!-- PESO CHART -->
             <div class="col-md-6">
                 <div class="box box-default">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Peso corporal total</h3>
+                        <h3 class="box-title">Banco de Wells</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                             </button>
@@ -638,11 +733,14 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                         </div>
                     </div>
                     <div class="box-body chart-responsive">
-                        <div class="chart" id="peso-chart" style="height: 300px;"></div>
+                        <div class="chart" id="wells-chart" style="height: 300px;"></div>
                     </div>
                 </div>
             </div>
             <!-- ./PESO CHART -->
+            <!-- WELLS - Fim -->
+        </div>
+
         <!-- /.row -->
     </section>
     <!-- /.content -->
@@ -664,6 +762,16 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             hideHover: 'auto'
         });
 
-
+        //WELLS CHART
+        var bar = new Morris.Bar({
+            element: 'wells-chart',
+            resize: true,
+            data: [<?= $wells_charts ?>],
+            barColors: ['#3c8dbc'],
+            xkey: 'y',
+            ykeys: ['a'],
+            labels: ['Medida'],
+            hideHover: 'auto'
+        });
     });
 </script>
