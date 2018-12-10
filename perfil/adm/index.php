@@ -12,7 +12,8 @@ $user = recuperaDados("usuarios","id",$idUser);
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
       <section class="content-header">
-          <h1>SACC - Sistema de Avaliação e Controle de Carga</h1>
+          <h1> <img src="../visual/images/logo_sacc.png" width="50" height="50">
+           Sistema de Avaliação e Controle de Carga</h1>
       </section>
 
     <!-- Main content -->

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/funcoes/funcoesGerais.php" beforeDir="false" afterPath="$PROJECT_DIR$/funcoes/funcoesGerais.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +69,7 @@
     <session id="-487345705">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="1" />
@@ -97,7 +96,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="20268" />
+          <entry key="php" value="20298" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -106,7 +105,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="20254" />
+          <entry key="PHP" value="20284" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -123,7 +122,7 @@
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="295" />
+          <entry key="php" value="296" />
           <entry key="sexos" value="1" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
@@ -137,7 +136,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="295" />
+          <entry key="PHP" value="296" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -180,19 +179,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="903" column="39" selection-start-line="903" selection-start-column="39" selection-end-line="903" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="415">
+              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
               </folding>
@@ -200,41 +190,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/wells_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="654" column="53" lean-forward="true" selection-start-line="654" selection-start-column="53" selection-end-line="654" selection-end-column="53" />
-              <folding>
-                <element signature="n#div#1;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#3;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#5;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#7;n#section#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#section#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -274,7 +234,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showing</find>
       <find>Bar Chart</find>
       <find>areaChartOptions</find>
       <find>barChart</find>
@@ -304,6 +263,7 @@
       <find>Escapular&lt;/labeL&gt;</find>
       <find>Sub escapular&lt;/labeL&gt;</find>
       <find>Sub escapular</find>
+      <find>src</find>
     </findStrings>
     <replaceStrings>
       <replace>Telefone</replace>
@@ -326,7 +286,6 @@
       <list>
         <option value="$PROJECT_DIR$/visual/pages/tables/data.html" />
         <option value="$PROJECT_DIR$/perfil/adm/includes/menu_cliente.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/index.php" />
         <option value="$PROJECT_DIR$/perfil/adm/estatura_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/estatura_add.php" />
         <option value="$PROJECT_DIR$/visual/bower_components/chart.js/docs/02-Bar-Chart.md" />
@@ -375,6 +334,7 @@
         <option value="$PROJECT_DIR$/perfil/adm/wells_edit.php" />
         <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/index.php" />
       </list>
     </option>
   </component>
@@ -542,16 +502,15 @@
       <workItem from="1543961797057" duration="2987000" />
       <workItem from="1544048449797" duration="793000" />
       <workItem from="1544186885529" duration="33028000" />
-      <workItem from="1544356692962" duration="12301000" />
+      <workItem from="1544356692962" duration="13507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303377000" />
+    <option name="totallyTimeSpent" value="304583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.18683812" />
@@ -615,13 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="902" column="16" selection-start-line="902" selection-start-column="16" selection-end-line="902" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -905,16 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="80" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://15936419-6801-4dbd-98d4-24efe5676b14/schema/sampa/table/sexos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -931,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="654" column="53" lean-forward="true" selection-start-line="654" selection-start-column="53" selection-end-line="654" selection-end-column="53" />
+        <state relative-caret-position="900">
+          <caret line="621" column="71" lean-forward="true" selection-start-line="621" selection-start-column="71" selection-end-line="621" selection-end-column="71" />
           <folding>
             <element signature="n#div#1;n#section#0;n#div#0;n#!!top" />
             <element signature="n#div#2;n#section#0;n#div#0;n#!!top" />
@@ -945,6 +887,23 @@
             <element signature="n#div#1;n#div#7;n#section#0;n#div#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#7;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>
