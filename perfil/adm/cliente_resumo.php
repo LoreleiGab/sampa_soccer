@@ -262,10 +262,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                         <labeL>Estimativa:</labeL> <?= decimalBr($estatura['estimativa'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Margem de erro #1:</labeL> <?= decimalBr($estatura['margem_erro01'],1) ?>
+                                        <labeL>Margem de erro 01:</labeL> <?= decimalBr($estatura['margem_erro01'],1) ?>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <labeL>Margem de erro #2:</labeL> <?= decimalBr($estatura['margem_erro02'],1) ?>
+                                        <labeL>Margem de erro 02:</labeL> <?= decimalBr($estatura['margem_erro02'],1) ?>
                                     </div>
                                 </div>
                             </div>
@@ -491,8 +491,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <th>Peitoral</th>
                                 <th>Sub Escapular</th>
                                 <th>Tricipital</th>
-                                <th>A Media</th>
-                                <th>S Ilíaca</th>
+                                <th>Axilia Média</th>
+                                <th>Supra Ilíaca</th>
                                 <th>Abdominal</th>
                                 <th>Coxa</th>
                                 <th>Perna</th>
