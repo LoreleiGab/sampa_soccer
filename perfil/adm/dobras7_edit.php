@@ -83,31 +83,31 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                                     ?>
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="peitoral">Peitoral</labeL>
+                                    <labeL for="peitoral">PT</labeL>
                                     <input type="text" id="peitoral" name="peitoral" class="form-control" value="<?= $dobras['peitoral'] ?>">
                                 </div>
-                                <div class="form-group col-md-2">
-                                    <labeL for="s_escapular">Sub Escapular</labeL>
+                                <div class="form-group col-md-1">
+                                    <labeL for="s_escapular">SE</labeL>
                                     <input type="text" id="s_escapular" name="s_escapular" class="form-control" value="<?= $dobras['s_escapular'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="tricipital">Tricipital</labeL>
+                                    <labeL for="tricipital">TR</labeL>
                                     <input type="text" id="tricipital" name="tricipital" class="form-control" value="<?= $dobras['tricipital'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="a_media">A Media</labeL>
+                                    <labeL for="a_media">AM</labeL>
                                     <input type="text" id="a_media" name="a_media" class="form-control" value="<?= $dobras['a_media'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="s_iliaca">S Ilíaca</labeL>
+                                    <labeL for="s_iliaca">SI</labeL>
                                     <input type="text" id="s_iliaca" name="s_iliaca" class="form-control" value="<?= $dobras['s_iliaca'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="abdominal">Abdominal</labeL>
+                                    <labeL for="abdominal">AB</labeL>
                                     <input type="text" id="abdominal" name="abdominal" class="form-control" value="<?= $dobras['abdominal'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="coxa">Coxa</labeL>
+                                    <labeL for="coxa">CX</labeL>
                                     <input type="text" id="coxa" name="coxa" class="form-control" value="<?= $dobras['coxa'] ?>">
                                 </div>
                             </div>

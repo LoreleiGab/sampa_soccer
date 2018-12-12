@@ -41,15 +41,15 @@ if(isset($_POST['idCliente'])){
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="tricipital">Tricipital</labeL>
+                                    <labeL for="tricipital">TR</labeL>
                                     <input type="text" id="tricipital" name="tricipital" class="form-control">
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="s_iliaca">S Ilíaca</labeL>
+                                    <labeL for="s_iliaca">SI</labeL>
                                     <input type="text" id="s_iliaca" name="s_iliaca" class="form-control">
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <labeL for="coxa">Coxa</labeL>
+                                    <labeL for="coxa">CX</labeL>
                                     <input type="text" id="coxa" name="coxa" class="form-control">
                                 </div>
                             </div>
