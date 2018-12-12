@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/images/logo_sacc.png" beforeDir="false" afterPath="$PROJECT_DIR$/visual/images/logo_sacc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual/rodape.php" beforeDir="false" afterPath="$PROJECT_DIR$/visual/rodape.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/dobras_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/dobras_list.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="20330" />
+          <entry key="php" value="20336" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -107,7 +106,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="20316" />
+          <entry key="PHP" value="20322" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -124,7 +123,7 @@
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="307" />
+          <entry key="php" value="309" />
           <entry key="sexos" value="1" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
@@ -138,7 +137,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="307" />
+          <entry key="PHP" value="309" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -199,6 +198,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="493" column="42" selection-start-line="493" selection-start-column="42" selection-end-line="493" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3f_add.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1196">
@@ -226,15 +243,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="264" column="63" selection-start-line="264" selection-start-column="63" selection-end-line="264" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
@@ -252,20 +260,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/visual/rodape.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="52">
               <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/dobras7_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="88" column="63" selection-start-line="88" selection-start-column="63" selection-end-line="88" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -376,7 +375,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/dobras_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_list.php" />
@@ -386,10 +384,11 @@
         <option value="$PROJECT_DIR$/perfil/adm/dobras7_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras7_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras8_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_edit.php" />
         <option value="$PROJECT_DIR$/visual/rodape.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/dobras_list.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
       </list>
     </option>
   </component>
@@ -459,7 +458,13 @@
             <path>
               <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
-              <item name="visual" type="462c0819:PsiDirectoryNode" />
+              <item name="perfil" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
+              <item name="perfil" type="462c0819:PsiDirectoryNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -547,12 +552,12 @@
       <workItem from="1544048449797" duration="793000" />
       <workItem from="1544186885529" duration="33028000" />
       <workItem from="1544356692962" duration="13507000" />
-      <workItem from="1544572187012" duration="3200000" />
+      <workItem from="1544572187012" duration="3501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307783000" />
+    <option name="totallyTimeSpent" value="308084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -834,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3250">
-          <caret line="125" column="22" selection-start-line="42" selection-start-column="16" selection-end-line="125" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
@@ -904,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="264" column="63" selection-start-line="264" selection-start-column="63" selection-end-line="264" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -929,6 +920,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/dobras_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="493" column="42" selection-start-line="493" selection-start-column="42" selection-end-line="493" selection-end-column="42" />
         </state>
       </provider>
     </entry>

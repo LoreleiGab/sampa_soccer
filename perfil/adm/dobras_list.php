@@ -78,8 +78,8 @@ include "includes/menu.php";
                                 <th>Peitoral</th>
                                 <th>Sub Escapular</th>
                                 <th>Tricipital</th>
-                                <th>A Media</th>
-                                <th>S Ilíaca</th>
+                                <th>Axilar Média</th>
+                                <th>Supra Ilíaca</th>
                                 <th>Abdominal</th>
                                 <th>Coxa</th>
                                 <th>Perna</th>

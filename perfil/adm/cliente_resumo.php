@@ -491,7 +491,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                 <th>Peitoral</th>
                                 <th>Sub Escapular</th>
                                 <th>Tricipital</th>
-                                <th>Axilia Média</th>
+                                <th>Axilar Média</th>
                                 <th>Supra Ilíaca</th>
                                 <th>Abdominal</th>
                                 <th>Coxa</th>
