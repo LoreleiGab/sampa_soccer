@@ -69,7 +69,7 @@ $wells = recuperaDados("wells","id",$idWells);
                             <div class="row">
                                 <div class="col-md-2">
                                     <labeL for="data">Data</labeL>
-                                    <input type="date" id="data" name="data" class="form-control" value="<?= $wells['data'] ?>">
+                                    <input type="date" id="data" name="data" class="form-control" required value="<?= $wells['data'] ?>">
                                 </div>
                                 <div class="col-md-2">
                                     <labeL for="medida">Medida</labeL>
