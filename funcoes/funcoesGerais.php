@@ -295,10 +295,12 @@ function geraOpcaoData($tabela,$idCliente,$select)
 	function recuperaNomeCliente($idCliente)
     {
         $con = bancoMysqli();
-        $sql = "SELECT nome FROM clientes WHERE id = '$idCliente'";
+        $sql = "SELECT nome,data_nascimento FROM clientes WHERE id = '$idCliente'";
         $query = mysqli_query($con,$sql);
         $campo = mysqli_fetch_array($query);
-        return $campo['nome'];
+        $data_nascimento = $campo['data_nascimento'];
+        $idade = idade($data_nascimento);
+        return $campo['nome'].", ".$idade." anos.";
     }
 
 	function verificaExiste($idTabela,$idCampo,$idDado,$st)
