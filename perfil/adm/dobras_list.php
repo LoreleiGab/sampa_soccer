@@ -33,7 +33,9 @@ include "includes/menu.php";
         <!-- START FORM-->
         <h2 class="page-header">Cliente
             <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
-
+        <?php
+        include 'includes/menu_antropometria.php';
+        ?>
         <div class="row">
             <div class="col-md-12">
                 <div class="row" align="center">

@@ -14,8 +14,11 @@ $cliente = recuperaDados("clientes","id",$idCliente);
     <section class="content">
 
         <!-- START FORM-->
-        <h2 class="page-header">Peso / altura</h2>
-
+        <h2 class="page-header">Peso / altura
+            <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
+        <?php
+        include 'includes/menu_antropometria.php';
+        ?>
         <div class="row">
             <div class="col-md-12">
                 <!-- general form elements -->

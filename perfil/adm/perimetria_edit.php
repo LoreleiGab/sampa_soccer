@@ -58,6 +58,9 @@ $perimetria = recuperaDados("perimetrias","id",$idPerimetria);
         <!-- START FORM-->
         <h2 class="page-header">Perimetria
             <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
+        <?php
+        include 'includes/menu_antropometria.php';
+        ?>
 
         <div class="row">
             <div class="col-md-12">
