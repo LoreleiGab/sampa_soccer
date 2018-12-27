@@ -54,10 +54,13 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             <div class="form-group col-md-3">
                                 <labeL>Data de Nascimento:</labeL> <?= dataBR($cliente['data_nascimento']) ?>
                             </div>
+                            <div class="form-group col-md-2">
+                                <labeL>CPF:</labeL> <?= $cliente['cpf'] ?>
+                            </div>
                             <div class="form-group col-md-4">
                                 <labeL>Telefone:</labeL> <?= $cliente['telefone01'] ?><?= $cliente['telefone02'] ? " / ".$cliente['telefone02'] : NULL ?>
                             </div>
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-md-3">
                                 <labeL>Email:</labeL> <?= $cliente['email'] ?>
                             </div>
                         </div>
