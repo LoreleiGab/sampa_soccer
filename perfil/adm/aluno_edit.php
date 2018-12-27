@@ -9,6 +9,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $nome = $_POST['nome'];
     $sexo = $_POST['sexo_id'];
     $data_nascimento = $_POST['data_nascimento'];
+    $cpf = $_POST['cpf'];
     $telefone01 = $_POST['telefone01'];
     $telefone02 = $_POST['telefone02'];
     $email = $_POST['email'];
@@ -20,7 +21,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
 }
 
 if(isset($_POST['cadastrar'])){
-    $sql_cliente = "INSERT INTO clientes (nome, data_nascimento,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
+    $sql_cliente = "INSERT INTO clientes (nome, data_nascimento, cpf,  telefone01, telefone02, email, diagnostico, classificacao_id, usuario_id) VALUES ('$nome', '$data_nascimento', '$cpf', '$telefone01', '$telefone02', '$email', '$diagnostico', '$classificacao_id', '$usuario_id')";
     if(mysqli_query($con,$sql_cliente)){
         $idCliente = recuperaUltimo("clientes");
         $sql_aluno = "INSERT INTO alunos (sexo_id, atividade_interesse, restricao, cliente_id) VALUES ('$sexo', '$atividade_interesse', '$restricao', '$idCliente')";
@@ -37,7 +38,7 @@ if(isset($_POST['cadastrar'])){
 }
 if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
-    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
+    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', cpf = '$cpf', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
         $sql_edita_aluno = "UPDATE alunos SET sexo_id = '$sexo', atividade_interesse = '$atividade_interesse', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_aluno)) {
@@ -107,13 +108,17 @@ $aluno = recuperaDados("alunos","cliente_id",$idCliente);
                                     <labeL for="data_nascimento">Data de Nascimento</labeL>
                                     <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" value="<?= $cliente['data_nascimento'] ?>">
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <labeL for="telefone01">Telefone 01</labeL>
-                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone01'] ?>">
+                                <div class="form-group col-md-2">
+                                    <labeL for="cpf">CPF</labeL>
+                                    <input type="text" id="cpf" name="cpf" class="form-control" required value="<?= $cliente['cpf'] ?>">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
+                                    <labeL for="telefone01">Telefone 01</labeL>
+                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" maxlength="15" value="<?= $cliente['telefone01'] ?>">
+                                </div>
+                                <div class="form-group col-md-2">
                                     <labeL for="telefone02">Telefone 02</labeL>
-                                    <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone02'] ?>">
+                                    <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" maxlength="15" value="<?= $cliente['telefone02'] ?>">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="email">Email</labeL>
@@ -177,3 +182,6 @@ $aluno = recuperaDados("alunos","cliente_id",$idCliente);
     </section>
     <!-- /.content -->
 </div>
+<script>
+    $("input[name='cpf']").mask('000.000.000-00', {reverse: true});
+</script>

@@ -11,6 +11,7 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $posicao_id = $_POST['posicao_id'];
     $pe_dominante = $_POST['pe_dominante'];
     $data_nascimento = $_POST['data_nascimento'];
+    $cpf = $_POST['cpf'];
     $telefone01 = $_POST['telefone01'];
     $telefone02 = $_POST['telefone02'];
     $email = $_POST['email'];
@@ -39,7 +40,7 @@ if(isset($_POST['cadastrar'])){
 
 if(isset($_POST['editar'])){
     $idCliente = $_POST['idCliente'];
-    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
+    $sql_edita_cliente = "UPDATE clientes SET nome = '$nome', data_nascimento = '$data_nascimento', cpf = '$cpf', telefone01 = '$telefone01', telefone02 = '$telefone02', email = '$email', diagnostico = '$diagnostico', classificacao_id = '$classificacao_id' WHERE id = '$idCliente'";
     if(mysqli_query($con,$sql_edita_cliente)){
         $sql_edita_base = "UPDATE bases SET apelido = '$apelido', posicao_id = '$posicao_id', pe_dominante_id = '$pe_dominante', restricao = '$restricao' WHERE cliente_id = '$idCliente'";
         if(mysqli_query($con,$sql_edita_base)) {
@@ -103,11 +104,15 @@ $base = recuperaDados("bases","cliente_id",$idCliente);
                                     <labeL for="data_nascimento">Data de Nascimento</labeL>
                                     <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" value="<?= $cliente['data_nascimento'] ?>">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
+                                    <labeL for="cpf">CPF</labeL>
+                                    <input type="text" id="cpf" name="cpf" class="form-control" required value="<?= $cliente['cpf'] ?>">
+                                </div>
+                                <div class="form-group col-md-2">
                                     <labeL for="telefone01">Telefone 01</labeL>
                                     <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone01'] ?>">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                     <labeL for="telefone02">Telefone 02</labeL>
                                     <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" value="<?= $cliente['telefone02'] ?>">
                                 </div>
@@ -187,3 +192,6 @@ $base = recuperaDados("bases","cliente_id",$idCliente);
     </section>
     <!-- /.content -->
 </div>
+<script>
+    $("input[name='cpf']").mask('000.000.000-00', {reverse: true});
+</script>

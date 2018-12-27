@@ -33,17 +33,21 @@ include "includes/menu.php";
                                     <labeL for="datepicker01">Data de Nascimento</labeL>
                                     <input type="date" id="data_nascimento" name="data_nascimento" class="form-control" required>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <labeL for="telefone01">Telefone 01</labeL>
-                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" required>
+                                <div class="form-group col-md-2">
+                                    <labeL for="cpf">CPF</labeL>
+                                    <input type="text" id="cpf" name="cpf" class="form-control" required>
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
+                                    <labeL for="telefone01">Telefone 01</labeL>
+                                    <input type="text" id="telefone01" name="telefone01" onkeyup="mascara( this, mtel );" class="form-control" maxlength="15" required>
+                                </div>
+                                <div class="form-group col-md-2">
                                     <labeL for="telefone02">Telefone 02</labeL>
-                                    <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control">
+                                    <input type="text" id="telefone02" name="telefone02" onkeyup="mascara( this, mtel );" class="form-control" maxlength="15">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <labeL for="email">Email</labeL>
-                                    <input type="email" id="email" name="email" class="form-control">
+                                    <input type="email" id="email" name="email" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -90,3 +94,6 @@ include "includes/menu.php";
     </section>
     <!-- /.content -->
 </div>
+<script>
+    $("input[name='cpf']").mask('000.000.000-00', {reverse: true});
+</script>
