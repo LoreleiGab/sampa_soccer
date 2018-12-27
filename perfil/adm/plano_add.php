@@ -40,17 +40,21 @@ include "includes/menu.php";
                                     <label for="data_inicio">Data início</label>
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                     <label for="data_vencimento">Vencimento</label>
                                     <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100">
                                 </div>
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-4">
                                     <label for="plano">Plano</label>
                                     <input type="text" id="plano" name="plano" class="form-control" maxlength="120">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="valor">Valor</label>
                                     <input type="text" id="valor" name="valor" class="form-control">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="valor_total">Valor total</label>
+                                    <input type="text" id="valor_total" name="valor_total" class="form-control">
                                 </div>
                             </div>
                             <div class="row">
@@ -82,4 +86,5 @@ include "includes/menu.php";
 
 <script>
     $('#valor').mask('000.000.000.000.000,00', {reverse: true});
+    $('#valor_total').mask('000.000.000.000.000,00', {reverse: true});
 </script>

@@ -13,13 +13,14 @@ if(isset($_POST['cadastra']) || isset($_POST['edita'])){
     $data_vencimento = addslashes($_POST['data_vencimento']);
     $plano = addslashes($_POST['plano']);
     $valor = decimalMysql($_POST['valor']);
+    $valor_total = decimalMysql($_POST['valor_total']);
     $forma_pagamento = addslashes($_POST['forma_pagamento']);
     $outros = addslashes($_POST['outros']);
 }
 
 if(isset($_POST['cadastra'])){
-    $sql = "INSERT INTO planos (cliente_id, data_inicio, data_vencimento, plano, valor, forma_pagamento, outros) 
-            VALUES ('$idCliente', '$data_inicio', '$data_vencimento', '$plano', '$valor','$forma_pagamento','$outros')";
+    $sql = "INSERT INTO planos (cliente_id, data_inicio, data_vencimento, plano, valor, valor_total, forma_pagamento, outros) 
+            VALUES ('$idCliente', '$data_inicio', '$data_vencimento', '$plano', '$valor', '$valor_total','$forma_pagamento','$outros')";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success","Gravado com suscesso!");
     }else{
@@ -28,7 +29,7 @@ if(isset($_POST['cadastra'])){
 }
 
 if(isset($_POST['edita'])){
-    $sql = "UPDATE planos SET data_inicio = '$data_inicio', data_vencimento = '$data_vencimento', plano = '$plano', valor = '$valor', forma_pagamento = '$forma_pagamento', outros = '$outros' WHERE cliente_id = '$idCliente'";
+    $sql = "UPDATE planos SET data_inicio = '$data_inicio', data_vencimento = '$data_vencimento', plano = '$plano', valor = '$valor', valor_total = '$valor_total', forma_pagamento = '$forma_pagamento', outros = '$outros' WHERE cliente_id = '$idCliente'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
@@ -97,17 +98,21 @@ $plano = recuperaDados("planos","cliente_id",$idCliente);
                                     <label for="data_inicio">Data</label>
                                     <input type="date" id="data_inicio" name="data_inicio" class="form-control" value="<?= $plano['data_inicio'] ?>">
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
                                     <label for="data_vencimento">Vencimento</label>
                                     <input type="text" id="data_vencimento" name="data_vencimento" class="form-control" maxlength="100" value="<?= $plano['data_vencimento'] ?>">
                                 </div>
-                                <div class="form-group col-md-5">
+                                <div class="form-group col-md-4">
                                     <label for="plano">Plano</label>
                                     <input type="text" id="plano" name="plano" class="form-control" maxlength="120" value="<?= $plano['plano'] ?>">
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="valor">Valor</label>
                                     <input type="text" id="valor" name="valor" class="form-control" value="<?= $plano['valor'] ?>">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="valor_total">Valor total</label>
+                                    <input type="text" id="valor_total" name="valor_total" class="form-control" value="<?= $plano['valor_total'] ?>">
                                 </div>
                             </div>
                             <div class="row">
@@ -239,4 +244,5 @@ $plano = recuperaDados("planos","cliente_id",$idCliente);
 
 <script>
     $('#valor').mask('000.000.000.000.000,00', {reverse: true});
+    $('#valor_total').mask('000.000.000.000.000,00', {reverse: true});
 </script>

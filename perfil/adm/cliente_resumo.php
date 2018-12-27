@@ -186,11 +186,14 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                                     <div class="form-group col-md-3">
                                         <labeL>Data vencimento:</labeL> <?= $matricula['data_vencimento'] ?>
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-3">
                                         <labeL>Plano:</labeL> <?= $matricula['plano'] ?>
                                     </div>
                                     <div class="form-group col-md-2">
                                         <labeL>Valor:</labeL> R$ <?= decimalBr($matricula['valor'],2) ?>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <labeL>Valor total:</labeL> R$ <?= decimalBr($matricula['valor_total'],2) ?>
                                     </div>
                                 </div>
                                 <div class="row">

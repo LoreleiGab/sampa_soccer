@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_edit.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +42,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sampa: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sampa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sampa: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="planos: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -75,7 +83,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="300" />
           <entry key="md" value="5" />
-          <entry key="php" value="21027" />
+          <entry key="php" value="21087" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -84,7 +92,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="300" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="21013" />
+          <entry key="PHP" value="21073" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -101,7 +109,7 @@
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="338" />
+          <entry key="php" value="340" />
           <entry key="sexos" value="1" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
@@ -115,7 +123,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="338" />
+          <entry key="PHP" value="340" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -166,11 +174,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+            <state relative-caret-position="130">
+              <caret line="53" column="61" lean-forward="true" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="88" column="70" lean-forward="true" selection-start-line="87" selection-start-column="64" selection-end-line="88" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4680">
+              <caret line="246" column="70" selection-start-line="246" selection-start-column="70" selection-end-line="246" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -263,8 +289,6 @@
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.min.js" />
         <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/index.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
@@ -295,6 +319,8 @@
         <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
       </list>
     </option>
   </component>
@@ -460,19 +486,19 @@
       <workItem from="1544356692962" duration="13507000" />
       <workItem from="1544572187012" duration="3832000" />
       <workItem from="1545055270441" duration="489000" />
-      <workItem from="1545482123929" duration="12202000" />
+      <workItem from="1545482123929" duration="13577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321106000" />
+    <option name="totallyTimeSpent" value="322481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1709531" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1709531" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="0" visible="true" weight="0.19016394" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -826,20 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -849,8 +861,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        <state relative-caret-position="130">
+          <caret line="53" column="61" lean-forward="true" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/plano_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="88" column="70" lean-forward="true" selection-start-line="87" selection-start-column="64" selection-end-line="88" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/plano_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="246" column="70" selection-start-line="246" selection-start-column="70" selection-end-line="246" selection-end-column="70" />
         </state>
       </provider>
     </entry>
