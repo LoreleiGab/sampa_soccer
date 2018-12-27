@@ -48,10 +48,10 @@ $query = mysqli_query($con,$sql);
                                 echo "<td>".$cliente['email']."</td>";
                                 echo "<td>".$cliente['nome_classificacao']."</td>";
                                 if($cliente['classificacao_id'] == 1){
-                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit\" role=\"form\">";
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit&classificacao_id=1\" role=\"form\">";
                                 }
                                 if($cliente['classificacao_id'] == 2){
-                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=base_edit\" role=\"form\">";
+                                    echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit&classificacao_id=2\" role=\"form\">";
                                 }
                                 if($cliente['classificacao_id'] == 3){
                                     echo "<td><form method=\"POST\" action=\"?perfil=administrador&p=aluno_edit\" role=\"form\">";

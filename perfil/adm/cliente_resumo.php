@@ -65,7 +65,18 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             </div>
                         </div>
                         <?php
-                        if($cliente['classificacao_id'] == 1) {
+                        if($cliente['classificacao_id'] == 3) {
+                            $aluno = recuperaDados("alunos", "cliente_id", $idCliente);
+                            ?>
+                            <div class="form-group">
+                                <labeL>Atividades de interesse:</labeL> <?= $aluno['atividade_interesse'] ?>
+                            </div>
+                            <div class="form-group">
+                                <labeL>Restrição:</labeL> <?= $aluno['restricao'] ?>
+                            </div>
+                            <?php
+                        }
+                        else {
                             $atleta = recuperaDados("atletas", "cliente_id", $idCliente);
                             $pe = recuperaDados("pe_dominantes","id",$atleta['pe_dominante_id']);
                             $categoria = recuperaDados("categoria_atletas","id",$atleta['categoria_id']);
@@ -96,40 +107,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                             </div>
                             <?php
                         }
-                        if($cliente['classificacao_id'] == 2) {
-                            $base = recuperaDados("bases", "cliente_id", $idCliente);
-                            $pe = recuperaDados("pe_dominantes","id",$base['pe_dominante_id']);
-                            $posicao = recuperaDados("posicoes","id", $base['posicao_id']);
-                            ?>
-                            <div class="row">
-                                <div class="form-group col-md-2">
-                                    <labeL>Apelido:</labeL> <?= $base['apelido'] ?>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <labeL>Posição:</labeL> <?= $posicao['posicao'] ?>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <labeL>Pé dominante:</labeL> <?= $pe['pe_dominante'] ?>
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <labeL>Restrição:</labeL> <?= $base['restricao'] ?>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        if($cliente['classificacao_id'] == 3) {
-                            $aluno = recuperaDados("alunos", "cliente_id", $idCliente);
-                            ?>
-                            <div class="form-group">
-                                <labeL>Atividades de interesse:</labeL> <?= $aluno['atividade_interesse'] ?>
-                            </div>
-                            <div class="form-group">
-                                <labeL>Restrição:</labeL> <?= $aluno['restricao'] ?>
-                            </div>
-                            <?php
-                        }
                         ?>
-
                         <div class="form-group">
                             <label>Diagnóstico:</label> <?= $cliente['diagnostico'] ?>
                         </div>
@@ -138,10 +116,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
                     <!-- /.box-body -->
                     <?php
                     if($cliente['classificacao_id'] == 1){
-                        echo "<form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit\" role=\"form\">";
+                        echo "<form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit&classificacao_id=1\" role=\"form\">";
                     }
                     if($cliente['classificacao_id'] == 2){
-                        echo "<form method=\"POST\" action=\"?perfil=administrador&p=base_edit\" role=\"form\">";
+                        echo "<form method=\"POST\" action=\"?perfil=administrador&p=atleta_edit&classificacao_id=2\" role=\"form\">";
                     }
                     if($cliente['classificacao_id'] == 3){
                         echo "<form method=\"POST\" action=\"?perfil=administrador&p=aluno_edit\" role=\"form\">";

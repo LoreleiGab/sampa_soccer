@@ -60,7 +60,7 @@ $query = mysqli_query($con,$sql);
                                 echo "<td>".$cliente['telefone01']."</td>";
                                 echo "<td>".$cliente['email']."</td>";
                                 echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=base_edit\" role=\"form\">
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=base_edit&classificacao_id=2\" role=\"form\">
                                     <input type='hidden' name='idCliente' value='".$cliente['idCliente']."'>
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>

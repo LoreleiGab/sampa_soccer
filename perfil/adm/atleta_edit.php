@@ -1,6 +1,8 @@
 <?php
 $con = bancoMysqli();
 
+$classificacao_id = $_GET['classificacao_id'];
+
 if(isset($_SESSION['idCliente'])){
     $idCliente = $_SESSION['idCliente'];
 }
@@ -20,7 +22,6 @@ if(isset($_POST['cadastrar']) || isset($_POST['editar'])){
     $diagnostico = $_POST['diagnostico'];
     $restricao = $_POST['restricao'];
     $ultimos_clubes = $_POST['ultimos_clubes'];
-    $classificacao_id = 1;
     $usuario_id = $_SESSION['idUser'];
 }
 
@@ -89,7 +90,7 @@ $atleta = recuperaDados("atletas","cliente_id",$idCliente);
                     <div class="row" align="center">
                         <?php if(isset($mensagem)){echo $mensagem;};?>
                     </div>
-                    <form method="POST" action="?perfil=administrador&p=atleta_edit" role="form">
+                    <form method="POST" action="?perfil=administrador&p=atleta_edit&classificacao_id=<?= $classificacao_id ?>" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="form-group col-md-11">

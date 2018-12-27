@@ -1,5 +1,6 @@
 <?php
 include "includes/menu.php";
+$classificacao_id = $_GET['classificacao_id'];
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -22,7 +23,7 @@ include "includes/menu.php";
                     <div class="row" align="center">
                         <?php if(isset($mensagem)){echo $mensagem;};?>
                     </div>
-                    <form method="POST" action="?perfil=administrador&p=atleta_edit" role="form">
+                    <form method="POST" action="?perfil=administrador&p=atleta_edit&classificacao_id=<?= $classificacao_id ?>" role="form">
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="nome">Nome completo</label>
