@@ -71,7 +71,7 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-circle-o text-green"></i> <span>Antropometria</span>
+                        <i class="fa fa-circle-o text-green"></i> <span>Medidas e Avaliações</span>
                         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
@@ -92,7 +92,7 @@
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Saltos 1 minuto</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Yoyo test</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Rast test</a></li>
-                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Six mobility</a></li>
+                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Medicine ball</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
