@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,65 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
               <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="53" column="131" selection-start-line="53" selection-start-column="131" selection-end-line="53" selection-end-column="131" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="1760" column="4" lean-forward="true" selection-start-line="1760" selection-start-column="4" selection-end-line="1760" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="18" column="86" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="92" column="101" lean-forward="true" selection-start-line="92" selection-start-column="83" selection-end-line="92" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="62" column="121" selection-start-line="62" selection-start-column="121" selection-end-line="62" selection-end-column="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/base_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="62" column="119" selection-start-line="62" selection-start-column="119" selection-end-line="62" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -240,7 +187,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>danger modal</find>
       <find>modal-danger</find>
       <find>datepicker</find>
       <find>base</find>
@@ -270,6 +216,7 @@
       <find>sis</find>
       <find>Nenhum registro encontrado</find>
       <find>entries</find>
+      <find>search</find>
     </findStrings>
     <replaceStrings>
       <replace>Telefone</replace>
@@ -514,12 +461,12 @@
       <workItem from="1544356692962" duration="13507000" />
       <workItem from="1544572187012" duration="3832000" />
       <workItem from="1545055270441" duration="489000" />
-      <workItem from="1545482123929" duration="20019000" />
+      <workItem from="1545482123929" duration="20892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328923000" />
+    <option name="totallyTimeSpent" value="329796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -863,10 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+    <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+        <state relative-caret-position="879">
+          <caret line="4182" column="34" selection-start-line="4182" selection-start-column="28" selection-end-line="4182" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -877,10 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1760" column="4" lean-forward="true" selection-start-line="1760" selection-start-column="4" selection-end-line="1760" selection-end-column="4" />
+        <state relative-caret-position="182">
+          <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
         </state>
       </provider>
     </entry>
