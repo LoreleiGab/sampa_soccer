@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/15936419-6801-4dbd-98d4-24efe5676b14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/15936419-6801-4dbd-98d4-24efe5676b14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/base_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/base_edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/base_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/base_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,18 +73,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="88" />
-          <entry key="js" value="300" />
+          <entry key="js" value="352" />
           <entry key="md" value="5" />
-          <entry key="php" value="21215" />
+          <entry key="php" value="21223" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="94" />
-          <entry key="JavaScript" value="300" />
+          <entry key="JavaScript" value="352" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="21201" />
+          <entry key="PHP" value="21209" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -105,12 +96,12 @@
           <entry key="classificacao" value="1" />
           <entry key="css" value="4" />
           <entry key="html" value="35" />
-          <entry key="js" value="11" />
+          <entry key="js" value="12" />
           <entry key="json" value="1" />
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="344" />
+          <entry key="php" value="345" />
           <entry key="sexos" value="1" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
@@ -122,9 +113,9 @@
           <entry key="Database Element" value="6" />
           <entry key="HTML" value="35" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="11" />
+          <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="344" />
+          <entry key="PHP" value="345" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -175,11 +166,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
               <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-192">
+              <caret line="53" column="131" selection-start-line="53" selection-start-column="131" selection-end-line="53" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="1760" column="4" lean-forward="true" selection-start-line="1760" selection-start-column="4" selection-end-line="1760" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -231,8 +240,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>avaliacao_charts</find>
-      <find>danger</find>
       <find>danger modal</find>
       <find>modal-danger</find>
       <find>datepicker</find>
@@ -261,6 +268,8 @@
       <find>idade</find>
       <find>70%</find>
       <find>sis</find>
+      <find>Nenhum registro encontrado</find>
+      <find>entries</find>
     </findStrings>
     <replaceStrings>
       <replace>Telefone</replace>
@@ -301,9 +310,7 @@
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo_bkp.php" />
         <option value="$PROJECT_DIR$/visual/pages/charts/morris.html" />
         <option value="$PROJECT_DIR$/visual/cabecalho.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_list.php" />
-        <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.min.js" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/index.php" />
@@ -340,6 +347,8 @@
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/base_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_list.php" />
+        <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
       </list>
     </option>
   </component>
@@ -505,12 +514,12 @@
       <workItem from="1544356692962" duration="13507000" />
       <workItem from="1544572187012" duration="3832000" />
       <workItem from="1545055270441" duration="489000" />
-      <workItem from="1545482123929" duration="19154000" />
+      <workItem from="1545482123929" duration="20019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328058000" />
+    <option name="totallyTimeSpent" value="328923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -584,20 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="144" column="95" selection-start-line="144" selection-start-column="95" selection-end-line="144" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="1765" column="4" lean-forward="true" selection-start-line="1765" selection-start-column="4" selection-end-line="1765" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -872,6 +867,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="53" column="131" selection-start-line="53" selection-start-column="131" selection-end-line="53" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1760" column="4" lean-forward="true" selection-start-line="1760" selection-start-column="4" selection-end-line="1760" selection-end-column="4" />
         </state>
       </provider>
     </entry>
