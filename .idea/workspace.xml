@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/#modelagem/modelagem.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/wells_add.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,7 @@
           <entry key="html" value="88" />
           <entry key="js" value="352" />
           <entry key="md" value="5" />
-          <entry key="php" value="21223" />
+          <entry key="php" value="21497" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
@@ -85,7 +86,7 @@
           <entry key="HTML" value="94" />
           <entry key="JavaScript" value="352" />
           <entry key="Markdown" value="5" />
-          <entry key="PHP" value="21209" />
+          <entry key="PHP" value="21483" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="SQL" value="8" />
         </counts>
@@ -102,7 +103,7 @@
           <entry key="map" value="1" />
           <entry key="matricula" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="345" />
+          <entry key="php" value="352" />
           <entry key="sexos" value="1" />
           <entry key="sql" value="3" />
           <entry key="usuarios" value="1" />
@@ -116,7 +117,7 @@
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="12" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="345" />
+          <entry key="PHP" value="352" />
           <entry key="Scratch" value="3" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -167,11 +168,74 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
               <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="50" column="60" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_mapeamento_corporal.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="80" column="80" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="20" column="10" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/mapeamento_corporal.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/medidas_avaliacoes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -245,9 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/perfil/adm/estatura_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/estatura_add.php" />
-        <option value="$PROJECT_DIR$/visual/bower_components/chart.js/docs/02-Bar-Chart.md" />
         <option value="$PROJECT_DIR$/visual/pages/charts/chartjs.html" />
         <option value="$PROJECT_DIR$/visual/dist/js/cep_api.js" />
         <option value="$PROJECT_DIR$/visual/dist/js/telefone.js" />
@@ -261,7 +322,6 @@
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.min.js" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/index.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_edit.php" />
         <option value="$PROJECT_DIR$/visual/rodape.php" />
         <option value="$PROJECT_DIR$/funcoes/funcoesGerais.php" />
@@ -269,7 +329,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_list.php" />
@@ -288,7 +347,6 @@
         <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
@@ -296,6 +354,12 @@
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_list.php" />
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
+        <option value="$PROJECT_DIR$/perfil/adm/mapeamento_corporal.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/medidas_avaliacoes.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu_mapeamento_corporal.php" />
       </list>
     </option>
   </component>
@@ -372,6 +436,13 @@
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
               <item name="perfil" type="462c0819:PsiDirectoryNode" />
               <item name="adm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
+              <item name="perfil" type="462c0819:PsiDirectoryNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -461,12 +532,12 @@
       <workItem from="1544356692962" duration="13507000" />
       <workItem from="1544572187012" duration="3832000" />
       <workItem from="1545055270441" duration="489000" />
-      <workItem from="1545482123929" duration="20892000" />
+      <workItem from="1545482123929" duration="24881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329796000" />
+    <option name="totallyTimeSpent" value="333785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -490,7 +561,7 @@
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3295082" />
       <window_info anchor="right" id="Remote Host" order="0" weight="0.19288956" />
-      <window_info anchor="right" id="Database" order="1" visible="true" weight="0.1633888" />
+      <window_info anchor="right" id="Database" order="1" weight="0.1633888" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
@@ -503,27 +574,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visual/dist/js/telefone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="70" column="115" selection-start-line="70" selection-start-column="115" selection-end-line="70" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visual/cabecalho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="35" column="112" selection-start-line="35" selection-start-column="112" selection-end-line="35" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://eb261e0b-7692-4a9b-844a-71d369586629/schema/sampa/table/matricula" />
     <entry file="das://eb261e0b-7692-4a9b-844a-71d369586629/schema/sampa/table/base" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7f64e4ff-716c-48d2-a050-3fb284394c50/console.sql" />
@@ -561,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1066">
-          <caret line="41" column="106" selection-start-line="41" selection-start-column="106" selection-end-line="41" selection-end-column="106" />
         </state>
       </provider>
     </entry>
@@ -625,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -650,13 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -761,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="18" column="86" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -828,6 +850,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/mapeamento_corporal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/medidas_avaliacoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/wells_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="80" column="80" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="50" column="60" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_mapeamento_corporal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
         </state>
       </provider>
     </entry>

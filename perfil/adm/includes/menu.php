@@ -69,17 +69,17 @@
                         ?>
                     </ul>
                 </li>
-                <li class="treeview">
-                    <a href="#">
+                <li>
+                    <a href="?perfil=administrador&p=medidas_avaliacoes">
                         <i class="fa fa-circle-o text-green"></i> <span>Medidas e Avaliações</span>
-                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+<!--                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>-->
                     </a>
-                    <ul class="treeview-menu">
+                    <!--<ul class="treeview-menu">
                         <li><a href="?perfil=administrador&p=peso_altura_list"><i class="fa fa-circle-o"></i> Peso / Altura</a></li>
                         <li><a href="?perfil=administrador&p=perimetria_list"><i class="fa fa-circle-o"></i> Perimetria</a></li>
                         <li><a href="?perfil=administrador&p=dobras_list"><i class="fa fa-circle-o"></i> Dobras</a></li>
-                        <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
-                    </ul>
+                        <li><a href="?perfil=administrador&p=mapeamento_corporal"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
+                    </ul>-->
                 </li>
                 <li class="treeview">
                     <a href="#">

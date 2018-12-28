@@ -16,6 +16,9 @@ $cliente = recuperaDados("clientes","id",$idCliente);
         <!-- START FORM-->
         <h2 class="page-header">Banco de Wells
         <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
+        <?php
+        include 'includes/menu_mapeamento_corporal.php';
+        ?>
 
         <div class="row">
             <div class="col-md-12">

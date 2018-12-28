@@ -48,7 +48,7 @@
     </div>
     <!-- /.col -->
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#">
+        <a href="?perfil=administrador&p=mapeamento_corporal">
             <div class="info-box bg-purple">
                 <span class="info-box-icon"><i class="ion ion-person-add"></i></span>
                 <div class="info-box-content">
