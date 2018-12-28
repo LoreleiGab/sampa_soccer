@@ -37,7 +37,7 @@ if(isset($_POST['idCliente'])){
 
                             <div class="row">
                                 <div class="form-group col-md-2">
-                                    <labeL for="imc_id">Data</labeL>
+                                    <labeL for="imc_id">Data</labeL> <a href="?perfil=administrador&p=peso_altura_list"><i class="fa fa-plus"></i></a>
                                     <select id="imc_id" name="imc_id" class="form-control" required>
                                         <option value="">Selecione...</option>
                                         <?php geraOpcaoData("dobras",$idCliente,"") ?>
