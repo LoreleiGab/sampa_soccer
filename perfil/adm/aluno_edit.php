@@ -26,6 +26,7 @@ if(isset($_POST['cadastrar'])){
         $idCliente = recuperaUltimo("clientes");
         $sql_aluno = "INSERT INTO alunos (sexo_id, atividade_interesse, restricao, cliente_id) VALUES ('$sexo', '$atividade_interesse', '$restricao', '$idCliente')";
         if(mysqli_query($con,$sql_aluno)) {
+            $_SESSION['idCliente'] = $idCliente;
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
         else{

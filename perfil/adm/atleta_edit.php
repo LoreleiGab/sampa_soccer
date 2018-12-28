@@ -2,6 +2,7 @@
 $con = bancoMysqli();
 
 $classificacao_id = $_GET['classificacao_id'];
+$classificacao = recuperaDados("classificacao","id",$classificacao_id);
 
 if(isset($_SESSION['idCliente'])){
     $idCliente = $_SESSION['idCliente'];
@@ -31,6 +32,7 @@ if(isset($_POST['cadastrar'])){
         $idCliente = recuperaUltimo("clientes");
         $sql_atleta = "INSERT INTO atletas (apelido, posicao_id, pe_dominante_id, clube, categoria_id, restricao, ultimos_clubes, cliente_id) VALUES ('$apelido', '$posicao_id', '$pe_dominante', '$clube', '$categoria_id', '$restricao', '$ultimos_clubes', '$idCliente')";
         if(mysqli_query($con,$sql_atleta)) {
+            $_SESSION['idCliente'] = $idCliente;
             $mensagem = mensagem("success", "Cadastrado com sucesso!");
         }
         else{
@@ -83,7 +85,7 @@ $atleta = recuperaDados("atletas","cliente_id",$idCliente);
                 <!-- general form elements -->
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro de Atleta</h3>
+                        <h3 class="box-title">Cadastro de <?= $classificacao['nome_classificacao'] ?></h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->

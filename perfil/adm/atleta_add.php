@@ -1,6 +1,7 @@
 <?php
 include "includes/menu.php";
 $classificacao_id = $_GET['classificacao_id'];
+$classificacao = recuperaDados("classificacao","id",$classificacao_id);
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -16,7 +17,7 @@ $classificacao_id = $_GET['classificacao_id'];
                 <!-- general form elements -->
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Cadastro de Atleta</h3>
+                        <h3 class="box-title">Cadastro de <?= $classificacao['nome_classificacao'] ?></h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->

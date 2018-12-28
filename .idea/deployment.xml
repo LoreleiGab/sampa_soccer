@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="CCSP">
+  <component name="PublishConfigData" autoUpload="Always">
     <serverData>
-      <paths name="CCSP">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/sampa_soccer" local="$PROJECT_DIR$" web="/sampa_soccer" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="CCSP (project level)">
         <serverdata>
           <mappings>
             <mapping deploy="/sampa_soccer" local="$PROJECT_DIR$" web="/sampa_soccer" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="localhost">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="virtual">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
