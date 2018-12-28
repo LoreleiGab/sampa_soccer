@@ -8,7 +8,7 @@
 ?>
 <div class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="?perfil=administrador&p=musculos_fracos&musculo_tipos=1">
+        <a href="?perfil=administrador&p=musculos_list&musculo_tipo_id=1">
             <div class="info-box bg-aqua">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
@@ -21,7 +21,7 @@
     </div>
     <!-- /.col -->
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="?perfil=administrador&p=musculos_fracos&musculo_tipos=2">
+        <a href="?perfil=administrador&p=musculos_list&musculo_tipo_id=2">
             <div class="info-box bg-green">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
@@ -35,7 +35,7 @@
     <!-- /.col -->
 
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="?perfil=administrador&p=musculos_fracos&musculo_tipos=3">
+        <a href="?perfil=administrador&p=musculos_list&musculo_tipo_id=3">
             <div class="info-box bg-yellow">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
