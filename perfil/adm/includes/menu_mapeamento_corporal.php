@@ -51,7 +51,7 @@
 
 <div class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="#">
+        <a href="?perfil=administrador&p=mobilidade_list">
             <div class="info-box bg-purple">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
@@ -64,7 +64,7 @@
     </div>
     <!-- /.col -->
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="?perfil=administrador&p=perimetria_list">
+        <a href="?perfil=administrador&p=core_list">
             <div class="info-box bg-navy">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
