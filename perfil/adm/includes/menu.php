@@ -41,33 +41,10 @@
                 $cliente = recuperaDados("clientes","id",$_SESSION['idCliente']);
             ?>
                 <li class="header">CLIENTE</li>
-                <li class="treeview">
-                    <a href="#">
+                <li>
+                    <a href="?perfil=administrador&p=cadastro">
                         <i class="fa fa-book"></i> <span>Cadastro</span>
-                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
-                    <ul class="treeview-menu">
-                        <!--<li><a href="?perfil=administrador&p=cliente_resumo"><i class="fa fa-circle-o"></i> Resumo</a></li>-->
-                        <?php
-                        if($cliente['classificacao_id'] == 1) {
-                            echo "<li><a href=\"?perfil=administrador&p=atleta_edit\"><i class=\"fa fa-futbol-o\"></i> Dados pessoais</a></li>";
-                        }
-                        if($cliente['classificacao_id'] == 2) {
-                            echo "<li><a href=\"?perfil=administrador&p=base_edit\"><i class=\"fa fa-child\"></i> Dados pessoais</a></li>";
-                        }
-                        if($cliente['classificacao_id'] == 3) {
-                            echo "<li><a href=\"?perfil=administrador&p=aluno_edit\"><i class=\"fa fa-male\"></i> Dados pessoais</a></li>";
-                        }
-                        /* plano */
-                        $matricula = recuperaDados("planos","cliente_id",$_SESSION['idCliente']);
-                        if($matricula == NULL){
-                            echo "<li><a href=\"?perfil=administrador&p=plano_add\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
-                        }
-                        else{
-                            echo "<li><a href=\"?perfil=administrador&p=plano_edit\"><i class=\"fa fa-circle-o\"></i> Plano</a></li>";
-                        }
-                        ?>
-                    </ul>
                 </li>
                 <li>
                     <a href="?perfil=administrador&p=medidas_avaliacoes">

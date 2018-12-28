@@ -72,7 +72,9 @@ $aluno = recuperaDados("alunos","cliente_id",$idCliente);
 
         <!-- START FORM-->
         <h2 class="page-header">Cliente</h2>
-
+        <?php
+        include 'includes/menu_cadastro.php';
+        ?>
         <div class="row">
             <div class="col-md-12">
                 <!-- general form elements -->
