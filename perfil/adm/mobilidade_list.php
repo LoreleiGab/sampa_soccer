@@ -29,7 +29,10 @@ include "includes/menu.php";
         ?>
         <div class="row">
             <div class="col-md-12">
-                <!-- AVALIAÇÕES general form elements -->
+                <div class="row" align="center">
+                    <?php if(isset($mensagem)){echo $mensagem;};?>
+                </div>
+                <!-- general form elements -->
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title">Mobilidade articular</h3>

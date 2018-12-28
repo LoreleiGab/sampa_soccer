@@ -26,7 +26,6 @@ include "includes/menu.php";
 <div class="content-wrapper">
     <!-- Main content -->
     <section class="content">
-
         <!-- START FORM-->
         <h2 class="page-header">Cliente
             <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
@@ -35,7 +34,10 @@ include "includes/menu.php";
         ?>
         <div class="row">
             <div class="col-md-12">
-                <!-- AVALIAÇÕES general form elements -->
+                <div class="row" align="center">
+                    <?php if(isset($mensagem)){echo $mensagem;};?>
+                </div>
+                <!-- general form elements -->
                 <div class="box box-default">
                     <div class="box-header with-border">
                         <h3 class="box-title"><?= $tipo['musculo_tipo'] ?></h3>
@@ -70,7 +72,7 @@ include "includes/menu.php";
                                     echo "<td>" . dataBR($musculos['data']) . "</td>";
                                     echo "<td>" . $musculos['descricao']. "</td>";
                                     echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=musculos_add&musculos_tipo_id= $musculo_tipo_id\" role=\"form\">
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=musculos_edit&musculo_tipo_id=$musculo_tipo_id\" role=\"form\">
                                     <input type='hidden' name='idMusculo' value='" . $musculos['id'] . "'>
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>
