@@ -3,19 +3,13 @@ include "includes/menu.php";
 $con = bancoMysqli();
 
 if(isset($_POST['cadastra']) || isset($_POST['edita'])){
-    $peitoral = decimalMysql($_POST['peitoral']) ?? NULL;
-    $s_escapular =  decimalMysql($_POST['s_escapular']) ?? NULL;
     $tricipital =  decimalMysql($_POST['tricipital']) ?? NULL;
-    $a_media =  decimalMysql($_POST['a_media']) ?? NULL;
-    $s_iliaca =  decimalMysql($_POST['s_iliaca']) ?? NULL;
-    $abdominal =  decimalMysql($_POST['abdominal']) ?? NULL;
-    $coxa =  decimalMysql($_POST['coxa']) ?? NULL;
     $perna =  decimalMysql($_POST['perna']) ?? NULL;
 }
 
 if(isset($_POST['cadastra'])) {
     $idImc = $_POST['imc_id'];
-    $sql = "INSERT INTO dobras (imc_id, peitoral, s_escapular, tricipital, a_media, s_iliaca, abdominal, coxa, perna) VALUES ('$idImc', '$peitoral', '$s_escapular', '$tricipital', '$a_media', '$s_iliaca', '$abdominal', '$coxa', '$perna')";
+    $sql = "INSERT INTO dobras (imc_id, tricipital, perna) VALUES ('$idImc', '$tricipital', '$perna')";
     if(mysqli_query($con,$sql)){
         $idDobras = recuperaUltimo("dobras");
         $mensagem = mensagem("success", "Cadastrado com sucesso!");
@@ -27,7 +21,7 @@ if(isset($_POST['cadastra'])) {
 
 if(isset($_POST['edita'])) {
     $idDobras = $_POST['idDobras'];
-    $sql = "UPDATE dobras SET peitoral = '$peitoral', s_escapular = '$s_escapular', tricipital = '$tricipital', a_media = '$a_media', s_iliaca = '$s_iliaca', abdominal = '$abdominal', coxa = '$coxa', perna = '$perna' WHERE id = '$idDobras'";
+    $sql = "UPDATE dobras SET tricipital = '$tricipital', perna = '$perna' WHERE id = '$idDobras'";
     if(mysqli_query($con,$sql)){
         $mensagem = mensagem("success", "Gravado com sucesso!");
     }
@@ -86,32 +80,8 @@ $dobras = recuperaDados("dobras","id",$idDobras);
                                     ?>
                                 </div>
                                 <div class="form-group col-md-1">
-                                    <labeL for="peitoral">PT</labeL>
-                                    <input type="text" id="peitoral" name="peitoral" class="form-control" value="<?= $dobras['peitoral'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="s_escapular">SE</labeL>
-                                    <input type="text" id="s_escapular" name="s_escapular" class="form-control" value="<?= $dobras['s_escapular'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
                                     <labeL for="tricipital">TR</labeL>
                                     <input type="text" id="tricipital" name="tricipital" class="form-control" value="<?= $dobras['tricipital'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="a_media">AM</labeL>
-                                    <input type="text" id="a_media" name="a_media" class="form-control" value="<?= $dobras['a_media'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="s_iliaca">SI</labeL>
-                                    <input type="text" id="s_iliaca" name="s_iliaca" class="form-control" value="<?= $dobras['s_iliaca'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="abdominal">AB</labeL>
-                                    <input type="text" id="abdominal" name="abdominal" class="form-control" value="<?= $dobras['abdominal'] ?>">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <labeL for="coxa">CX</labeL>
-                                    <input type="text" id="coxa" name="coxa" class="form-control" value="<?= $dobras['coxa'] ?>">
                                 </div>
                                 <div class="form-group col-md-1">
                                     <labeL for="perna">PE</labeL>
