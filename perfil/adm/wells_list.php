@@ -1,9 +1,13 @@
 <?php
 $con = bancoMysqli();
 
+$idCliente = $_SESSION['idCliente'];
+$teste_tipo_id = $_GET['teste_tipo_id'];
+$tipo = recuperaDados("teste_tipos","id",$teste_tipo_id);
+
 if(isset($_POST['apagar'])){
-    $idWells = $_POST['idWells'];
-    $sql_apaga_dobra = "DELETE FROM wells WHERE id = '$idWells'";
+    $idTeste = $_POST['idTeste'];
+    $sql_apaga_dobra = "DELETE FROM testes WHERE id = '$idTeste'";
     if(mysqli_query($con,$sql_apaga_dobra)){
         $mensagem = mensagem("success", "Excluído com sucesso!");
     }
@@ -28,14 +32,16 @@ include "includes/menu.php";
         <!-- START FORM-->
         <h2 class="page-header">Cliente
             <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
-
+        <?php
+        include 'includes/menu_testes.php';
+        ?>
         <div class="row">
             <div class="col-md-12">
                 <!-- WELLS - Início -->
                 <div class="box box-default">
                     <?php
-                    $sql_wells = "SELECT * FROM wells WHERE cliente_id = '$idCliente'";
-                    $query_wells = mysqli_query($con,$sql_wells);
+                    $sql_testes = "SELECT * FROM testes WHERE cliente_id = '$idCliente'";
+                    $query_testes = mysqli_query($con,$sql_testes);
                     ?>
                     <div class="box-header with-border">
                         <h3 class="box-title">Banco de Wells</h3>
@@ -44,7 +50,7 @@ include "includes/menu.php";
                                 <i class="fa fa-minus"></i>
                             </button>
                         </div>
-                        <form method="POST" action="?perfil=administrador&p=wells_add" role="form">
+                        <form method="POST" action="?perfil=administrador&p=testes_add" role="form">
                             <input type="hidden" name="idCliente" value="<?= $idCliente ?>">
                             <button type="submit" name="carregar" class="btn btn-info pull-right">Adicionar</button>
                         </form>
@@ -55,18 +61,20 @@ include "includes/menu.php";
                             <tr>
                                 <th>Data</th>
                                 <th>Medida</th>
+                                <th>Observação</th>
                                 <th width="20%">Ação</th>
                             </tr>
                             </thead>
                             <?php
                             echo "<tbody>";
-                            while($wel = mysqli_fetch_array($query_wells)){
+                            while($wel = mysqli_fetch_array($query_testes)){
                                 echo "<tr>";
                                 echo "<td>".dataBR($wel['data'])."</td>";
                                 echo "<td>".$wel['medida']."</td>";
+                                echo "<td>".$wel['observacao']."</td>";
                                 echo "<td>
-                                    <form method=\"POST\" action=\"?perfil=administrador&p=wells_edit\" role=\"form\">
-                                    <input type='hidden' name='idWells' value='" . $wel['id'] . "'>
+                                    <form method=\"POST\" action=\"?perfil=administrador&p=testes_edit\" role=\"form\">
+                                    <input type='hidden' name='idTeste' value='" . $wel['id'] . "'>
                                     <input type='hidden' name='idCliente' value='" . $idCliente. "'>
                                     <button type=\"submit\" name='carregar' class=\"btn btn-block btn-primary\">Editar</button>
                                     </form>

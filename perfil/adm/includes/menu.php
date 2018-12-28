@@ -81,19 +81,18 @@
                         <li><a href="?perfil=administrador&p=mapeamento_corporal"><i class="fa fa-circle-o"></i> Mapeamento corporal</a></li>
                     </ul>-->
                 </li>
-                <li class="treeview">
-                    <a href="#">
+                <li>
+                    <a href="?perfil=administrador&p=testes">
                         <i class="fa fa-circle-o text-lime"></i> <span>Testes</span>
-                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
                     </a>
-                    <ul class="treeview-menu">
+                    <!--<ul class="treeview-menu">
                         <li><a href="?perfil=administrador&p=wells_list"><i class="fa fa-circle-o"></i> Banco de Wells</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Salto horizontal</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Saltos 1 minuto</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Yoyo test</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Rast test</a></li>
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Medicine ball</a></li>
-                    </ul>
+                    </ul>-->
                 </li>
                 <li class="treeview">
                     <a href="#">
