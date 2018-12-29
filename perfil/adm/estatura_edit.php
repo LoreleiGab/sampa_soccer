@@ -55,7 +55,9 @@ $estatura = recuperaDados("estaturas","cliente_id",$idCliente);
         <!-- START FORM-->
         <h2 class="page-header">Estatura
             <small><?= recuperaNomeCliente($idCliente) ?></small></h2>
-
+        <?php
+        include 'includes/menu_antropometria.php';
+        ?>
         <div class="row">
             <div class="col-md-6">
                 <!-- general form elements -->

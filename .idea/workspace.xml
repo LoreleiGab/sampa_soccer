@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,10 +57,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2433">
-              <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+            <state relative-caret-position="286">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -145,7 +145,6 @@
         <option value="$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js" />
         <option value="$PROJECT_DIR$/perfil/adm/mapeamento_corporal.php" />
         <option value="$PROJECT_DIR$/perfil/adm/wells_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" />
         <option value="$PROJECT_DIR$/perfil/adm/medidas_avaliacoes.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/funcoesConecta.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_add.php" />
@@ -190,17 +189,19 @@
         <option value="$PROJECT_DIR$/perfil/adm/resumo_jackson_pollock.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_wells.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php" />
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="y" value="-14" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -242,6 +243,13 @@
               <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
               <item name="perfil" type="462c0819:PsiDirectoryNode" />
               <item name="adm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sampa_soccer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sampa_soccer" type="462c0819:PsiDirectoryNode" />
+              <item name="perfil" type="462c0819:PsiDirectoryNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,12 +341,12 @@
       <workItem from="1545055270441" duration="489000" />
       <workItem from="1545482123929" duration="49151000" />
       <workItem from="1546032395442" duration="10000" />
-      <workItem from="1546032651832" duration="11950000" />
+      <workItem from="1546032651832" duration="12621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370015000" />
+    <option name="totallyTimeSpent" value="370686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -348,7 +356,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49836066" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="2" sideWeight="0.50163937" side_tool="true" weight="0.17019667" />
       <window_info anchor="bottom" id="File Transfer" order="0" weight="0.1898527" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
@@ -396,13 +404,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="106" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/dobras3m_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -751,8 +752,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2433">
-          <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+        <state relative-caret-position="390">
+          <caret line="161" column="89" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
