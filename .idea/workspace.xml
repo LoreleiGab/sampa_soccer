@@ -57,12 +57,8 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_musculos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_core.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -139,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/perfil/adm/perimetria_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3f_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras7_edit.php" />
@@ -188,8 +183,9 @@
         <option value="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/testes_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_salto_horizontal.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_musculos.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
       </list>
     </option>
   </component>
@@ -333,12 +329,12 @@
       <workItem from="1545055270441" duration="489000" />
       <workItem from="1545482123929" duration="49151000" />
       <workItem from="1546032395442" duration="10000" />
-      <workItem from="1546032651832" duration="8455000" />
+      <workItem from="1546032651832" duration="9081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366520000" />
+    <option name="totallyTimeSpent" value="367146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -407,20 +403,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/base_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="62" column="119" selection-start-line="62" selection-start-column="119" selection-end-line="62" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="879">
@@ -542,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/core_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/core_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -570,13 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/mobilidade_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -744,19 +712,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+    <entry file="file://$PROJECT_DIR$/perfil/adm/mobilidade_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="586" column="30" lean-forward="true" selection-start-line="581" selection-start-column="24" selection-end-line="586" selection-end-column="30" />
+        <state relative-caret-position="558">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_musculos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <caret line="23" column="22" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="659" column="12" selection-start-line="659" selection-start-column="12" selection-end-line="659" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/core_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="52" column="83" selection-start-line="52" selection-start-column="83" selection-end-line="52" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_core.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

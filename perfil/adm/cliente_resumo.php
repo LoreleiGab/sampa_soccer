@@ -654,6 +654,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
         <?php
         // MAPEAMENTO CORPORAL - MÚSCULOS
         include "resumo_musculos.php";
+        // MOBILIDADE ARTICULAR
+        include "resumo_mobilidade.php";
         ?>
         <div class="row">
             <!-- WELLS - Início -->
