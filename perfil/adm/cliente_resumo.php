@@ -656,7 +656,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             <div class="col-md-6">
                 <div class="box box-default">
                     <?php
-                    $sql_wells = "SELECT * FROM wells WHERE cliente_id = '$idCliente' ORDER BY data";
+                    $sql_wells = "SELECT * FROM testes WHERE cliente_id = '$idCliente' AND teste_tipo_id = 1 ORDER BY data";
                     $query_wells = mysqli_query($con,$sql_wells);
                     ?>
                     <div class="box-header with-border">
@@ -724,6 +724,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             <!-- ./PESO CHART -->
             <!-- WELLS - Fim -->
         </div>
+        <?php
+        // TESTE SALTO HORIZONTAL
+        include "resumo_salto_horizontal.php";
+        ?>
 
         <!-- /.row -->
     </section>
@@ -755,6 +759,18 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             xkey: 'y',
             ykeys: ['a'],
             labels: ['Medida'],
+            hideHover: 'auto'
+        });
+
+        //HORIZONTAL CHART
+        var bar = new Morris.Bar({
+            element: 'horizontal-chart',
+            resize: true,
+            data: [<?= $horizontal_charts ?>],
+            barColors: ['#3c8dbc'],
+            xkey: 'y',
+            ykeys: ['a'],
+            labels: ['Peso'],
             hideHover: 'auto'
         });
     });
