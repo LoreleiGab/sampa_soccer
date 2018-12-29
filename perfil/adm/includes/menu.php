@@ -118,6 +118,7 @@
                         <li class="disabled"><a href="#"><i class="fa fa-circle-o"></i> Treino</a></li>
                     </ul>
                 </li>
+            <li><a href="?perfil=administrador&p=cliente_resumo"><i class="fa fa-circle-o text-orange"></i> <span>Resumo</span></a></li>
             <?php
             }
             /*
@@ -127,54 +128,6 @@
             <li class="header">OUTROS</li>
             <li><a href="?perfil=administrador"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="../include/logoff.php"><i class="fa fa-sign-out"></i><span>Sair</span></a></li>
-            <!--
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i>
-                    <span>Avaliações</span>
-                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="disabled"><a href="?perfil=administrador&p=avaliacao_add"><i class="fa fa-circle-o"></i> Cadastro</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                </ul>
-            </li>
-
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-share"></i> <span>Multilevel</span>
-                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                    <li class="treeview">
-                        <a href="#"><i class="fa fa-circle-o"></i> Level One
-                            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                            <li class="treeview">
-                                <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-            -->
         </ul>
     </section>
     <!-- /.sidebar -->

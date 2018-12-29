@@ -1,9 +1,19 @@
 <?php
 $con = bancoMysqli();
 
+if(isset($_POST['apagar'])){
+    $idAvaliacao = $_POST['idAvaliacao'];
+    $sql_apaga_avaliacao = "DELETE FROM imcs WHERE id = '$idAvaliacao'";
+    if(mysqli_query($con,$sql_apaga_avaliacao)){
+        $mensagem = mensagem("success", "Excluído com sucesso!");
+    }
+    else {
+        $mensagem = mensagem("danger", "Erro ao excluir! Tente novamente.");
+    }
+}
+
 if(isset($_POST['resumo'])){
     $idCliente = $_POST['idCliente'];
-    $_SESSION['idCliente'] = $idCliente;
 }
 
 if(isset($_SESSION['idCliente'])){

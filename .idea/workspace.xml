@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/aluno_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/atleta_edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/includes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/includes/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/plano_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/plano_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +37,12 @@
         <item name="sampa@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sampa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sampa: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -50,10 +52,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_cadastro.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="104">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -132,8 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_list.php" />
@@ -177,12 +177,14 @@
         <option value="$PROJECT_DIR$/perfil/adm/testes_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/testes_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cadastro.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/aluno_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_add.php" />
         <option value="$PROJECT_DIR$/perfil/adm/plano_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/includes/menu_cadastro.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/includes/menu.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/peso_altura_list.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/peso_altura_edit.php" />
       </list>
     </option>
   </component>
@@ -326,20 +328,21 @@
       <workItem from="1545055270441" duration="489000" />
       <workItem from="1545482123929" duration="49151000" />
       <workItem from="1546032395442" duration="10000" />
-      <workItem from="1546032651832" duration="1867000" />
+      <workItem from="1546032651832" duration="4455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359932000" />
+    <option name="totallyTimeSpent" value="362520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50163937" side_tool="true" weight="0.17019667" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49836066" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="2" sideWeight="0.50163937" side_tool="true" weight="0.17019667" />
-      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.19016394" />
+      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.1898527" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.3295082" />
@@ -418,13 +421,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -496,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -511,13 +500,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_list1.php" />
-    <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1784">
-          <caret line="94" column="110" lean-forward="true" selection-start-line="93" selection-start-column="28" selection-end-line="94" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://15936419-6801-4dbd-98d4-24efe5676b14/schema/sampa/table/musculos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -543,13 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="125" column="44" lean-forward="true" selection-start-line="101" selection-start-column="8" selection-end-line="125" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="41" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -612,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="110" column="85" selection-start-line="110" selection-start-column="85" selection-end-line="110" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/testes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -668,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cadastro.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -721,6 +682,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="847">
+          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2366">
+          <caret line="127" column="48" lean-forward="true" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="119" column="44" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="119" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/peso_altura_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
