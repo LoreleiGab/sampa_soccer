@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/wells_list.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +41,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sampa: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sampa@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sampa: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="musculo_tipos: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -54,10 +57,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_musculos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4955">
-              <caret line="763" column="20" selection-start-line="763" selection-start-column="20" selection-end-line="763" selection-end-column="20" />
+            <state relative-caret-position="468">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -136,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/perfil/adm/perimetria_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/perimetria_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3f_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
@@ -187,6 +189,7 @@
         <option value="$PROJECT_DIR$/perfil/adm/testes_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_salto_horizontal.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_musculos.php" />
       </list>
     </option>
   </component>
@@ -330,12 +333,12 @@
       <workItem from="1545055270441" duration="489000" />
       <workItem from="1545482123929" duration="49151000" />
       <workItem from="1546032395442" duration="10000" />
-      <workItem from="1546032651832" duration="6391000" />
+      <workItem from="1546032651832" duration="8455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364456000" />
+    <option name="totallyTimeSpent" value="366520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -392,8 +395,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php</url>
+          <line>225</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/perfil/adm/base_add.php" />
     <entry file="file://$PROJECT_DIR$/perfil/adm/aluno_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -574,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -731,10 +737,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/musculos_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4955">
-          <caret line="763" column="20" selection-start-line="763" selection-start-column="20" selection-end-line="763" selection-end-column="20" />
+        <state relative-caret-position="379">
+          <caret line="586" column="30" lean-forward="true" selection-start-line="581" selection-start-column="24" selection-end-line="586" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_musculos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>

@@ -651,6 +651,10 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
             </div>
             <!-- ./JACKSON POLLOCK 3 -->
         </div>
+        <?php
+        // MAPEAMENTO CORPORAL - MÚSCULOS
+        include "resumo_musculos.php";
+        ?>
         <div class="row">
             <!-- WELLS - Início -->
             <div class="col-md-6">
