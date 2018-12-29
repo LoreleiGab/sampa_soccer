@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3779c89b-3f41-417d-96a2-71216e200da2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,10 +57,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_core.php">
+        <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+            <state relative-caret-position="2433">
+              <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -77,8 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#1</find>
-      <find>Telefone #1</find>
       <find>Telefone #2</find>
       <find>&lt;labeL for=&quot;telefone01&quot;&gt;Telefone&lt;/labeL&gt;</find>
       <find>Telefone 2</find>
@@ -107,6 +104,8 @@
       <find>Nenhum registro encontrado</find>
       <find>musculo</find>
       <find>well</find>
+      <find>peso</find>
+      <find>pla</find>
     </findStrings>
     <replaceStrings>
       <replace>Telefone</replace>
@@ -140,12 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/perfil/adm/dobras3m_edit.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/dobras7_edit.php" />
-        <option value="$PROJECT_DIR$/../siscontrat2/perfil/evento/pf_cadastro_pesquisa.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/aluno_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/base_add.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/base_edit.php" />
         <option value="$PROJECT_DIR$/perfil/adm/atleta_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/base_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/cliente_list.php" />
@@ -188,9 +181,15 @@
         <option value="$PROJECT_DIR$/perfil/adm/testes_list.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_salto_horizontal.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_musculos.php" />
-        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php" />
         <option value="$PROJECT_DIR$/perfil/adm/resumo_core.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_peso_altura.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_plano.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_perimetria.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_dobras.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_jackson_pollock.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/resumo_wells.php" />
+        <option value="$PROJECT_DIR$/perfil/adm/cliente_resumo.php" />
       </list>
     </option>
   </component>
@@ -334,12 +333,12 @@
       <workItem from="1545055270441" duration="489000" />
       <workItem from="1545482123929" duration="49151000" />
       <workItem from="1546032395442" duration="10000" />
-      <workItem from="1546032651832" duration="9887000" />
+      <workItem from="1546032651832" duration="11950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367952000" />
+    <option name="totallyTimeSpent" value="370015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -396,61 +395,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php</url>
-          <line>225</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visual/bower_components/datatables.net/js/jquery.dataTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="4182" column="34" selection-start-line="4182" selection-start-column="28" selection-end-line="4182" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="53" column="131" selection-start-line="53" selection-start-column="131" selection-end-line="53" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/perimetria_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/includes/menu_antropometria.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="50" column="60" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/medidas_avaliacoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/funcoesConecta.php" />
-    <entry file="das://15936419-6801-4dbd-98d4-24efe5676b14/schema/sampa/table/classificacao">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/atleta_add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -738,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="657" column="40" selection-start-line="657" selection-start-column="40" selection-end-line="657" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_mobilidade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -756,6 +694,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_peso_altura.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_plano.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_perimetria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_dobras.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funcoes/funcoesGerais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5975">
+          <caret line="865" column="9" selection-start-line="865" selection-start-column="9" selection-end-line="865" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_jackson_pollock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3458">
+          <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/resumo_wells.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2121">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perfil/adm/cliente_resumo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2433">
+          <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
         </state>
       </provider>
     </entry>
