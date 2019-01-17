@@ -146,9 +146,7 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
         // DOBRAS
         include "resumo_dobras.php";
         // JACKSON POLLOCK
-        if($cliente['classificacao_id'] == 1) {
-            include "resumo_jackson_pollock.php";
-        }
+        include "resumo_jackson_pollock.php";
         // MAPEAMENTO CORPORAL - MÚSCULOS
         include "resumo_musculos.php";
         // MOBILIDADE ARTICULAR
