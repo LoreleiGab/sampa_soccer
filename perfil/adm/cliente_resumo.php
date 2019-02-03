@@ -157,6 +157,8 @@ $classificacao = recuperaDados("classificacao","id",$cliente['classificacao_id']
         include "resumo_wells.php";
         // TESTE SALTO HORIZONTAL
         include "resumo_salto_horizontal.php";
+        // YOYO TEST
+        include "resumo_yoyo_test.php";
         ?>
         <!-- /.row -->
     </section>
