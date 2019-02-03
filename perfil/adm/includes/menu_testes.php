@@ -51,7 +51,7 @@
 
 <div class="row">
     <div class="col-md-4 col-sm-6 col-xs-12">
-        <a href="?perfil=administrador&p=testes_list&teste_tipo_id=4">
+        <a href="?perfil=administrador&p=yoyo_test_list">
             <div class="info-box bg-purple">
                 <span class="info-box-icon"><i class="fa fa-plus"></i></span>
                 <div class="info-box-content">
