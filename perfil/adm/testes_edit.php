@@ -22,7 +22,7 @@ if(isset($_POST['cadastra'])){
     $sql = "INSERT INTO testes (teste_tipo_id, data, medida, observacao, cliente_id) VALUES ('$teste_tipo_id','$data','$medida', '$observacao', '$idCliente')";
     if(mysqli_query($con,$sql)){
         $idTeste = recuperaUltimo("testes");
-        $mensagem = mensagem("success","Gravado com suscesso!");
+        $mensagem = mensagem("success","Gravado com sucesso!");
     }else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }

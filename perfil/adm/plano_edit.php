@@ -22,7 +22,7 @@ if(isset($_POST['cadastra'])){
     $sql = "INSERT INTO planos (cliente_id, data_inicio, data_vencimento, plano, valor, valor_total, forma_pagamento, outros) 
             VALUES ('$idCliente', '$data_inicio', '$data_vencimento', '$plano', '$valor', '$valor_total','$forma_pagamento','$outros')";
     if(mysqli_query($con,$sql)){
-        $mensagem = mensagem("success","Gravado com suscesso!");
+        $mensagem = mensagem("success","Gravado com sucesso!");
     }else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.").$sql;
     }

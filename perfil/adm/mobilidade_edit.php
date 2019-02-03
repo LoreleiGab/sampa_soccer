@@ -15,7 +15,7 @@ if(isset($_POST['cadastra'])){
     $sql = "INSERT INTO mobilidade (data, quadril, isquiotibiais, quadriceps, cliente_id) VALUES ('$data', '$quadril', '$isquiotibiais', '$quadriceps','$idCliente')";
     if(mysqli_query($con,$sql)){
         $idMobilidade = recuperaUltimo("mobilidade");
-        $mensagem = mensagem("success","Gravado com suscesso!");
+        $mensagem = mensagem("success","Gravado com sucesso!");
     }else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }

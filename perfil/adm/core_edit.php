@@ -18,7 +18,7 @@ if(isset($_POST['cadastra'])){
     $sql = "INSERT INTO core (data, descricao, cliente_id) VALUES ('$data','$descricao','$idCliente')";
     if(mysqli_query($con,$sql)){
         $idCore = recuperaUltimo("core");
-        $mensagem = mensagem("success","Gravado com suscesso!");
+        $mensagem = mensagem("success","Gravado com sucesso!");
     }else{
         $mensagem = mensagem("danger","Erro ao gravar! Tente novamente.");
     }
